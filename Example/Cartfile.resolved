@@ -1,0 +1,2 @@
+git "https://bitbucket.org/npaw/configutil-plugin-ios.git" "0.1.0"
+github "NPAW/lib-plugin-ios" "6.0.0"
