@@ -1,0 +1,27 @@
+branches:
+  only:
+  - master
+
+language: objective-c
+osx_image: xcode8.3
+
+before_install:
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+
+install:
+  - pod install
+  - cd Example
+  - carthage update
+
+script:
+  - ./scripts/build.sh
+
+after_success:
+  - echo "done"
+
+after_failure:
+  - cat -n ~/Library/Logs/scan/*
+  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
+  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
