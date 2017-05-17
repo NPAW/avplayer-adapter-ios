@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Development
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-cert.cer.enc -d -a -out scripts/certs/development-cert.cer
