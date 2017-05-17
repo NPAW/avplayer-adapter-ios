@@ -32,9 +32,6 @@ cp "./scripts/provisioning-profile/development-provisioning-profile.mobileprovis
 # Fix for OS X Sierra that hungs in the codesign step
 security set-key-partition-list -S apple-tool:,apple: -s -k $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain > /dev/null
 
-# Build Adapter
-xcodebuild build -workspace YouboraAVPlayerAdapter.xcworkspace -scheme YouboraAVPlayerAdapter -configuration Debug
-
 # Archive
 xcodebuild archive -workspace YouboraAVPlayerAdapter.xcworkspace -scheme AVPlayerAdapterExample -configuration Release -derivedDataPath ./build -archivePath ./build/Products/AVPlayerAdapterExample.xcarchive
 
