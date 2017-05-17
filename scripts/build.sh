@@ -8,6 +8,7 @@ openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/dev
 # Distribution
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-cer.cer.enc -d -a -out scripts/certs/distribution-cer.cer
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-key.p12.enc -d -a -out scripts/certs/distribution-key.p12
+openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/distribution-provisioning-profile.mobileprovision.enc -d -a -out scripts/provisioning-profile/distribution-provisioning-profile.mobileprovision
 
 # Create custom keychain
 security create-keychain -p $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain
@@ -28,6 +29,7 @@ security import ./scripts/certs/distribution-key.p12 -k ios-build.keychain -P $S
 # Install provisioning profile
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 cp "./scripts/provisioning-profile/development-provisioning-profile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/provisioning-profile/distribution-provisioning-profile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
 # Fix for OS X Sierra that hungs in the codesign step
 security set-key-partition-list -S apple-tool:,apple: -s -k $CUSTOM_KEYCHAIN_PASSWORD ios-build.keychain > /dev/null
