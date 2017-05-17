@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Development
-openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-cert.cer.enc -d -a -out scripts/certs/development-cert.cer
+openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-cer.cer.enc -d -a -out scripts/certs/development-cer.cer
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/development-key.p12.enc -d -a -out scripts/certs/development-key.p12
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/provisioning-profile/development-provisioning-profile.mobileprovision.enc -d -a -out scripts/provisioning-profile/development-provisioning-profile.mobileprovision
 
 # Distribution
-openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-cert.cer.enc -d -a -out scripts/certs/distribution-cert.cer
+openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-cer.cer.enc -d -a -out scripts/certs/distribution-cer.cer
 openssl aes-256-cbc -k "$SECURITY_PASSWORD" -in scripts/certs/distribution-key.p12.enc -d -a -out scripts/certs/distribution-key.p12
 
 # Create custom keychain
@@ -20,9 +20,9 @@ security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 
 # Import certificates and keys
 security import ./scripts/certs/AppleWWDRCA.cer -k ios-build.keychain -A
-security import ./scripts/certs/development-cert.cer -k ios-build.keychain -A
+security import ./scripts/certs/development-cer.cer -k ios-build.keychain -A
 security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
-security import ./scripts/certs/distribution-cert.cer -k ios-build.keychain -A
+security import ./scripts/certs/distribution-cer.cer -k ios-build.keychain -A
 security import ./scripts/certs/distribution-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
 
 # Install provisioning profile
