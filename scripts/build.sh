@@ -24,6 +24,10 @@ security import ./scripts/certs/development-key.p12 -k ios-build.keychain -P $SE
 security import ./scripts/certs/distribution-cert.cer -k ios-build.keychain -A
 security import ./scripts/certs/distribution-key.p12 -k ios-build.keychain -P $SECURITY_PASSWORD -A
 
+# Install provisioning profile
+mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+cp "./scripts/provisioning-profile/development-provisioning-profile.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+
 # Fix for OS X Sierra that hungs in the codesign step
 security set-key-partition-list -S apple-tool:,apple: -s -k $SECURITY_PASSWORD ios-build.keychain > /dev/null
 

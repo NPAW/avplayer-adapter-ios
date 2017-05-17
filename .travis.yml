@@ -16,7 +16,7 @@ install:
   - carthage update
 
 script:
-  - ./scripts/build.sh
+  - sh scripts/build.sh
 
 after_success:
   - echo "done"
