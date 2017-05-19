@@ -10,7 +10,10 @@
 #import <TargetConditionals.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.0.0"
+#define MACRO_NAME(f) #f
+#define MACRO_VALUE(f) MACRO_NAME(f)
+
+#define PLUGIN_VERSION_DEF MACRO_VALUE(YOUBORAADAPTER_VERSION)
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -472,11 +475,11 @@ static void * const observationContext = (void *) &observationContext;
 }
 
 - (NSString *)getPlayerName {
-    return @"AVPlayer";
+    return PLUGIN_NAME;
 }
 
 - (NSString *)getVersion {
-    return @PLUGIN_NAME_DEF;
+    return PLUGIN_VERSION;
 }
 
 @end
