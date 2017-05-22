@@ -1,13 +1,30 @@
 #!/usr/bin/env ruby
 require 'fileutils'
 require 'xcodeproj'
+require 'json'
+
+""" 
+Before running this script, the following the manifest.json shold be available.
+There's a script for creating that manifest.
+'ruby scripts/createManifest.rb'
+
+This script does the following:
+- Build and archive the adapter project with Carthage
+- Set up example project configuration with xcodeproj utility
+- Build the folder structure ready to be uploaded to the CDN.
+
+The script should be invoked from the project root directory.
+'ruby scripts/make_deployable.rb'
+"""
 
 # Build
 `pod install`
 
 # Hide Example directory so only the adapter is built
 `mv Example .Example`
-puts `carthage update --no-skip-current --platform ios`
+# Build and archive binary
+puts `carthage build --no-skip-current --platform ios`
+puts `carthage archive YouboraAVPlayerAdapter`
 `mv .Example Example`
 
 # Build sample dependencies
@@ -72,3 +89,52 @@ frameworks_build_phase.add_file_reference(framework_ref)
 build_file.settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
 
 @project.save
+
+# Make zip with sample project
+puts `zip -r -9 Example.zip Example/`
+
+# Create deployment folder structure
+manifest_file_path = 'manifest.json'
+
+`rm -r deploy`
+
+# Load manifest to extract data from it
+json = JSON.parse(File.read(manifest_file_path))
+
+version = json["version"]
+deployable_name = json["name"]
+
+if (json["type"] == "adapter")
+    package_type = "adapters"
+else 
+    package_type = ""
+end
+
+last_build_path = "deploy/last-build/" + package_type + "/" + deployable_name + "/last-build"
+version_path = "deploy/version/" + package_type + "/" + deployable_name + "/" + version
+sample_dest_path = last_build_path + "/sample"
+
+# Create folder structure
+cmd = "mkdir -p " + last_build_path
+puts `#{cmd}`
+
+# Copy manifest, sample and ipa
+puts "Copying manifest..."
+cmd = "cp " + manifest_file_path + " " + last_build_path
+puts `#{cmd}`
+puts "Copying Example..."
+cmd = "cp Example.zip " + last_build_path
+puts `#{cmd}`
+puts "Copying IPA..."
+cmd = "cp build/Products/IPA/AVPlayerAdapterExample.ipa " + last_build_path
+puts `#{cmd}`
+puts "Copying binary..."
+cmd = "cp " + deployable_name + ".framework.zip " + last_build_path
+puts `#{cmd}`
+# Copy to "version" path
+cmd = "mkdir -p " + version_path
+puts `#{cmd}`
+cmd = "cp -r " + last_build_path + " " + version_path
+puts `#{cmd}`
+
+puts "Done!"

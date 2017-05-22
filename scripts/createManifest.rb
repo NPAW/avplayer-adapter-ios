@@ -117,8 +117,7 @@ if project_type == "adapter"
     puts "Seek type: " + seek_type
     puts "Detected getters: " + available_getters.to_s
 
-    json[:features] = {:buffer => buffer_type, :seek => seek_type}
-    json[:getters] = available_getters
+    json[:features] = {:buffer => buffer_type, :seek => seek_type, :getters => available_getters}
 
 end
 

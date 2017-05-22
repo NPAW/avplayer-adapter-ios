@@ -17,6 +17,7 @@ install:
   - cd ..
 
 script:
+  - ./scripts/prepare_ios_env.sh
   - ./scripts/build.sh
 
 after_success:
