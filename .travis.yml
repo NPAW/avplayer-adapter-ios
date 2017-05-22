@@ -21,9 +21,10 @@ script:
   - ./scripts/build.sh
 
 after_success:
-  - echo "done"
+  - ruby scripts/createManifest.rb
+  - ruby scripts/make_deployable.rb
+  - ruby scripts/deploy_to_qa.rb
 
 after_failure:
   - cat -n ~/Library/Logs/scan/*
-  - cat -n $TMPDIR/com.apple.dt.XCTest-status/Session*.log
-  - cat -n ~/Library/Logs/DiagnosticReports/xctest*.crash
+
