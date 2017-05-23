@@ -21,7 +21,7 @@ script:
   - ./scripts/build.sh
 
 after_success:
-  - ruby scripts/createManifest.rb YouboraAVPlayerAdapter
+  - ruby scripts/createManifest.rb YouboraAVPlayerAdapter AVPlayer
   - ruby scripts/make_deployable.rb
   - ruby scripts/deploy_to_qa.rb
 

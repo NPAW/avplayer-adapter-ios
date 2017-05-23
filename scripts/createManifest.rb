@@ -4,6 +4,12 @@ require 'json'
 # get project name
 project_name = ARGV[0]
 
+manifest_name = ARGV[1]
+
+if manifest_name == nil
+    manifest_name = project_name
+end
+
 project_path = './' + project_name + '.xcodeproj'
 project = Xcodeproj::Project.open(project_path)
 
@@ -55,7 +61,7 @@ puts "Date: " + date_today
 
 # create json
 json = {
-    :name => project_name,
+    :name => manifest_name,
     :type => project_type,
     :tech => "ios",
     :author => author_git,
