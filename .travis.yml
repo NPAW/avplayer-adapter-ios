@@ -28,3 +28,9 @@ after_success:
 after_failure:
   - cat -n ~/Library/Logs/scan/*
 
+env:
+  global:
+  # QA_KNOWN_HOSTS
+    secure: pRp6TGAEKNnbHNgtSR87x02Bovda0f1VoI/wmkqeNO0rb0pPkBBqXK8sJ/E1OAYlYi8ITcy42atJIZ1KrsgO0NFpkdJdaKKpPtj72boMEp5HvRU7rXsLEXjodsIdegw8+JvFWXr+7In0MdlknCb/QwZF07SYdlYpJmsCbhgDcR5ZnvxGruwtyBESJoK1HkYpDCHvyUinbU257iJ5g/3LF78UhUH+Y3ZZXE9ce4G85as0EhV4sQ/guXa35cbp2V8Bbv8pvDMHTkrBxDuU7XRSM/JGsVYtGYGd/6A9vBBodXs+UTCGQDxiRl13FW02EIeN+wHYSyN72aNWWJ6gHOTIzKk38919PWX8KbOTj3t/x3SLuW+r7fd6VfZq7xAXZ2GZT4FXhaYeby6MgHgPZDnWhFaS+ZyCflx8ED8H5K+ycBbQNCBYLWo1tUP6w0H4kc6vvm1/BOaobVggdMj9nTV/4RKmDQq1Ohxv+m7eQxJFe8eDpxGOhmoB7Qlyd3xmzYcIwp4nNk84d1Oq4OYOaQFLJdvizsr9kNvfivrh3VW0x8gL/FHpwcVbW+uAzNftKiB1L187XXIMGcjUio1fRF/JXOQn2znzEU7G1W8V9T9GeGBJMwfIqSercdmRjAemUde3hVgcaG0/2UlqXcRio84RpfYhWJhi1xNLQ+f+GbZQ7t0=
+
+

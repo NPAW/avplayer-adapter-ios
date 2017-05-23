@@ -95,8 +95,9 @@ puts `zip -r -9 Example.zip Example/`
 
 # Create deployment folder structure
 manifest_file_path = 'manifest.json'
-
-`rm -r deploy`
+if File.directory?('deploy')
+    `rm -r deploy`
+end
 
 # Load manifest to extract data from it
 json = JSON.parse(File.read(manifest_file_path))
