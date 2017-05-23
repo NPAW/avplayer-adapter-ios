@@ -38,10 +38,12 @@ repo_git = `git config remote.origin.url`
 
 puts "Author from git: " + author_git
 
-index_start = repo_git.index("//") + 1
-index_end = repo_git.index("@") + 1
-
-repo_git = repo_git[0..index_start] + repo_git[index_end..repo_git.length]
+if repo_git.include? "@"
+    # Strip username
+    index_start = repo_git.index("//") + 1
+    index_end = repo_git.index("@") + 1
+    repo_git = repo_git[0..index_start] + repo_git[index_end..repo_git.length]
+end
 
 repo_git.strip!
 
