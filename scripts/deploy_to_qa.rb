@@ -14,7 +14,7 @@ else
     deploy_location = "version"
 end
 
-cmd = "scp -r deploy/" + deploy_location + "/* nicedeployer@qa-smartplugin.youbora.com:/home/nicedeployer/qa/catalog/v6/android/"
+cmd = "scp -r deploy/" + deploy_location + "/* nicedeployer@qa-smartplugin.youbora.com:/home/nicedeployer/qa/catalog/v6/ios/"
 puts `#{cmd}`
 
 puts "Done."

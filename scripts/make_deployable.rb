@@ -14,7 +14,7 @@ This script does the following:
 - Build the folder structure ready to be uploaded to the CDN.
 
 The script should be invoked from the project root directory.
-'ruby scripts/make_deployable.rb'
+'ruby scripts/make_deployable.rb <project_name>'
 """
 
 # Build
@@ -103,7 +103,11 @@ end
 json = JSON.parse(File.read(manifest_file_path))
 
 version = json["version"]
-deployable_name = json["name"]
+
+deployable_name = ARGV[0]
+if deployable_name == nil
+    deployable_name = json["name"]
+end
 
 if (json["type"] == "adapter")
     package_type = "adapters"
