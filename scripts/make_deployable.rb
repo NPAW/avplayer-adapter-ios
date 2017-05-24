@@ -73,17 +73,17 @@ subproject.remove_from_project
 
 # Embed frameworks in sample project
 # Adapter
-framework_name = "YouboraAVPlayerAdapter"
+adapter_name = "YouboraAVPlayerAdapter"
 
-framework_ref = @frameworks_group.new_file("./"+framework_name+".framework")
+framework_ref = @frameworks_group.new_file("./"+adapter_name+".framework")
 build_file = embed_build_phase.add_file_reference(framework_ref)
 frameworks_build_phase.add_file_reference(framework_ref)
 build_file.settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
 
 # Lib from Carthage
-framework_name = "YouboraLib"
+lib_framework = "YouboraLib"
 
-framework_ref = @frameworks_group.new_file("Carthage/Build/iOS/"+framework_name+".framework")
+framework_ref = @frameworks_group.new_file("Carthage/Build/iOS/"+lib_framework+".framework")
 build_file = embed_build_phase.add_file_reference(framework_ref)
 frameworks_build_phase.add_file_reference(framework_ref)
 build_file.settings = { 'ATTRIBUTES' => ['CodeSignOnCopy', 'RemoveHeadersOnCopy'] }
@@ -104,20 +104,20 @@ json = JSON.parse(File.read(manifest_file_path))
 
 version = json["version"]
 
-deployable_name = ARGV[0]
-if deployable_name == nil
-    deployable_name = json["name"]
-end
+package_type = ""
+deployable_name = "lib"
 
 if (json["type"] == "adapter")
     package_type = "adapters"
-else 
-    package_type = ""
+
+    deployable_name = ARGV[0]
+    if deployable_name == nil
+        deployable_name = json["name"]
+    end 
 end
 
 last_build_path = "deploy/last-build/" + package_type + "/" + deployable_name + "/last-build"
 version_path = "deploy/version/" + package_type + "/" + deployable_name + "/" + version
-sample_dest_path = last_build_path + "/sample"
 
 # Create folder structure
 cmd = "mkdir -p " + last_build_path
@@ -134,7 +134,7 @@ puts "Copying IPA..."
 cmd = "cp build/Products/IPA/AVPlayerAdapterExample.ipa " + last_build_path
 puts `#{cmd}`
 puts "Copying binary..."
-cmd = "cp " + deployable_name + ".framework.zip " + last_build_path
+cmd = "cp " + adapter_name + ".framework.zip " + last_build_path
 puts `#{cmd}`
 # Copy to "version" path
 cmd = "mkdir -p " + version_path

@@ -22,7 +22,7 @@ script:
 
 after_success:
   - ruby scripts/createManifest.rb YouboraAVPlayerAdapter AVPlayer
-  - ruby scripts/make_deployable.rb YouboraAVPlayerAdapter
+  - ruby scripts/make_deployable.rb avplayer
   - ruby scripts/deploy_to_qa.rb
 
 after_failure:

@@ -35,9 +35,11 @@ end
 puts "Version: " + version
 
 # get author
-author_git = `git config user.name`
+#author_git = `git config user.name`
 
-author_git.strip!
+author_info = `git show --summary | grep Author` 
+match = /Author: (?<name>.+?) </.match(author_info)
+author_git = match["name"].strip
 
 # get git repo
 repo_git = `git config remote.origin.url`
