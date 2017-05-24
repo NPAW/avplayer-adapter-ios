@@ -139,7 +139,7 @@ puts `#{cmd}`
 # Copy to "version" path
 cmd = "mkdir -p " + version_path
 puts `#{cmd}`
-cmd = "cp -r " + last_build_path + " " + version_path
+cmd = "cp -r " + last_build_path + "/* " + version_path
 puts `#{cmd}`
 
 puts "Done!"
