@@ -131,29 +131,7 @@ static void * const observationContext = (void *) &observationContext;
         // - PlayerItem status is failed
         // - A new PlayerItem is created and replaced in the Player (here is where we don't want to add the time observer)
         if (self.joinTimePeriodicTimeObserver == nil) {
-            CMTime interval = CMTimeMakeWithSeconds(.1, NSEC_PER_SEC); // 100ms
-            self.joinTimePeriodicTimeObserver = [self.player addPeriodicTimeObserverForInterval:interval queue:0 usingBlock:^(CMTime time) {
-                __strong typeof(weakSelf) strongSelf = weakSelf;
-                if (strongSelf) {
-                    if (ABS(CMTimeGetSeconds(time)) > 0.1) {
-                        if (!self.flags.started) {
-                            // Send start if it hasn't been sent yet
-                            // this happens when the startMonitoring is called once the video already started
-                            [strongSelf fireStart];
-                        }
-                        
-                        [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
-                        [strongSelf fireJoin];
-                        
-                        if (self.flags.joined) {
-                            [strongSelf.player removeTimeObserver:strongSelf.joinTimePeriodicTimeObserver];
-                            strongSelf.joinTimePeriodicTimeObserver = nil;
-                            [YBLog debug:@"Join sent, removed time observer"];
-                        }
-                        
-                    }
-                }
-            }];
+            [self setupJoinCheck];
         }
         
         // Observer for seek
@@ -231,6 +209,9 @@ static void * const observationContext = (void *) &observationContext;
                             [self fireResume]; // Resume
                         } else {
                             [self fireStart]; // Start
+                            if (self.joinTimePeriodicTimeObserver == nil) {
+                                [self setupJoinCheck];
+                            }
                         }
                     }
                 }
@@ -288,31 +269,42 @@ static void * const observationContext = (void *) &observationContext;
                     }
                     [self sendError:error];
                 }
-            /*} else if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
-                if (self.checkMaxBufferTime) {
-                    NSArray<NSValue *> * timeRanges = [change objectForKey:NSKeyValueChangeNewKey];
-                    double totalLoadedTime = 0;
-                    double playhead = [self getPlayhead].doubleValue;
-                    for (NSValue * rangeObj in timeRanges) {
-                        CMTimeRange range = [rangeObj CMTimeRangeValue];
-                        if (CMTIMERANGE_IS_VALID(range)) {
-                            double start = CMTimeGetSeconds(range.start);
-                            double end = start + CMTimeGetSeconds(range.duration);
-                            double loadedTimeAheadContent = MAX(end-playhead, 0);
-                            totalLoadedTime += loadedTimeAheadContent;
-                        }
-                    }
-                    if (totalLoadedTime > self.maxBufferTime) {
-                        [self bufferedHandler];
-                    }
-                }
-               */
             }
         }
         
     } @catch (NSException *exception) {
         [YBLog logException:exception];
     }
+}
+
+- (void) setupJoinCheck {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    CMTime interval = CMTimeMakeWithSeconds(.1, NSEC_PER_SEC); // 100ms
+    self.joinTimePeriodicTimeObserver = [self.player addPeriodicTimeObserverForInterval:interval queue:0 usingBlock:^(CMTime time) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            if (ABS(CMTimeGetSeconds(time)) > 0.1) {
+                if (!self.flags.started) {
+                    // Send start if it hasn't been sent yet
+                    // this happens when the startMonitoring is called once the video already started
+                    [strongSelf fireStart];
+                }
+                
+                [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
+                [strongSelf fireJoin];
+                
+                if (self.flags.joined) {
+                    [strongSelf.player removeTimeObserver:strongSelf.joinTimePeriodicTimeObserver];
+                    strongSelf.joinTimePeriodicTimeObserver = nil;
+                    [YBLog debug:@"Join sent, removed time observer"];
+                }
+                
+            }
+        }
+    }];
+
 }
 
 - (void) itemDidFinishPlaying:(NSNotification *) notification {
@@ -326,39 +318,7 @@ static void * const observationContext = (void *) &observationContext;
         [YBLog logException:exception];
     }
 }
-/*
-- (void) accessLogEntry:(NSNotification *) notification {
-    @try {
-        if (notification.object == self.player.currentItem) {
-            AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
-            
-            if (logEvent.segmentsDownloadedDuration > 0) {
-                self.bitrate = (logEvent.numberOfBytesTransferred * 8) / logEvent.segmentsDownloadedDuration;
-            } else {
-                self.bitrate = logEvent.indicatedBitrate;
-            }
-            
-            if (logEvent.observedBitrate > 0) {
-                self.throughput = logEvent.observedBitrate;
-            }
-            
-            if (logEvent.indicatedBitrate > 0 && self.bitrate != -1) {
-                if (self.bitrate != logEvent.indicatedBitrate) {
-                    self.rendition = [YBYouboraUtils buildRenditionStringWithWidth:0 height:0 andBitrate:logEvent.indicatedBitrate];
-                } else {
-                    self.rendition = [super getRendition];
-                }
-                [YBLog notice:@"Rendition updated: %@", self.rendition];
-            }
-            
-            [YBLog notice:@"Bitrate updated: %f", self.bitrate];
-            [YBLog notice:@"Throughput updated: %lld", self.throughput];
-        }
-    } @catch (NSException *exception) {
-        [YBLog logException:exception];
-    }
-}
-*/
+
 - (void) sendError:(NSError *) error {
     @try {
         if (error != nil) {
@@ -476,6 +436,10 @@ static void * const observationContext = (void *) &observationContext;
 
 - (NSString *)getPlayerName {
     return PLUGIN_NAME;
+}
+
+- (NSString *)getPlayerVersion {
+    return @PLUGIN_NAME_DEF;
 }
 
 - (NSString *)getVersion {

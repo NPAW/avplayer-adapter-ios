@@ -1,22 +1,22 @@
 PODS:
-  - YouboraLib (6.0.0)
+  - YouboraLib (6.0.0-rc)
 
 DEPENDENCIES:
-  - YouboraLib (from `https://github.com/NPAW/lib-plugin-ios.git`, tag `6.0.0`)
+  - YouboraLib (from `https://github.com/NPAW/lib-plugin-ios.git`, tag `6.0.0-rc`)
 
 EXTERNAL SOURCES:
   YouboraLib:
     :git: https://github.com/NPAW/lib-plugin-ios.git
-    :tag: 6.0.0
+    :tag: 6.0.0-rc
 
 CHECKOUT OPTIONS:
   YouboraLib:
     :git: https://github.com/NPAW/lib-plugin-ios.git
-    :tag: 6.0.0
+    :tag: 6.0.0-rc
 
 SPEC CHECKSUMS:
-  YouboraLib: d2dc80ef567d6859f78f3baa1d67a572e4eaabc1
+  YouboraLib: 87b616d56ac2e4ba445420afc5c2650b81903bb5
 
-PODFILE CHECKSUM: 99d6140a12f264901797f076528a61e21b5b8c75
+PODFILE CHECKSUM: c24198a88cdbe02482f610355fe481756f2c832c
 
 COCOAPODS: 1.2.1

@@ -26,7 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
     // Set Youbora log level
     [YBLog setDebugLevel:YBLogLevelVerbose];
     
@@ -52,12 +55,16 @@
     self.playerViewController.player = [AVPlayer playerWithURL:[NSURL URLWithString:self.resourceUrl]];
     
     // As soon as we have the player instance, create an Adapter to listen for the player events
-    YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
-    [self.youboraPlugin setAdapter:adapter];
+    [self startYoubora];
     
     // Start playback
     [self.playerViewController.player play];
     
+}
+
+- (void) startYoubora {
+    YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    [self.youboraPlugin setAdapter:adapter];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +76,14 @@
     
     [self.youboraPlugin removeAdapter];
     [super viewWillDisappear:animated];
+}
+
+-(void)appDidBecomeActive:(NSNotification*)notification {
+    [self startYoubora];
+}
+
+-(void)appWillResignActive:(NSNotification*)notification {
+    [self.youboraPlugin removeAdapter];
 }
 
 /*
