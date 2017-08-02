@@ -48,15 +48,22 @@
 /// Rendition
 @property (nonatomic, strong) NSString * rendition;
 
+/// Error codes for known fatal errors
+@property (nonatomic, strong) NSArray * fatalErrors;
+
 @end
 
 @implementation YBAVPlayerAdapter
 
 // Observation context
 static void * const observationContext = (void *) &observationContext;
+//Just to skip false seeks (such as de first one)
+bool firstSeek;
 
 - (void)registerListeners {
     [super registerListeners];
+    
+    self.fatalErrors = @[@-1100 , @-11853, @-1005];
     
     @try {
         [self resetValues];
@@ -141,7 +148,7 @@ static void * const observationContext = (void *) &observationContext;
             __strong typeof(weakSelf) strongSelf = weakSelf;
             if (strongSelf) {
                 double currentPlayhead = CMTimeGetSeconds(time);
-
+                
                 if (strongSelf.lastPlayhead != 0) {
                     double distance = ABS(strongSelf.lastPlayhead - currentPlayhead);
                     if (distance > intervalSeek * 2) {
@@ -203,6 +210,11 @@ static void * const observationContext = (void *) &observationContext;
                 // it will still set the rate to 0
                 if (player.currentItem != nil) {
                     if ([newRate isEqualToNumber:@0]) {
+                        if([self.getPlayhead intValue] == [self.getDuration intValue]){
+                            [YBLog notice:@"paused at the video end, sending stop"];
+                            [self fireStop];
+                            [self resetValues];
+                        }
                         [self firePause];
                     } else {
                         if (self.flags.started) {
@@ -249,8 +261,11 @@ static void * const observationContext = (void *) &observationContext;
                 if (isLikely) {
                     [YBLog debug:@"AVPlayer playbackLikelyToKeepUp"];
                     if (self.flags.joined) {
-                        [self fireSeekEnd];
-                        [self fireBufferEnd];
+                        if(firstSeek){
+                            [self fireSeekEnd];
+                            [self fireBufferEnd];
+                        }
+                        firstSeek = true;
                     }
                 }
             } else if ([keyPath isEqualToString:@"status"]) {
@@ -267,7 +282,12 @@ static void * const observationContext = (void *) &observationContext;
                         [YBLog error:@"Detected error from AVPlayer's currentItem"];
                         error = player.currentItem.error;
                     }
-                    [self sendError:error];
+                    
+                    if([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]){
+                        [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
+                    }else{
+                        [self sendError:error];
+                    }
                 }
             }
         }
@@ -289,6 +309,7 @@ static void * const observationContext = (void *) &observationContext;
                 if (!self.flags.started) {
                     // Send start if it hasn't been sent yet
                     // this happens when the startMonitoring is called once the video already started
+                    firstSeek = true;
                     [strongSelf fireStart];
                 }
                 

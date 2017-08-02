@@ -80,6 +80,7 @@
 
 -(void)appDidBecomeActive:(NSNotification*)notification {
     [self startYoubora];
+    [self.playerViewController.player play];
 }
 
 -(void)appWillResignActive:(NSNotification*)notification {
