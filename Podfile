@@ -9,7 +9,7 @@ target 'YouboraAVPlayerAdapter' do
   use_frameworks!
 
   # Pods for YouboraAVPlayerAdapter
-  pod 'YouboraLib', :git => 'https://github.com/NPAW/lib-plugin-ios.git', :tag => '6.0.0'
+  pod 'YouboraLib', '6.0.0'
 end
 
 target 'AVPlayerAdapterExample' do
@@ -18,6 +18,6 @@ target 'AVPlayerAdapterExample' do
   use_frameworks!
 
   # Pods for AVPlayerAdapterExample
-  pod 'YouboraLib', :git => 'https://github.com/NPAW/lib-plugin-ios.git', :tag => '6.0.0'
+  pod 'YouboraLib', '6.0.0'
 end
 
