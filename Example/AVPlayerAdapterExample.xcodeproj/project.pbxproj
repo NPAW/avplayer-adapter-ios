@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0F61301ECC899E0004B081 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; };
-		4E0F61311ECC899E0004B081 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */; };
 		4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD591EA8E9C40016D46A /* AVKit.framework */; };
 		4E2DCD5E1EA8EFCB0016D46A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */; };
@@ -18,9 +16,9 @@
 		4E4956821E9F6E3600FF6280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956801E9F6E3600FF6280 /* Main.storyboard */; };
 		4E4956841E9F6E3600FF6280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956831E9F6E3600FF6280 /* Assets.xcassets */; };
 		4E4956871E9F6E3600FF6280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956851E9F6E3600FF6280 /* LaunchScreen.storyboard */; };
-		4E6CEDB01EBC5EEA00CC6A2B /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */; };
-		4E6CEDB11EBC5EEA00CC6A2B /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */; };
+		CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; };
+		CDF8C5491F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +29,7 @@
 			remoteGlobalIDString = 4E4956601E9F6CAA00FF6280;
 			remoteInfo = YouboraAVPlayerAdapter;
 		};
-		4E0F61321ECC899E0004B081 /* PBXContainerItemProxy */ = {
+		CDF8C54A1F7BDE8A00470644 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E0F612A1ECC89910004B081 /* YouboraAVPlayerAdapter.xcodeproj */;
 			proxyType = 1;
@@ -47,8 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E0F61311ECC899E0004B081 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
-				4E6CEDB11EBC5EEA00CC6A2B /* YouboraConfigUtils.framework in Embed Frameworks */,
+				CDF8C5491F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,8 +81,7 @@
 			files = (
 				4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */,
 				4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */,
-				4E6CEDB01EBC5EEA00CC6A2B /* YouboraConfigUtils.framework in Frameworks */,
-				4E0F61301ECC899E0004B081 /* YouboraAVPlayerAdapter.framework in Frameworks */,
+				CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */,
 				6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +181,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4E0F61331ECC899E0004B081 /* PBXTargetDependency */,
+				CDF8C54B1F7BDE8A00470644 /* PBXTargetDependency */,
 			);
 			name = AVPlayerAdapterExample;
 			productName = AVPlayerAdapterExample;
@@ -276,9 +272,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib/YouboraLib.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,13 +305,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayerAdapterExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -332,10 +334,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E0F61331ECC899E0004B081 /* PBXTargetDependency */ = {
+		CDF8C54B1F7BDE8A00470644 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = YouboraAVPlayerAdapter;
-			targetProxy = 4E0F61321ECC899E0004B081 /* PBXContainerItemProxy */;
+			targetProxy = CDF8C54A1F7BDE8A00470644 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

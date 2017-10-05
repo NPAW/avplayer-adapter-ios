@@ -1,6 +1,6 @@
 //
 //  YouboraAVPlayerAdapter.h
-//  YouboraAVPlayerAdapter
+//  YouboraAVPlayerAdapter 
 //
 //  Created by Joan on 13/04/2017.
 //  Copyright © 2017 NPAW. All rights reserved.
