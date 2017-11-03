@@ -2,11 +2,15 @@ PODS:
   - YouboraLib (6.0.0)
 
 DEPENDENCIES:
-  - YouboraLib (= 6.0.0)
+  - YouboraLib (from `../lib-plugin-ios`)
+
+EXTERNAL SOURCES:
+  YouboraLib:
+    :path: ../lib-plugin-ios
 
 SPEC CHECKSUMS:
   YouboraLib: d2dc80ef567d6859f78f3baa1d67a572e4eaabc1
 
-PODFILE CHECKSUM: b557b1c7c1df9551854bda34a710f052edafa019
+PODFILE CHECKSUM: 839cef64a5cb59cd67a6750b23468ac97712ed6d
 
 COCOAPODS: 1.3.1

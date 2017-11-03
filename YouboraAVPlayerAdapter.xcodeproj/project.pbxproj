@@ -344,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.0.0;
 			};
 			name = Debug;
 		};
@@ -369,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.0.0;
 			};
 			name = Release;
 		};

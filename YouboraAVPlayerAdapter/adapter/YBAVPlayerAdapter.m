@@ -67,6 +67,8 @@ bool firstSeek;
     
     @try {
         [self resetValues];
+        [self monitorPlayheadWithBuffers:true seeks:false andInterval:800]; // [buffer, seek, interval] in this case we monitor buffers, but not seeks every 800 milliseconds
+        [self.monitor stop];
         AVPlayer * avplayer = self.player;
         
         // Observers for AVPlayer
