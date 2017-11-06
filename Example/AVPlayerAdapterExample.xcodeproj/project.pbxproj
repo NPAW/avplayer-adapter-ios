@@ -72,6 +72,8 @@
 		4E4956861E9F6E3600FF6280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4956881E9F6E3600FF6280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraConfigUtils.framework; path = Carthage/Build/iOS/YouboraConfigUtils.framework; sourceTree = "<group>"; };
+		CDBA56081FB076AF00A9A35C /* YouboraAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter.h; sourceTree = "<group>"; };
+		CDBA56091FB076AF00A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				4E0F612A1ECC89910004B081 /* YouboraAVPlayerAdapter.xcodeproj */,
 				4E4956761E9F6E3600FF6280 /* AVPlayerAdapterExample */,
+				CDBA56071FB076AF00A9A35C /* YouboraAVPlayerAdapter */,
 				4E4956751E9F6E3600FF6280 /* Products */,
 				4E2469F21E9F8EDA00F3774C /* Frameworks */,
 				50C9B2611C287165DAEF710C /* Pods */,
@@ -160,6 +163,15 @@
 				2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDBA56071FB076AF00A9A35C /* YouboraAVPlayerAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				CDBA56081FB076AF00A9A35C /* YouboraAVPlayerAdapter.h */,
+				CDBA56091FB076AF00A9A35C /* Info.plist */,
+			);
+			path = YouboraAVPlayerAdapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char YouboraAVPlayerAdapter_tvOSVersionString[]
 // In this header, you should import all the public headers of your framework using statements like #import <YouboraAVPlayerAdapter_tvOS/PublicHeader.h>
 
 
+#import <YouboraAVPlayerAdapter/YBAVPlayerAdapter.h>
