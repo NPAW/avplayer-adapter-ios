@@ -15,4 +15,5 @@
 - (void) fireStop;
 - (void) firePause;
 - (void) fireResume;
+- (void) fireJoin;
 @end

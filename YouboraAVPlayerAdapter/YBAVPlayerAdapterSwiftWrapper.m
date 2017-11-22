@@ -43,6 +43,10 @@
     [self initAdapterIfNecessary];
     [self.plugin.adapter fireResume];
 }
+- (void) fireJoin{
+    [self initAdapterIfNecessary];
+    [self.plugin.adapter fireJoin];
+}
 
 - (YBAVPlayerAdapter *) getAdapter{
     return self.adapter;
