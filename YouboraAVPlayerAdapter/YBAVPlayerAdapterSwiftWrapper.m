@@ -11,21 +11,58 @@
 @interface YBAVPlayerAdapterSwiftWrapper ()
 
 @property(nonatomic,strong) NSObject* player;
+@property(nonatomic,strong) YBPlugin* plugin;
+@property(nonatomic,strong) YBAVPlayerAdapter* adapter;
 
 @end
 
 @implementation YBAVPlayerAdapterSwiftWrapper
 
-- (id) initWithPlayer:(NSObject*)player{
+- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin{
     if (self = [super init]) {
         self.player = player;
+        self.plugin = plugin;
     }
     return self;
 }
 
+- (void) fireStart{
+    [self initAdapterIfNecessary];
+    [self.plugin.adapter fireStart];
+}
+
+- (void) fireStop{
+    [self initAdapterIfNecessary];
+    [self.plugin.adapter fireStop];
+}
+- (void) firePause{
+    [self initAdapterIfNecessary];
+    [self.plugin.adapter firePause];
+}
+- (void) fireResume{
+    [self initAdapterIfNecessary];
+    [self.plugin.adapter fireResume];
+}
+
 - (YBAVPlayerAdapter *) getAdapter{
-    AVPlayer* avPlayer = (AVPlayer*) self.player;
-    return [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];
+    return self.adapter;
+    /*AVPlayer* avPlayer = (AVPlayer*) self.player;
+     return [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];*/
+}
+
+- (YBPlugin *) getPlugin{
+    return self.plugin;
+    /*AVPlayer* avPlayer = (AVPlayer*) self.player;
+     return [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];*/
+}
+
+- (void) initAdapterIfNecessary{
+    if(self.plugin.adapter == nil){
+        if(self.plugin != nil){
+            AVPlayer* avPlayer = (AVPlayer*) self.player;
+            [self.plugin setAdapter:[[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer]];
+        }
+    }
 }
 
 @end

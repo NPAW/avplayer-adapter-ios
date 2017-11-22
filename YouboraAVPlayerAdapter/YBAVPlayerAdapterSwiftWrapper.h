@@ -10,6 +10,9 @@
 
 @interface YBAVPlayerAdapterSwiftWrapper : NSObject
 
-- (id) initWithPlayer:(NSObject*)player;
-
+- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin;
+- (void) fireStart;
+- (void) fireStop;
+- (void) firePause;
+- (void) fireResume;
 @end
