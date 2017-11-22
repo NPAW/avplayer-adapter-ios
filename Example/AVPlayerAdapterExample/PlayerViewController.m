@@ -62,7 +62,8 @@
 }
 
 - (void) startYoubora {
-    YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    //YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    self.adapter = 
     [self.youboraPlugin setAdapter:adapter];
 }
 

@@ -13,4 +13,6 @@
 
 @interface YBAVPlayerAdapter : YBPlayerAdapter<AVPlayer *>
 
++ (YBAVPlayerAdapter*) instantiateWithPlayer:(AVPlayer*) player;
+
 @end
