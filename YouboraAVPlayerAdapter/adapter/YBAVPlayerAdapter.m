@@ -256,7 +256,9 @@ bool firstSeek;
                 bool isEmpty = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
-                    [self fireBufferBegin];
+                    if(!self.flags.paused){
+                        [self fireBufferBegin];
+                    }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
                 bool isLikely = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];

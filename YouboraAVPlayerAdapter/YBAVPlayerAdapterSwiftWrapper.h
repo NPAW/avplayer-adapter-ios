@@ -16,4 +16,9 @@
 - (void) firePause;
 - (void) fireResume;
 - (void) fireJoin;
+
+- (YBPlugin *) getPlugin;
+- (YBAVPlayerAdapter *) getAdapter;
+- (void) removeAdapter;
+
 @end

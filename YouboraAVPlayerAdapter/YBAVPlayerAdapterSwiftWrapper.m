@@ -32,8 +32,16 @@
 }
 
 - (void) fireStop{
-    [self initAdapterIfNecessary];
-    [self.plugin.adapter fireStop];
+    if(self.plugin != nil){
+        if(self.plugin.adapter != nil){
+            if(!self.plugin.adapter.flags.stopped){
+                [self initAdapterIfNecessary];
+                [self.plugin.adapter fireStop];
+                [self.plugin removeAdapter];
+            }
+        }
+    }
+    
 }
 - (void) firePause{
     [self initAdapterIfNecessary];
@@ -50,14 +58,10 @@
 
 - (YBAVPlayerAdapter *) getAdapter{
     return self.adapter;
-    /*AVPlayer* avPlayer = (AVPlayer*) self.player;
-     return [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];*/
 }
 
 - (YBPlugin *) getPlugin{
     return self.plugin;
-    /*AVPlayer* avPlayer = (AVPlayer*) self.player;
-     return [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];*/
 }
 
 - (void) initAdapterIfNecessary{
@@ -67,6 +71,10 @@
             [self.plugin setAdapter:[[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer]];
         }
     }
+}
+
+- (void) removeAdapter{
+    [self.plugin removeAdapter];
 }
 
 @end
