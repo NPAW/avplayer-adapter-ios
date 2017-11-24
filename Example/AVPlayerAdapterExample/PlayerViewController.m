@@ -33,6 +33,8 @@
     // Set Youbora log level
     [YBLog setDebugLevel:YBLogLevelVerbose];
     
+     [self.navigationController setHidesBarsOnTap:YES];
+    
     // Create Youbora plugin
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];

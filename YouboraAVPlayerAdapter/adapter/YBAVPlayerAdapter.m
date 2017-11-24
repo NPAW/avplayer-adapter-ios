@@ -25,6 +25,8 @@
 #define PLUGIN_NAME @PLUGIN_NAME_DEF "-" PLUGIN_PLATFORM_DEF
 #define PLUGIN_VERSION @PLUGIN_VERSION_DEF "-" PLUGIN_NAME_DEF "-" PLUGIN_PLATFORM_DEF
 
+#define MONITOR_INTERVAL 800
+
 // For AVPlayer
 @import AVFoundation;
 
@@ -63,11 +65,11 @@ bool firstSeek;
 - (void)registerListeners {
     [super registerListeners];
     
-    self.fatalErrors = @[@-1100 , @-11853, @-1005];
+    self.fatalErrors = @[@-1100 , @-11853, @-1005, @-11819];
     
     @try {
         [self resetValues];
-        [self monitorPlayheadWithBuffers:true seeks:false andInterval:800]; // [buffer, seek, interval] in this case we monitor buffers, but not seeks every 800 milliseconds
+        [self monitorPlayheadWithBuffers:true seeks:false andInterval:MONITOR_INTERVAL]; // [buffer, seek, interval] in this case we monitor buffers, but not seeks every 800 milliseconds
         [self.monitor stop];
         AVPlayer * avplayer = self.player;
         
@@ -267,7 +269,11 @@ bool firstSeek;
                     if (self.flags.joined) {
                         if(firstSeek){
                             [self fireSeekEnd];
-                            [self fireBufferEnd];
+                            if([self.chronos.buffer getDeltaTime] < MONITOR_INTERVAL / 2 || ([self.chronos.buffer getDeltaTime] < (MONITOR_INTERVAL + 10) && [self.chronos.buffer getDeltaTime] > (MONITOR_INTERVAL - 10))){
+                                [self.chronos.buffer stop];
+                            }else{
+                                [self fireBufferEnd];
+                            }
                         }
                         firstSeek = true;
                     }
