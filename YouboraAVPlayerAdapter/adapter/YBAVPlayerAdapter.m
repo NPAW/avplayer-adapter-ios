@@ -259,7 +259,7 @@ bool firstSeek;
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     if(!self.flags.paused){
-                        [self fireBufferBegin];
+                        //[self fireBufferBegin];
                     }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
@@ -269,11 +269,7 @@ bool firstSeek;
                     if (self.flags.joined) {
                         if(firstSeek){
                             [self fireSeekEnd];
-                            if([self.chronos.buffer getDeltaTime] < MONITOR_INTERVAL / 2 || ([self.chronos.buffer getDeltaTime] < (MONITOR_INTERVAL + 10) && [self.chronos.buffer getDeltaTime] > (MONITOR_INTERVAL - 10))){
-                                [self.chronos.buffer stop];
-                            }else{
-                                [self fireBufferEnd];
-                            }
+                            //[self fireBufferEnd];
                         }
                         firstSeek = true;
                     }
