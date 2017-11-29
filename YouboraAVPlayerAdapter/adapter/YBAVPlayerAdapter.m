@@ -338,7 +338,8 @@ bool firstSeek;
     @try {
         if (notification.object == self.player.currentItem) {
             [YBLog notice:@"itemDidFinishPlaying, stopping"];
-            [self fireStop];
+            [self fireEnd];
+            //[self fireStop];
             [self resetValues];
         }
     } @catch (NSException *exception) {
