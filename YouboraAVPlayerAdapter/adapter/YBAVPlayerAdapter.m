@@ -216,7 +216,8 @@ bool firstSeek;
                     if ([newRate isEqualToNumber:@0]) {
                         if([self.getPlayhead intValue] == [self.getDuration intValue]){
                             [YBLog notice:@"paused at the video end, sending stop"];
-                            [self fireStop];
+                            //[self fireStop];
+                            [self fireEnd];
                             [self resetValues];
                         }
                         [self firePause];
