@@ -224,9 +224,11 @@ bool firstSeek;
                         if (self.flags.started) {
                             [self fireResume]; // Resume
                         } else {
-                            [self fireStart]; // Start
-                            if (self.joinTimePeriodicTimeObserver == nil) {
-                                [self setupJoinCheck];
+                            if([self.getPlayhead intValue] != [self.getDuration intValue]){
+                                [self fireStart]; // Start
+                                if (self.joinTimePeriodicTimeObserver == nil) {
+                                    [self setupJoinCheck];
+                                }
                             }
                         }
                     }
