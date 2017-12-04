@@ -216,8 +216,7 @@ bool firstSeek;
                     if ([newRate isEqualToNumber:@0]) {
                         if([self.getPlayhead intValue] == [self.getDuration intValue]){
                             [YBLog notice:@"paused at the video end, sending stop"];
-                            //[self fireStop];
-                            [self fireEnd];
+                            [self fireStop];
                             [self resetValues];
                         }
                         [self firePause];
@@ -339,8 +338,7 @@ bool firstSeek;
     @try {
         if (notification.object == self.player.currentItem) {
             [YBLog notice:@"itemDidFinishPlaying, stopping"];
-            [self fireEnd];
-            //[self fireStop];
+            [self fireStop];
             [self resetValues];
         }
     } @catch (NSException *exception) {
