@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOUBORAADAPTER_VERSION=' + s.version.to_s }
 
   # Dependency
-  s.dependency "YouboraLib", "~> 6.0.2"
+  s.dependency "YouboraLib", "~> 6.0.5"
 
 end

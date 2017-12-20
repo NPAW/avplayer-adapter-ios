@@ -34,11 +34,9 @@
 - (void) fireStop{
     if(self.plugin != nil){
         if(self.plugin.adapter != nil){
-            if(!self.plugin.adapter.flags.stopped){
-                [self initAdapterIfNecessary];
-                [self.plugin.adapter fireStop];
-                [self.plugin removeAdapter];
-            }
+            [self initAdapterIfNecessary];
+            [self.plugin.adapter fireStop];
+            [self.plugin removeAdapter];
         }
     }
     
