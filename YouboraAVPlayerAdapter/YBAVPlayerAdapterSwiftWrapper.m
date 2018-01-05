@@ -23,6 +23,7 @@
         self.player = player;
         self.plugin = plugin;
     }
+    [self initAdapterIfNecessary];
     return self;
 }
 

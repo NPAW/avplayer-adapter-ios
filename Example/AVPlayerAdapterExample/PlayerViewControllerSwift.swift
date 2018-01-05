@@ -15,9 +15,9 @@ class PlayerViewControllerSwift: UIViewController {
     
     var resourceUrl = String()
 
-    var playerViewController = AVPlayerViewController()
+    var playerViewController:AVPlayerViewController? = nil;
     //var adapter = YBAVPlayerAdapter()
-    var wrapper = YBAVPlayerAdapterSwiftWrapper()
+    var wrapper:YBAVPlayerAdapterSwiftWrapper? = nil;
     var youboraPlugin:YBPlugin? = nil
     
     override func viewDidLoad() {
@@ -42,20 +42,20 @@ class PlayerViewControllerSwift: UIViewController {
         self.playerViewController = AVPlayerViewController()
         
         // Add view to the current screen
-        self.addChildViewController(self.playerViewController)
-        self.view.addSubview(self.playerViewController.view)
+        self.addChildViewController(playerViewController!)
+        self.view.addSubview((self.playerViewController?.view)!)
         
         // We use the playerView view as a guide for the video
-        self.playerViewController.view.frame = self.view.frame
+        self.playerViewController?.view.frame = self.view.frame
         
         // Create AVPlayer
-        self.playerViewController.player = AVPlayer(url: NSURL.init(string: self.resourceUrl)! as URL)
+        self.playerViewController?.player = AVPlayer(url: NSURL.init(string: self.resourceUrl)! as URL)
         
         // As soon as we have the player instance, create an Adapter to listen for the player events
         startYoubora()
         
         // Start playback
-        playerViewController.player?.play()
+        playerViewController?.player?.play()
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,8 +64,7 @@ class PlayerViewControllerSwift: UIViewController {
     }
     
     func startYoubora(){
-        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController.player, andPlugin: self.youboraPlugin!)
-        self.wrapper.fireStart()
+        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController?.player, andPlugin: self.youboraPlugin!)
     }
     
     @objc func appWillResignActive(notification: NSNotification){
@@ -73,7 +72,7 @@ class PlayerViewControllerSwift: UIViewController {
     }
     
     @objc func appDidBecomeActive(notification: NSNotification){
-        self.youboraPlugin?.removeAdapter()
+        self.wrapper?.removeAdapter()
     }
     
     
