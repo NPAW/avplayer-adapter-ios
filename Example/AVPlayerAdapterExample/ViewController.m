@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <YouboraConfigUtils/YouboraConfigUtils.h>
 #import "PlayerViewController.h"
+#import "AVPlayerAdapterExample-Swift.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textFieldResource;
@@ -35,12 +36,18 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"PlayerSegue"]) {
+    if ([segue.identifier isEqualToString:@"PlayerObjCSegue"]) {
         
         PlayerViewController * playerViewController = segue.destinationViewController;
         playerViewController.resourceUrl = self.textFieldResource.text;
         
     }
+    if ([segue.identifier isEqualToString:@"PlayerSwiftSegue"]) {
+        
+        PlayerViewControllerSwift * playerViewController = segue.destinationViewController;
+        playerViewController.resourceUrl = self.textFieldResource.text;
+    }
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
