@@ -1,0 +1,90 @@
+//
+//  PlayerViewController-Swift.swift
+//  AVPlayerAdapterExample
+//
+//  Created by Enrique Alfonso Burillo on 05/01/2018.
+//  Copyright © 2018 NPAW. All rights reserved.
+//
+
+import UIKit
+import YouboraAVPlayerAdapter
+import YouboraConfigUtils
+import AVKit
+
+class PlayerViewControllerSwift: UIViewController {
+    
+    var resourceUrl = String()
+
+    var playerViewController = AVPlayerViewController()
+    //var adapter = YBAVPlayerAdapter()
+    var wrapper = YBAVPlayerAdapterSwiftWrapper()
+    var youboraPlugin:YBPlugin? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appWillResignActive), name: .UIApplicationWillResignActive, object:nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: .UIApplicationDidBecomeActive, object:nil)
+        
+        // Set Youbora log level
+        YBLog.setDebugLevel(YBLogLevel.verbose)
+        
+        self.navigationController?.hidesBarsOnTap = true
+        
+        // Create Youbora plugin
+        let options = YouboraConfigManager.getOptions()
+        youboraPlugin = YBPlugin.init(options: options)
+        
+        // Send init - this creates a new view in Youbora
+        self.youboraPlugin?.fireInit()
+        
+        // Video player controller
+        self.playerViewController = AVPlayerViewController()
+        
+        // Add view to the current screen
+        self.addChildViewController(self.playerViewController)
+        self.view.addSubview(self.playerViewController.view)
+        
+        // We use the playerView view as a guide for the video
+        self.playerViewController.view.frame = self.view.frame
+        
+        // Create AVPlayer
+        self.playerViewController.player = AVPlayer(url: NSURL.init(string: self.resourceUrl)! as URL)
+        
+        // As soon as we have the player instance, create an Adapter to listen for the player events
+        startYoubora()
+        
+        // Start playback
+        playerViewController.player?.play()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func startYoubora(){
+        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController.player, andPlugin: self.youboraPlugin!)
+        self.wrapper.fireStart()
+    }
+    
+    @objc func appWillResignActive(notification: NSNotification){
+        self.startYoubora()
+    }
+    
+    @objc func appDidBecomeActive(notification: NSNotification){
+        self.youboraPlugin?.removeAdapter()
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
