@@ -65,7 +65,7 @@
 - (void) startYoubora {
     YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
     //Uncomment this if you don't want to create a new view every time playerItem is changed
-    adapter.supportPlaylists = NO;
+    //adapter.supportPlaylists = NO;
     [self.youboraPlugin setAdapter:adapter];
 }
 
