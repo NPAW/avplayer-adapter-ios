@@ -245,8 +245,11 @@ bool firstSeek;
                     // Remove its observers
                     [self removeObserversForAVPlayerItem:oldItem];
                     // Close that view
-                    [self fireStop];
-                    [self resetValues];
+                    if(self.supportPlaylists == YES){
+                        // Close that view
+                        [self fireStop];
+                        [self resetValues];
+                    }
                 }
                 if (newItem != nil && newItem != [NSNull null]) {
                     // New item
@@ -368,6 +371,7 @@ bool firstSeek;
     self.lastPlayhead = 0;
     self.bitrate = -1;
     self.throughput = -1;
+    self.supportPlaylists = YES;
     self.rendition = [super getRendition];
 }
 

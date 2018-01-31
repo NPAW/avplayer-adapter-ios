@@ -15,4 +15,7 @@
 
 + (YBAVPlayerAdapter*) instantiateWithPlayer:(AVPlayer*) player;
 
+/// If changing current item creates new view, by default it's YES
+@property (nonatomic, assign) BOOL supportPlaylists;
+
 @end
