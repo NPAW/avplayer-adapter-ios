@@ -25,6 +25,7 @@
 		4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerAdapter.m; path = adapter/YBAVPlayerAdapter.m; sourceTree = "<group>"; };
 		CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdapterSwiftWrapper.h; sourceTree = "<group>"; };
 		CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdapterSwiftWrapper.m; sourceTree = "<group>"; };
+		CD91947E203208D1002A8507 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		CDBA56141FB0771900A9A35C /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBA56161FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouboraAVPlayerAdapter tvOS.h"; sourceTree = "<group>"; };
 		CDBA56171FB0771900A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		4E4956561E9F6CAA00FF6280 = {
 			isa = PBXGroup;
 			children = (
+				CD91947E203208D1002A8507 /* CHANGELOG.md */,
 				4E4956621E9F6CAA00FF6280 /* YouboraAVPlayerAdapter */,
 				CDBA56151FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */,
 				4E4956611E9F6CAA00FF6280 /* Products */,
