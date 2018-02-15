@@ -225,7 +225,8 @@ bool firstSeek;
                         if (self.flags.started) {
                             [self fireResume]; // Resume
                         } else {
-                            if([self.getPlayhead intValue] != [self.getDuration intValue]){
+                            if([[self getPlayhead] intValue] != [[self getDuration] intValue] ||
+                                    (self.plugin != nil && self.plugin.options != nil && [self.plugin.options.contentIsLive isEqual:@YES])){
                                 [self fireStart]; // Start
                                 if (self.joinTimePeriodicTimeObserver == nil) {
                                     [self setupJoinCheck];
