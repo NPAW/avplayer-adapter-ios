@@ -41,7 +41,6 @@
     
     // Send init - this creates a new view in Youbora
     [self.youboraPlugin fireInit];
-    
     // Video player controller
     self.playerViewController = [[AVPlayerViewController alloc] init];
     
