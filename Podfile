@@ -10,7 +10,7 @@ target 'YouboraAVPlayerAdapter' do
 
   # Pods for YouboraAVPlayerAdapter
   #pod 'YouboraLib',:path => '../lib-plugin-ios'
-  pod 'YouboraLib', '~> 6.0.7'
+  pod 'YouboraLib', '~> 6.1.1'
 end
 
 target 'AVPlayerAdapterExample' do

@@ -65,7 +65,7 @@ bool firstSeek;
 - (void)registerListeners {
     [super registerListeners];
     
-    self.fatalErrors = @[@-1100 , @-11853, @-1005, @-11819];
+    self.fatalErrors = @[@-1100 , @-11853, @-1005, @-11819, @-11800, @-1008];
     
     @try {
         [self resetValues];
@@ -298,6 +298,10 @@ bool firstSeek;
                     
                     if([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]){
                         [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
+                        //TODO Add this to adapter
+                        if(self.plugin != nil && !self.flags.started){
+                            [self.plugin fireStop];
+                        }
                     }else{
                         [self sendError:error];
                     }
