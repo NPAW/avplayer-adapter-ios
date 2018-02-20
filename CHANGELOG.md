@@ -1,7 +1,7 @@
 ## [6.0.9] - 2018-02-20
 ### Added
 - New error codes
-- YouboraLib updated to 6.1.1
+- YouboraLib 6.1.3
 
 ## [6.0.8] - 2018-02-15
 ### Fixed
