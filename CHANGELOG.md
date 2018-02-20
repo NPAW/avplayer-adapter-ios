@@ -1,3 +1,12 @@
+## [6.0.9] - 2018-02-20
+### Added
+- New error codes
+- YouboraLib updated to 6.1.1
+
+## [6.0.8] - 2018-02-15
+### Fixed
+- Start event for live now send properly with live content
+
 ## [6.0.7] - 2018-01-31
 ### Added
 - Now is possible to disable paylist support (no stop when playeritem changes, be careful)
