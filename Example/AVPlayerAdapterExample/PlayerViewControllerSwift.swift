@@ -33,6 +33,7 @@ class PlayerViewControllerSwift: UIViewController {
         
         // Create Youbora plugin
         let options = YouboraConfigManager.getOptions()
+        options?.offline = false
         youboraPlugin = YBPlugin.init(options: options)
         
         // Send init - this creates a new view in Youbora
@@ -68,22 +69,16 @@ class PlayerViewControllerSwift: UIViewController {
     }
     
     @objc func appWillResignActive(notification: NSNotification){
-        self.startYoubora()
-    }
-    
-    @objc func appDidBecomeActive(notification: NSNotification){
         self.wrapper?.removeAdapter()
     }
     
+    @objc func appDidBecomeActive(notification: NSNotification){
+        self.startYoubora()
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func viewWillDisappear(_ animated: Bool) {
+        self.wrapper?.removeAdapter()
+        super.viewWillDisappear(animated)
+    }
     
 }

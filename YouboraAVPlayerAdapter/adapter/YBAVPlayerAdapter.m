@@ -485,7 +485,6 @@ bool firstSeek;
     return PLUGIN_VERSION;
 }
 
-
 //Static method as a workaround for swift
 + (YBAVPlayerAdapter*) instantiateWithPlayer:(AVPlayer*) player{
     return [[YBAVPlayerAdapter alloc] initWithPlayer:player];
