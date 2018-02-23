@@ -9,8 +9,8 @@ target 'YouboraAVPlayerAdapter' do
   use_frameworks!
 
   # Pods for YouboraAVPlayerAdapter
-  pod 'YouboraLib',:path => '../lib-plugin-ios'
-  #pod 'YouboraLib', '~> 6.1.3'
+  #pod 'YouboraLib',:path => '../lib-plugin-ios'
+  pod 'YouboraLib', '~> 6.1.3'
 end
 
 target 'AVPlayerAdapterExample' do
