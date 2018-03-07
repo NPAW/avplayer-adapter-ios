@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YouboraAVPlayerAdapter"
-  s.version      = "6.0.9"
+  s.version      = "6.0.10"
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOUBORAADAPTER_VERSION=' + s.version.to_s }
 
   # Dependency
-  s.dependency "YouboraLib", "~> 6.1.3"
+  s.dependency "YouboraLib", "~> 6.1.4"
 
 end
