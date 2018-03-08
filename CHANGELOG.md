@@ -1,3 +1,11 @@
+## [6.0.11] - 2018-03-08
+### Added
+- YouboraLib 6.1.5
+
+## [6.0.10] - 2018-03-07
+### Added
+- YouboraLib 6.1.4
+
 ## [6.0.9] - 2018-02-20
 ### Added
 - New error codes
