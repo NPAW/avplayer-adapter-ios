@@ -17,6 +17,7 @@
 		4E4956841E9F6E3600FF6280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956831E9F6E3600FF6280 /* Assets.xcassets */; };
 		4E4956871E9F6E3600FF6280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956851E9F6E3600FF6280 /* LaunchScreen.storyboard */; };
 		6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */; };
+		CD81CD80205FB59C0032FAF1 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */; };
 		CDCCF6B61FFF7D2700147EA9 /* PlayerViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */; };
 		CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; };
 		CDF8C5491F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD81CD80205FB59C0032FAF1 /* YouboraConfigUtils.framework in Frameworks */,
 				4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */,
 				4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */,
 				CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */,
@@ -294,6 +296,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/YouboraConfigUtils.framework",
 			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/YouboraConfigUtils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
