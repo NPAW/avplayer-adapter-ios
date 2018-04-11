@@ -366,7 +366,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
-					"$(PROJECT_DIR)/Example/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouboraAVPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -393,7 +392,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
-					"$(PROJECT_DIR)/Example/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouboraAVPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

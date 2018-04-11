@@ -1,3 +1,7 @@
+## [6.0.12] - 
+### Fixed
+- Fix for Carthage build
+
 ## [6.0.11] - 2018-03-08
 ### Added
 - YouboraLib 6.1.5
