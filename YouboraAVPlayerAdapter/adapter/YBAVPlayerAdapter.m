@@ -415,9 +415,9 @@ bool firstSeek;
         double br;
         
         if (logEvent.segmentsDownloadedDuration > 0) {
-            br = (logEvent.numberOfBytesTransferred * 8) / logEvent.segmentsDownloadedDuration;
-        } else {
             br = logEvent.indicatedBitrate;
+        } else {
+            br = (logEvent.numberOfBytesTransferred * 8) / logEvent.segmentsDownloadedDuration;
         }
         
         return @(round(br));
