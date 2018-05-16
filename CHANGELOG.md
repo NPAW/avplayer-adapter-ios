@@ -1,4 +1,4 @@
-## [6.0.12] - 
+## [6.0.12] - 2018-05-16
 ### Fixed
 - Fix for Carthage build
 - Bitrate now comes from the manifest if possible
