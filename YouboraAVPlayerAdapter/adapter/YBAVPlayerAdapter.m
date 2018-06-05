@@ -53,6 +53,8 @@
 /// Error codes for known fatal errors
 @property (nonatomic, strong) NSArray * fatalErrors;
 
+@property (nonatomic, assign) double lastRenditionBitrate;
+
 @end
 
 @implementation YBAVPlayerAdapter
@@ -378,6 +380,7 @@ bool firstSeek;
     self.throughput = -1;
     self.supportPlaylists = YES;
     self.rendition = [super getRendition];
+    self.lastRenditionBitrate = -1;
 }
 
 #pragma mark - Overridden get methods
@@ -449,7 +452,8 @@ bool firstSeek;
     if (logEvent) {
         NSNumber * bitrate = [self getBitrate];
         if (logEvent.indicatedBitrate > 0 && bitrate != [super getBitrate]) {
-            if (bitrate.doubleValue != logEvent.indicatedBitrate) {
+            if (self.lastRenditionBitrate != logEvent.indicatedBitrate) {
+                self.lastRenditionBitrate = logEvent.indicatedBitrate;
                 rendition = [YBYouboraUtils buildRenditionStringWithWidth:0 height:0 andBitrate:logEvent.indicatedBitrate];
             }
         }
