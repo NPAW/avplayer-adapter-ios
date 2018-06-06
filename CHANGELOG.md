@@ -1,5 +1,6 @@
 ## [6.0.13] -
 ### Fixed
+- Carthage tvOS now compiles
 - Rendition not changing
 
 ## [6.0.12] - 2018-05-16
