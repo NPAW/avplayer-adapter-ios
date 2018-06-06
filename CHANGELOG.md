@@ -1,3 +1,7 @@
+## [6.0.13] -
+### Fixed
+- Carthage tvOS now compiles
+
 ## [6.0.12] - 2018-05-16
 ### Fixed
 - Fix for Carthage build
