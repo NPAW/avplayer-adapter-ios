@@ -12,7 +12,6 @@
 
 @property(nonatomic,strong) NSObject* player;
 @property(nonatomic,strong) YBPlugin* plugin;
-@property(nonatomic,strong) YBAVPlayerAdapter* adapter;
 
 @end
 
@@ -56,7 +55,7 @@
 }
 
 - (YBAVPlayerAdapter *) getAdapter{
-    return self.adapter;
+    return self.plugin.adapter;
 }
 
 - (YBPlugin *) getPlugin{
