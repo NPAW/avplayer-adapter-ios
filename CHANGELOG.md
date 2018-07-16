@@ -1,7 +1,8 @@
-## [6.0.13] -
+## [6.0.13] - 2018-07-16
 ### Fixed
 - Carthage tvOS now compiles
 - Rendition not changing
+- Adapter retuning nil if called from wrapper
 
 ## [6.0.12] - 2018-05-16
 ### Fixed

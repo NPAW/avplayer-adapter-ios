@@ -55,7 +55,7 @@
 }
 
 - (YBAVPlayerAdapter *) getAdapter{
-    return self.plugin.adapter;
+    return (YBAVPlayerAdapter *)self.plugin.adapter;
 }
 
 - (YBPlugin *) getPlugin{
