@@ -26,8 +26,7 @@
                        @"Live HLS Planes":@"http://cdn3.viblast.com/streams/hls/airshow/playlist.m3u8",
                        @"VoD mp4 Nice (Fastly)":@"http://fastly.nicepeopleatwork.com.global.prod.fastly.net/video/sintel-1024-surround.mp4",
                        @"VoD HLS Apple (ABR)":@"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8",
-                       @"Malformed url (error)":@"http://false.url.com/1234.mp4",
-                       @"FoxSports" : @"https://matchesliveottfs-i.akamaihd.net/hls/live/597624/1_6598/master.m3u8?hdnea=st=1529390043~exp=1529390331~acl=/hls/live/597624/1_6598/*~hmac=c4291f5654c613f56076e642e36713b118d4b89ffb821f2a8095a16cf64b8a25"
+                       @"Malformed url (error)":@"http://false.url.com/1234.mp4"
                        };
 }
 
