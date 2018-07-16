@@ -26,7 +26,8 @@
                        @"Live HLS Planes":@"http://cdn3.viblast.com/streams/hls/airshow/playlist.m3u8",
                        @"VoD mp4 Nice (Fastly)":@"http://fastly.nicepeopleatwork.com.global.prod.fastly.net/video/sintel-1024-surround.mp4",
                        @"VoD HLS Apple (ABR)":@"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8",
-                       @"Malformed url (error)":@"http://false.url.com/1234.mp4"};
+                       @"Malformed url (error)":@"http://false.url.com/1234.mp4"
+                       };
 }
 
 
