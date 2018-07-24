@@ -402,7 +402,9 @@ bool firstSeek;
     if (item != nil) {
         AVURLAsset * asset = (AVURLAsset *) item.asset;
         if (asset != nil) {
-            duration = @(CMTimeGetSeconds(asset.duration));
+            if ([asset statusOfValueForKey:@"duration" error:nil] == AVKeyValueStatusLoaded) {
+                duration = @(CMTimeGetSeconds(asset.duration));
+            }
         }
     }
     
