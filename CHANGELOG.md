@@ -1,3 +1,7 @@
+## [6.0.14] - 2018-07-25
+### Fixed
+- Freeze when trying to get the duration and it was not loaded
+
 ## [6.0.13] - 2018-07-16
 ### Fixed
 - Carthage tvOS now compiles
