@@ -1,3 +1,7 @@
+## [6.0.15] - 2018-07-30
+### Updated
+- Updated dependency to YouboraLib 6.1.8
+
 ## [6.0.14] - 2018-07-25
 ### Fixed
 - Freeze when trying to get the duration and it was not loaded
