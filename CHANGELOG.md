@@ -1,6 +1,8 @@
 ## [6.2.0] - 2018-08-22
 ### Updated
 - Updated dependency to YouboraLib 6.2.0
+### Fixed
+- tvOS Deployment target downgraded to iOS 9.0
 ### Removed
 - RemoveAdapter is not called anymore when wrapper fireStop is called
 
