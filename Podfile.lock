@@ -1,0 +1,12 @@
+PODS:
+  - YouboraLib (6.1.8)
+
+DEPENDENCIES:
+  - YouboraLib (~> 6.1.5)
+
+SPEC CHECKSUMS:
+  YouboraLib: 299922be92a65a3a86ff964970c635add818f34a
+
+PODFILE CHECKSUM: baae8642eb09c5cecd45efabec324c54c3b9aac3
+
+COCOAPODS: 1.4.0

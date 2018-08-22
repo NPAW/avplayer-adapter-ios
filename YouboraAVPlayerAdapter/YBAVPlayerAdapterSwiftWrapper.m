@@ -36,7 +36,7 @@
         if(self.plugin.adapter != nil){
             [self initAdapterIfNecessary];
             [self.plugin.adapter fireStop];
-            [self.plugin removeAdapter];
+            //[self.plugin removeAdapter];
         }
     }
     
