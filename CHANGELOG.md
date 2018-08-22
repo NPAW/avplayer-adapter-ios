@@ -1,3 +1,9 @@
+## [6.2.0] - 2018-08-22
+### Updated
+- Updated dependency to YouboraLib 6.2.0
+### Removed
+- RemoveAdapter is not called anymore when wrapper fireStop is called
+
 ## [6.0.15] - 2018-07-30
 ### Updated
 - Updated dependency to YouboraLib 6.1.8
