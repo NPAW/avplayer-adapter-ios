@@ -48,7 +48,6 @@
         PlayerViewControllerSwift * playerViewController = segue.destinationViewController;
         playerViewController.resourceUrl = self.textFieldResource.text;
     }
-
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
