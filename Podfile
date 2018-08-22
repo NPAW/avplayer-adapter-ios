@@ -38,3 +38,13 @@ target 'AVPlayerAdapterExample' do
   #pod 'YouboraLib',:path => '../lib-plugin-ios'
 end
 
+target 'AVPlayerAdaptertvOSExample' do
+    project 'AVPlayerAdaptertvOSExample/AVPlayerAdaptertvOSExample.xcodeproj'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+    
+    platform :tvos, '9.0' 
+    
+    # Pods for AVPlayerAdapterExample
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+end

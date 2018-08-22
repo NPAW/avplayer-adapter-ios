@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68EBEED977CA092A2443FE0D /* Pods_AVPlayerAdaptertvOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975091E9B28C9AF2F03EAB17 /* Pods_AVPlayerAdaptertvOSExample.framework */; };
+		CD171257212C809800E92A3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD171256212C809800E92A3C /* AppDelegate.m */; };
+		CD17125A212C809800E92A3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD171259212C809800E92A3C /* ViewController.m */; };
+		CD17125D212C809800E92A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD17125B212C809800E92A3C /* Main.storyboard */; };
+		CD17125F212C809A00E92A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD17125E212C809A00E92A3C /* Assets.xcassets */; };
+		CD171262212C809A00E92A3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD171261212C809A00E92A3C /* main.m */; };
+		CD17126B212C914900E92A3C /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD17126A212C914900E92A3C /* PlayerViewController.m */; };
+		CDA16AA3212DB2C8004B6299 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA16AA2212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */; };
+		CDA16AA4212DB2C8004B6299 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDA16AA2212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDA16AA8212DB314004B6299 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA16AA7212DB314004B6299 /* AVKit.framework */; };
+		CDA16AAA212DB31B004B6299 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA16AA9212DB31B004B6299 /* AVFoundation.framework */; };
+		CDA16AAF212DC9D9004B6299 /* PlayerViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA16AAE212DC9D9004B6299 /* PlayerViewControllerSwift.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDA16A9F212DB2AB004B6299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4E4956601E9F6CAA00FF6280;
+			remoteInfo = YouboraAVPlayerAdapter;
+		};
+		CDA16AA1212DB2AB004B6299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CDBA56141FB0771900A9A35C;
+			remoteInfo = "YouboraAVPlayerAdapter tvOS";
+		};
+		CDA16AA5212DB2C8004B6299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CDBA56131FB0771900A9A35C;
+			remoteInfo = "YouboraAVPlayerAdapter tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDA16A98212CD07F004B6299 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CDA16AA4212DB2C8004B6299 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C8422AF4648C3F59413B56D /* Pods-AVPlayerAdaptertvOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdaptertvOSExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdaptertvOSExample/Pods-AVPlayerAdaptertvOSExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7424DAF97DC73F6913295210 /* Pods-AVPlayerAdaptertvOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdaptertvOSExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdaptertvOSExample/Pods-AVPlayerAdaptertvOSExample.release.xcconfig"; sourceTree = "<group>"; };
+		975091E9B28C9AF2F03EAB17 /* Pods_AVPlayerAdaptertvOSExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerAdaptertvOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD171252212C809800E92A3C /* AVPlayerAdaptertvOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerAdaptertvOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD171255212C809800E92A3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD171256212C809800E92A3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD171258212C809800E92A3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CD171259212C809800E92A3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CD17125C212C809800E92A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD17125E212C809A00E92A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD171260212C809A00E92A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD171261212C809A00E92A3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD171269212C914900E92A3C /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		CD17126A212C914900E92A3C /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouboraAVPlayerAdapter.xcodeproj; path = ../YouboraAVPlayerAdapter.xcodeproj; sourceTree = "<group>"; };
+		CDA16AA7212DB314004B6299 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CDA16AA9212DB31B004B6299 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CDA16AAD212DC9D9004B6299 /* AVPlayerAdaptertvOSExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVPlayerAdaptertvOSExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDA16AAE212DC9D9004B6299 /* PlayerViewControllerSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewControllerSwift.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD17124F212C809800E92A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA16AAA212DB31B004B6299 /* AVFoundation.framework in Frameworks */,
+				CDA16AA8212DB314004B6299 /* AVKit.framework in Frameworks */,
+				CDA16AA3212DB2C8004B6299 /* YouboraAVPlayerAdapter.framework in Frameworks */,
+				68EBEED977CA092A2443FE0D /* Pods_AVPlayerAdaptertvOSExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65B404C0350CC4C0FA7B6B33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C8422AF4648C3F59413B56D /* Pods-AVPlayerAdaptertvOSExample.debug.xcconfig */,
+				7424DAF97DC73F6913295210 /* Pods-AVPlayerAdaptertvOSExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9368233A74F2802ACBBAF5E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDA16AA9212DB31B004B6299 /* AVFoundation.framework */,
+				CDA16AA7212DB314004B6299 /* AVKit.framework */,
+				975091E9B28C9AF2F03EAB17 /* Pods_AVPlayerAdaptertvOSExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD171249212C809800E92A3C = {
+			isa = PBXGroup;
+			children = (
+				CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */,
+				CD171254212C809800E92A3C /* AVPlayerAdaptertvOSExample */,
+				CD171253212C809800E92A3C /* Products */,
+				65B404C0350CC4C0FA7B6B33 /* Pods */,
+				9368233A74F2802ACBBAF5E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD171253212C809800E92A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD171252212C809800E92A3C /* AVPlayerAdaptertvOSExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD171254212C809800E92A3C /* AVPlayerAdaptertvOSExample */ = {
+			isa = PBXGroup;
+			children = (
+				CDA16AB2212DCB22004B6299 /* Supporting Files */,
+				CD171255212C809800E92A3C /* AppDelegate.h */,
+				CD171256212C809800E92A3C /* AppDelegate.m */,
+				CD171258212C809800E92A3C /* ViewController.h */,
+				CD171259212C809800E92A3C /* ViewController.m */,
+				CD171269212C914900E92A3C /* PlayerViewController.h */,
+				CD17126A212C914900E92A3C /* PlayerViewController.m */,
+				CDA16AAE212DC9D9004B6299 /* PlayerViewControllerSwift.swift */,
+				CD17125B212C809800E92A3C /* Main.storyboard */,
+				CD17125E212C809A00E92A3C /* Assets.xcassets */,
+				CD171260212C809A00E92A3C /* Info.plist */,
+			);
+			path = AVPlayerAdaptertvOSExample;
+			sourceTree = "<group>";
+		};
+		CDA16A9B212DB2AB004B6299 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA16AA0212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */,
+				CDA16AA2212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA16AB2212DCB22004B6299 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDA16AAD212DC9D9004B6299 /* AVPlayerAdaptertvOSExample-Bridging-Header.h */,
+				CD171261212C809A00E92A3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD171251212C809800E92A3C /* AVPlayerAdaptertvOSExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD171265212C809A00E92A3C /* Build configuration list for PBXNativeTarget "AVPlayerAdaptertvOSExample" */;
+			buildPhases = (
+				092FBA6A6E028C9EA2E8755D /* [CP] Check Pods Manifest.lock */,
+				CD17124E212C809800E92A3C /* Sources */,
+				CD17124F212C809800E92A3C /* Frameworks */,
+				CD171250212C809800E92A3C /* Resources */,
+				A9EC652843A434B7F1BFB00B /* [CP] Embed Pods Frameworks */,
+				A4221F934FCDB9B2CC69229A /* [CP] Copy Pods Resources */,
+				CDA16A98212CD07F004B6299 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA16AA6212DB2C8004B6299 /* PBXTargetDependency */,
+			);
+			name = AVPlayerAdaptertvOSExample;
+			productName = AVPlayerAdaptertvOSExample;
+			productReference = CD171252212C809800E92A3C /* AVPlayerAdaptertvOSExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD17124A212C809800E92A3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Enrique Alfonso Burillo";
+				TargetAttributes = {
+					CD171251212C809800E92A3C = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = CD17124D212C809800E92A3C /* Build configuration list for PBXProject "AVPlayerAdaptertvOSExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD171249212C809800E92A3C;
+			productRefGroup = CD171253212C809800E92A3C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CDA16A9B212DB2AB004B6299 /* Products */;
+					ProjectRef = CDA16A9A212DB2AB004B6299 /* YouboraAVPlayerAdapter.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CD171251212C809800E92A3C /* AVPlayerAdaptertvOSExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CDA16AA0212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraAVPlayerAdapter.framework;
+			remoteRef = CDA16A9F212DB2AB004B6299 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CDA16AA2212DB2AB004B6299 /* YouboraAVPlayerAdapter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraAVPlayerAdapter.framework;
+			remoteRef = CDA16AA1212DB2AB004B6299 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD171250212C809800E92A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD17125F212C809A00E92A3C /* Assets.xcassets in Resources */,
+				CD17125D212C809800E92A3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		092FBA6A6E028C9EA2E8755D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayerAdaptertvOSExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4221F934FCDB9B2CC69229A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdaptertvOSExample/Pods-AVPlayerAdaptertvOSExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EC652843A434B7F1BFB00B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdaptertvOSExample/Pods-AVPlayerAdaptertvOSExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-tvOS/YouboraLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdaptertvOSExample/Pods-AVPlayerAdaptertvOSExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD17124E212C809800E92A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD17125A212C809800E92A3C /* ViewController.m in Sources */,
+				CD17126B212C914900E92A3C /* PlayerViewController.m in Sources */,
+				CD171262212C809A00E92A3C /* main.m in Sources */,
+				CD171257212C809800E92A3C /* AppDelegate.m in Sources */,
+				CDA16AAF212DC9D9004B6299 /* PlayerViewControllerSwift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA16AA6212DB2C8004B6299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YouboraAVPlayerAdapter tvOS";
+			targetProxy = CDA16AA5212DB2C8004B6299 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD17125B212C809800E92A3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD17125C212C809800E92A3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD171263212C809A00E92A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		CD171264212C809A00E92A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD171266212C809A00E92A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C8422AF4648C3F59413B56D /* Pods-AVPlayerAdaptertvOSExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
+				INFOPLIST_FILE = AVPlayerAdaptertvOSExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdaptertvOSExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerAdaptertvOSExample/AVPlayerAdaptertvOSExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		CD171267212C809A00E92A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7424DAF97DC73F6913295210 /* Pods-AVPlayerAdaptertvOSExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
+				INFOPLIST_FILE = AVPlayerAdaptertvOSExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdaptertvOSExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerAdaptertvOSExample/AVPlayerAdaptertvOSExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD17124D212C809800E92A3C /* Build configuration list for PBXProject "AVPlayerAdaptertvOSExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD171263212C809A00E92A3C /* Debug */,
+				CD171264212C809A00E92A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD171265212C809A00E92A3C /* Build configuration list for PBXNativeTarget "AVPlayerAdaptertvOSExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD171266212C809A00E92A3C /* Debug */,
+				CD171267212C809A00E92A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD17124A212C809800E92A3C /* Project object */;
+}
