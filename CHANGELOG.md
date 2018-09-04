@@ -1,3 +1,9 @@
+## [6.2.3] - 2018-09-04
+### Updated
+ - YouboraLib on project updated to 6.2.X
+### Fixed
+ - It was possible to change start flags without actually sending start request
+
 ## [6.2.2] - 2018-09-03
 ### Fixed
 - Fix Cocoapods version mismatch
