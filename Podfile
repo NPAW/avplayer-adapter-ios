@@ -12,7 +12,7 @@ target 'YouboraAVPlayerAdapter' do
 
   # Pods for YouboraAVPlayerAdapter
   #pod 'YouboraLib',:path => '../lib-plugin-ios'
-  pod 'YouboraLib', '~> 6.1.5'
+  pod 'YouboraLib', '~> 6.2.0'
 end
 
 target 'YouboraAVPlayerAdapter tvOS' do
@@ -24,7 +24,7 @@ target 'YouboraAVPlayerAdapter tvOS' do
 
     # Pods for YouboraAVPlayerAdapter
     #pod 'YouboraLib',:path => '../lib-plugin-ios'
-    pod 'YouboraLib', '~> 6.1.5'
+    pod 'YouboraLib', '~> 6.2.0'
 end
 
 target 'AVPlayerAdapterExample' do
