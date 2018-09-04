@@ -84,9 +84,10 @@ bool firstSeek;
         if (avplayer.currentItem != nil) {
             
             // Check if we need to send start
-            if (avplayer.rate != 0.0) {
+            //Commented since it could be fired without having set the plugin therefore making posible to change flags without sending /start request
+            /*if (avplayer.rate != 0.0) {
                 [self fireStart];
-            }
+            }*/
             
             [self prepareForNewViewWithPlayerItem:avplayer.currentItem];
         }
