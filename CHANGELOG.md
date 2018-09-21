@@ -1,3 +1,7 @@
+## [6.2.4] - 2018-09-21
+### Improved
+ - Improved Carthage support for iOS and tvOS
+
 ## [6.2.3] - 2018-09-04
 ### Updated
  - YouboraLib on project updated to 6.2.X
