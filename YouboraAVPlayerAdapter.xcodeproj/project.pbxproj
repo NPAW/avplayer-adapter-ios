@@ -27,12 +27,12 @@
 		4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerAdapter.m; path = adapter/YBAVPlayerAdapter.m; sourceTree = "<group>"; };
 		CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdapterSwiftWrapper.h; sourceTree = "<group>"; };
 		CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdapterSwiftWrapper.m; sourceTree = "<group>"; };
+		CD8BF1162155411C00137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
+		CD8BF1192155413100137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
 		CD91947E203208D1002A8507 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		CDBA56141FB0771900A9A35C /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBA56161FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouboraAVPlayerAdapter tvOS.h"; sourceTree = "<group>"; };
 		CDBA56171FB0771900A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF8C54D1F7BE29400470644 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Example/Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
-		CDF8C54F1F7BE3FC00470644 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = "../lib-plugin-ios/Carthage/Build/iOS/YouboraLib.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		809F1C8FAC23BCA9EFCB0E1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CDF8C54D1F7BE29400470644 /* YouboraLib.framework */,
-				CDF8C54F1F7BE3FC00470644 /* YouboraLib.framework */,
+				CD8BF1192155413100137480 /* YouboraLib.framework */,
+				CD8BF1162155411C00137480 /* YouboraLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouboraAVPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -396,6 +397,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = YouboraAVPlayerAdapter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -418,6 +420,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -445,6 +452,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
