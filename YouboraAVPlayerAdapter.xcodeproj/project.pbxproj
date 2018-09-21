@@ -15,8 +15,6 @@
 		CD56F96B1FEA86D800286ACA /* YouboraAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96C1FEA8C2800286ACA /* YBAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956941E9F87F900FF6280 /* YBAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96D1FEA8C2800286ACA /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD8BF1182155411F00137480 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8BF1162155411C00137480 /* YouboraLib.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CD8BF11A2155413100137480 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8BF1192155413100137480 /* YouboraLib.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CDC81F9920FD1B4800B00781 /* YBAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */; };
 		CDC81F9A20FD1B4B00B00781 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */; };
 /* End PBXBuildFile section */
@@ -42,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8BF1182155411F00137480 /* YouboraLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8BF11A2155413100137480 /* YouboraLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
