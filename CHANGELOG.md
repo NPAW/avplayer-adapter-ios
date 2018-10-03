@@ -1,3 +1,7 @@
+## [6.2.5] - 2018-10-03
+### Updated
+- Update swift version to 4.2
+
 ## [6.2.4] - 2018-09-21
 ### Improved
  - Improved Carthage support for iOS and tvOS
