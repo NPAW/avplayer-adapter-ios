@@ -8,7 +8,7 @@ target 'YouboraAVPlayerAdapter' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
 
-  platform :ios, '8.0'
+  platform :ios, '9.0'
 
   # Pods for YouboraAVPlayerAdapter
   #pod 'YouboraLib',:path => '../lib-plugin-ios'
@@ -32,7 +32,7 @@ target 'AVPlayerAdapterExample' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
 
-  platform :ios, '8.0'
+  platform :ios, '9.0'
 
   # Pods for AVPlayerAdapterExample
   #pod 'YouboraLib',:path => '../lib-plugin-ios'

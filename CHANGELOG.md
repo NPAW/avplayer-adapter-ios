@@ -1,3 +1,7 @@
+## [6.2.6] - 2018-11-20
+### Updated
+- Now iOS adapter requires at least iOS 9.0
+
 ## [6.2.5] - 2018-10-03
 ### Updated
 - Update swift version to 4.2
