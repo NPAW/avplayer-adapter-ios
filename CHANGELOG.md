@@ -1,3 +1,7 @@
+## [6.2.8] - 2018-12-05
+### Improved
+- Check states before starting to pause or not
+
 ## [6.2.7] - 2018-12-05
 ### Improved
 - Added extra checks before firing pause
