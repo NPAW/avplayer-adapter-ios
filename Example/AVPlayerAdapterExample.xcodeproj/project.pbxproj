@@ -199,7 +199,6 @@
 				4E4956711E9F6E3600FF6280 /* Frameworks */,
 				4E4956721E9F6E3600FF6280 /* Resources */,
 				8A3649C08B08A822282A9696 /* [CP] Embed Pods Frameworks */,
-				9081B0393CFFD764ED630765 /* [CP] Copy Pods Resources */,
 				4E2DCD611EA8FAC20016D46A /* Embed Frameworks */,
 				4E6CEDB21EBC5F2B00CC6A2B /* ShellScript */,
 			);
@@ -316,21 +315,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9081B0393CFFD764ED630765 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C41008F68129E3FA47EF4840 /* [CP] Check Pods Manifest.lock */ = {
