@@ -223,7 +223,9 @@ bool firstSeek;
                             [self fireStop];
                             [self resetValues];
                         }
-                        [self firePause];
+                        if ([oldRate isEqualToNumber:@1]) {
+                            [self firePause];
+                        }
                     } else {
                         if (self.flags.started) {
                             [self fireResume]; // Resume

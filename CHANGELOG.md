@@ -1,3 +1,7 @@
+## [6.2.7] - 2018-12-05
+### Improved
+- Added extra checks before firing pause
+
 ## [6.2.6] - 2018-11-20
 ### Updated
 - Now iOS adapter requires at least iOS 9.0
