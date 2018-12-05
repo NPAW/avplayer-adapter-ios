@@ -55,6 +55,8 @@
 
 @property (nonatomic, assign) double lastRenditionBitrate;
 
+@property (nonatomic, assign) BOOL shouldPause;
+
 @end
 
 @implementation YBAVPlayerAdapter
@@ -162,10 +164,12 @@ bool firstSeek;
                     if (distance > intervalSeek * 2) {
                         // Distance is very big -> seeking
                         [YBLog debug:@"Seek with distance: %f", distance];
+                        strongSelf.shouldPause = false;
                         [strongSelf fireSeekBegin:true];
                     } else {
                         // Healthy
                         [strongSelf fireSeekEnd];
+                        strongSelf.shouldPause = true;
                         //[strongSelf fireBufferEnd];
                     }
                 }
@@ -223,7 +227,7 @@ bool firstSeek;
                             [self fireStop];
                             [self resetValues];
                         }
-                        if ([oldRate isEqualToNumber:@1]) {
+                        if ([oldRate isEqualToNumber:@1] && self.shouldPause) {
                             [self firePause];
                         }
                     } else {
@@ -270,6 +274,7 @@ bool firstSeek;
                 bool isEmpty = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
+                    self.shouldPause = false;
                     if(!self.flags.paused){
                         //[self fireBufferBegin];
                     }
@@ -278,9 +283,11 @@ bool firstSeek;
                 bool isLikely = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];
                 if (isLikely) {
                     [YBLog debug:@"AVPlayer playbackLikelyToKeepUp"];
+                    self.shouldPause = true;
                     if (self.flags.joined) {
                         if(firstSeek){
                             [self fireSeekEnd];
+                            self.shouldPause = true;
                             //[self fireBufferEnd];
                         }
                         firstSeek = true;
@@ -384,6 +391,7 @@ bool firstSeek;
     self.supportPlaylists = YES;
     self.rendition = [super getRendition];
     self.lastRenditionBitrate = -1;
+    self.shouldPause = true;
 }
 
 #pragma mark - Overridden get methods
