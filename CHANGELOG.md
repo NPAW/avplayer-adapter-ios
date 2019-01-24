@@ -1,6 +1,6 @@
-## [6.3.0] - 2019
+## [6.3.0] - 2019-01-24
 ### Improved
-- Check states before starting to pause or not
+- Update YouboraLib to 6.3.0 to support playrate
 
 ## [6.2.8] - 2018-12-05
 ### Improved
