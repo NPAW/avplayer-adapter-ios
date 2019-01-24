@@ -227,7 +227,7 @@ bool firstSeek;
                             [self fireStop];
                             [self resetValues];
                         }
-                        if ([oldRate isEqualToNumber:@1] && self.shouldPause) {
+                        if (![oldRate isEqualToNumber:@0] && self.shouldPause) {
                             [self firePause];
                         }
                     } else {

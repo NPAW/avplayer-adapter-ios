@@ -60,6 +60,9 @@
     
     // Start playback
     [self.playerViewController.player play];
+    
+    // Uncomment this to test changing the rate
+    self.playerViewController.player.rate = 1.5;
 }
 
 - (void) startYoubora {

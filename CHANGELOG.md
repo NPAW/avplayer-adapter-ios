@@ -1,3 +1,7 @@
+## [6.3.0] - 2019
+### Improved
+- Check states before starting to pause or not
+
 ## [6.2.8] - 2018-12-05
 ### Improved
 - Check states before starting to pause or not

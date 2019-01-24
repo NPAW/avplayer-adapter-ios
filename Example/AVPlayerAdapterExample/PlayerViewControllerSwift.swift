@@ -57,6 +57,9 @@ class PlayerViewControllerSwift: UIViewController {
         
         // Start playback
         playerViewController?.player?.play()
+        
+        // Uncomment this to test changing the rate
+        playerViewController?.player?.rate = 1.5;
     }
     
     override func didReceiveMemoryWarning() {
