@@ -1,4 +1,4 @@
-## [6.3.1] -
+## [6.3.2] - 2019-02-06
 ### Fixed
 - Removing observers should not cause a crash
 
