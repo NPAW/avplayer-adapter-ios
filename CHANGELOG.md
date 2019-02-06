@@ -1,3 +1,7 @@
+## [6.3.1] -
+### Fixed
+- Removing observers should not cause a crash
+
 ## [6.3.0] - 2019-01-24
 ### Improved
 - Update YouboraLib to 6.3.0 to support playrate
