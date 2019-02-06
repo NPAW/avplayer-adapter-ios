@@ -123,7 +123,8 @@ bool firstSeek;
         NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
         
         // Remove all notifications
-        [nc removeObserver:self];
+        //[nc removeObserver:self];
+        [nc removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
         
         // This will send /stop if necessary, stop timers and set the player to nil
         [super unregisterListeners];
