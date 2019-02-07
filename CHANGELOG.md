@@ -1,3 +1,7 @@
+## [6.3.3] - 2019-02-07
+### Added
+- AutoJoinTime flag 
+
 ## [6.3.2] - 2019-02-06
 ### Fixed
 - Removing observers should not cause a crash
