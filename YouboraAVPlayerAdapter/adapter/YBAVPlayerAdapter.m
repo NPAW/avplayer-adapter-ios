@@ -70,7 +70,7 @@ bool firstSeek;
     [super registerListeners];
     
     self.fatalErrors = @[@-1100 , @-11853, @-1005, @-11819, @-11800, @-1008];
-    
+    self.autoJoinTime = YES;
     @try {
         [self resetValues];
         [self monitorPlayheadWithBuffers:true seeks:false andInterval:MONITOR_INTERVAL]; // [buffer, seek, interval] in this case we monitor buffers, but not seeks every 800 milliseconds
@@ -237,7 +237,7 @@ bool firstSeek;
                         } else {
                             if([[self getPlayhead] intValue] != [[self getDuration] intValue] ||
                                     (self.plugin != nil && self.plugin.options != nil && [self.plugin.options.contentIsLive isEqual:@YES])){
-                                [self fireStart]; // Start
+                                if (self.autoJoinTime) [self fireStart]; // Start
                                 if (self.joinTimePeriodicTimeObserver == nil) {
                                     [self setupJoinCheck];
                                 }
@@ -266,7 +266,7 @@ bool firstSeek;
                     // New item
                     if (player.rate != 0) {
                         // If rate is not 0 (it's playing), send start
-                        [self fireStart];
+                        if (self.autoJoinTime) [self fireStart];
                     }
                     // Prepare for new view, this will set set handlers and listeners
                     [self prepareForNewViewWithPlayerItem:newItem];
@@ -340,7 +340,7 @@ bool firstSeek;
                     // Send start if it hasn't been sent yet
                     // this happens when the startMonitoring is called once the video already started
                     firstSeek = true;
-                    [strongSelf fireStart];
+                    if (strongSelf.autoJoinTime) [strongSelf fireStart];
                 }
                 
                 [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
