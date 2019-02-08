@@ -18,7 +18,7 @@ end
 
 puts "Deploying to " + deploy_location
 
-cmd = "scp -r deploy/" + deploy_location + "/* nicedeployer@qa-smartplugin.youbora.com:/home/nicedeployer/qa/catalog/v6/ios/"
+cmd = "scp -r deploy/" + deploy_location + "/* npawdev@qa-smartplugin.youbora.com:/home/npawdev/qa/catalog/v6/ios/"
 puts `#{cmd}`
 
 puts "Done."
