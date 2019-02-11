@@ -12,15 +12,21 @@
 
 @property(nonatomic,strong) NSObject* player;
 @property(nonatomic,strong) YBPlugin* plugin;
+@property(nonatomic, assign) BOOL autoJoinTime;
 
 @end
 
 @implementation YBAVPlayerAdapterSwiftWrapper
 
 - (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin{
+    return [self initWithPlayer:player andPlugin:plugin withAutoJoinTime:YES];
+}
+
+- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin withAutoJoinTime:(BOOL) autoJoinTime{
     if (self = [super init]) {
         self.player = player;
         self.plugin = plugin;
+        self.autoJoinTime = autoJoinTime;
     }
     [self initAdapterIfNecessary];
     return self;
@@ -66,7 +72,9 @@
     if(self.plugin.adapter == nil){
         if(self.plugin != nil){
             AVPlayer* avPlayer = (AVPlayer*) self.player;
-            [self.plugin setAdapter:[[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer]];
+            YBAVPlayerAdapter *adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];
+            adapter.autoJoinTime = self.autoJoinTime;
+            [self.plugin setAdapter:adapter];
         }
     }
 }

@@ -18,4 +18,7 @@
 /// If changing current item creates new view, by default it's YES
 @property (nonatomic, assign) BOOL supportPlaylists;
 
+/// If the content loads but the metadata have not come through, by default it's YES
+@property (nonatomic, assign) BOOL autoJoinTime;
+
 @end
