@@ -1,3 +1,7 @@
+## [6.4.0] - 2019-04-02
+### Updated
+- Bump YouboraLib dependency to 6.4
+
 ## [6.3.3] - 2019-02-13
 ### Added
 - AutoJoinTime flag 
