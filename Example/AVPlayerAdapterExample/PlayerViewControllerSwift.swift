@@ -13,7 +13,7 @@ import AVKit
 
 class PlayerViewControllerSwift: UIViewController {
     
-    var resourceUrl = String()
+    @objc var resourceUrl = String()
 
     var playerViewController:AVPlayerViewController? = nil;
     //var adapter = YBAVPlayerAdapter()
@@ -23,8 +23,8 @@ class PlayerViewControllerSwift: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self,selector: #selector(self.appWillResignActive), name: .UIApplicationWillResignActive, object:nil)
-        NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: .UIApplicationDidBecomeActive, object:nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appWillResignActive), name: UIApplication.willResignActiveNotification, object:nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object:nil)
         
         // Set Youbora log level
         YBLog.setDebugLevel(YBLogLevel.verbose)
@@ -43,7 +43,7 @@ class PlayerViewControllerSwift: UIViewController {
         self.playerViewController = AVPlayerViewController()
         
         // Add view to the current screen
-        self.addChildViewController(playerViewController!)
+        self.addChild(playerViewController!)
         self.view.addSubview((self.playerViewController?.view)!)
         
         // We use the playerView view as a guide for the video
