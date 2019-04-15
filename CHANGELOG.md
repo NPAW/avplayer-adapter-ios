@@ -1,3 +1,7 @@
+## [6.4.1] - 2019-
+### Upgraded
+- Upgrade to Swift 5
+
 ## [6.4.0] - 2019-04-02
 ### Updated
 - Bump YouboraLib dependency to 6.4
