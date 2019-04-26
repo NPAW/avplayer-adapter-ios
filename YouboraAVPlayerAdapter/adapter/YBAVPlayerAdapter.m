@@ -342,8 +342,10 @@ bool firstSeek;
                     firstSeek = true;
                     if (strongSelf.autoJoinTime) [strongSelf fireStart];
                 }
+                if (self.plugin != nil && self.plugin.isStarted && !self.flags.joined) {
+                    [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
+                }
                 
-                [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
                 [strongSelf fireJoin];
                 
                 if (self.flags.joined) {
