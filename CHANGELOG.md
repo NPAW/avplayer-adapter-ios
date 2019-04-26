@@ -1,6 +1,8 @@
 ## [6.4.1] - 2019-
 ### Upgraded
 - Upgrade to Swift 5
+### Improved
+- Removed join time log once join time has been sent
 
 ## [6.4.0] - 2019-04-02
 ### Updated
