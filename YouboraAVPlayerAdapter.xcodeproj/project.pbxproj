@@ -12,6 +12,11 @@
 		4E4956971E9F87F900FF6280 /* YBAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */; };
 		CD13D3071FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD13D3081FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */; };
+		CD523807228DCE040013BA16 /* YBAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956941E9F87F900FF6280 /* YBAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD523808228DCE040013BA16 /* YBAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */; };
+		CD523809228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD52380A228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */; };
+		CD523865228DED070013BA16 /* YouboraAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96B1FEA86D800286ACA /* YouboraAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96C1FEA8C2800286ACA /* YBAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956941E9F87F900FF6280 /* YBAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96D1FEA8C2800286ACA /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +32,9 @@
 		4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerAdapter.m; path = adapter/YBAVPlayerAdapter.m; sourceTree = "<group>"; };
 		CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdapterSwiftWrapper.h; sourceTree = "<group>"; };
 		CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdapterSwiftWrapper.m; sourceTree = "<group>"; };
+		CD5237FF228DCD880013BA16 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter_OSX.h; sourceTree = "<group>"; };
+		CD523802228DCD880013BA16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8BF1162155411C00137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
 		CD8BF1192155413100137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
 		CD91947E203208D1002A8507 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -37,6 +45,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E49565C1E9F6CAA00FF6280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5237FC228DCD880013BA16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,8 +74,10 @@
 				CD91947E203208D1002A8507 /* CHANGELOG.md */,
 				4E4956621E9F6CAA00FF6280 /* YouboraAVPlayerAdapter */,
 				CDBA56151FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */,
+				CD523800228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */,
 				4E4956611E9F6CAA00FF6280 /* Products */,
 				809F1C8FAC23BCA9EFCB0E1E /* Frameworks */,
+				4E5371AC69C8477291A40A2E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +86,7 @@
 			children = (
 				4E4956601E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.framework */,
 				CDBA56141FB0771900A9A35C /* YouboraAVPlayerAdapter.framework */,
+				CD5237FF228DCD880013BA16 /* YouboraAVPlayerAdapter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +112,13 @@
 			name = adapter;
 			sourceTree = "<group>";
 		};
+		4E5371AC69C8477291A40A2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		809F1C8FAC23BCA9EFCB0E1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +126,15 @@
 				CD8BF1162155411C00137480 /* YouboraLib.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD523800228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */ = {
+			isa = PBXGroup;
+			children = (
+				CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter_OSX.h */,
+				CD523802228DCD880013BA16 /* Info.plist */,
+			);
+			path = "YouboraAVPlayerAdapter OSX";
 			sourceTree = "<group>";
 		};
 		CDBA56151FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */ = {
@@ -122,6 +156,16 @@
 				4E4956651E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h in Headers */,
 				4E4956961E9F87F900FF6280 /* YBAVPlayerAdapter.h in Headers */,
 				CD13D3071FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5237FA228DCD880013BA16 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD523807228DCE040013BA16 /* YBAVPlayerAdapter.h in Headers */,
+				CD523865228DED070013BA16 /* YouboraAVPlayerAdapter.h in Headers */,
+				CD523809228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +198,24 @@
 			name = YouboraAVPlayerAdapter;
 			productName = YouboraAVPlayerAdapter;
 			productReference = 4E4956601E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD5237FE228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD523806228DCD880013BA16 /* Build configuration list for PBXNativeTarget "YouboraAVPlayerAdapter OSX" */;
+			buildPhases = (
+				CD5237FA228DCD880013BA16 /* Headers */,
+				CD5237FB228DCD880013BA16 /* Sources */,
+				CD5237FC228DCD880013BA16 /* Frameworks */,
+				CD5237FD228DCD880013BA16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YouboraAVPlayerAdapter OSX";
+			productName = "YouboraAVPlayerAdapter OSX";
+			productReference = CD5237FF228DCD880013BA16 /* YouboraAVPlayerAdapter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CDBA56131FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */ = {
@@ -189,6 +251,11 @@
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
+					CD5237FE228DCD880013BA16 = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = S65Y3ZP8PG;
+						ProvisioningStyle = Automatic;
+					};
 					CDBA56131FB0771900A9A35C = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = DAR8GLKRWU;
@@ -212,12 +279,20 @@
 			targets = (
 				4E49565F1E9F6CAA00FF6280 /* YouboraAVPlayerAdapter */,
 				CDBA56131FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */,
+				CD5237FE228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E49565E1E9F6CAA00FF6280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5237FD228DCD880013BA16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,6 +315,15 @@
 			files = (
 				CD13D3081FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				4E4956971E9F87F900FF6280 /* YBAVPlayerAdapter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5237FB228DCD880013BA16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD52380A228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
+				CD523808228DCE040013BA16 /* YBAVPlayerAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +498,83 @@
 			};
 			name = Release;
 		};
+		CD523804228DCD880013BA16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S65Y3ZP8PG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "YouboraAVPlayerAdapter OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
+				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CD523805228DCD880013BA16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S65Y3ZP8PG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "YouboraAVPlayerAdapter OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
+				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CDBA56191FB0771900A9A35C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +655,15 @@
 			buildConfigurations = (
 				4E4956691E9F6CAA00FF6280 /* Debug */,
 				4E49566A1E9F6CAA00FF6280 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD523806228DCD880013BA16 /* Build configuration list for PBXNativeTarget "YouboraAVPlayerAdapter OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD523804228DCD880013BA16 /* Debug */,
+				CD523805228DCD880013BA16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
