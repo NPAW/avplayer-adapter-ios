@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *resourcesTableView;
-@property (weak, nonatomic) IBOutlet UILabel *lblCurrentResource;
+@property (weak) IBOutlet AVPlayerView *playerView;
 
 
 @end
