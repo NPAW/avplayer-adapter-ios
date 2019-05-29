@@ -20,7 +20,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         YBLog.setDebugLevel(.verbose)
         let options = YBOptions()
-        options.accountCode = "powerdev"
+        options.offline = false
         self.ybPlugin = YBPlugin(options: options)
         self.ybPlugin?.fireInit()
         guard let url = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8") else {
