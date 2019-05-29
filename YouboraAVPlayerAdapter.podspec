@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YouboraAVPlayerAdapter"
-  s.version      = "6.4.0"
+  s.version      = "6.4.1"
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   # Platforms
   s.ios.deployment_target = "9.0"
   s.tvos.deployment_target = "9.0"
+  s.osx.deployment_target = "10.10"
 
   # Source Location
   s.source       = { :git => 'https://bitbucket.org/npaw/avplayer-adapter-ios.git', :tag => s.version}
