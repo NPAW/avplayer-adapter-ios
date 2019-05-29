@@ -22,6 +22,9 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.osx.deployment_target = "10.10"
 
+  # Platforms
+  s.swift_version = "5.0"
+
   # Source Location
   s.source       = { :git => 'https://bitbucket.org/npaw/avplayer-adapter-ios.git', :tag => s.version}
 
