@@ -1,4 +1,6 @@
 ## [6.4.1] - 2019-
+### Added
+- Mac OS support
 ### Upgraded
 - Upgrade to Swift 5
 ### Improved

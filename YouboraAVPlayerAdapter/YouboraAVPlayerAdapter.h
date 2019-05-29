@@ -6,7 +6,7 @@
 //  Copyright © 2017 NPAW. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for YouboraAVPlayerAdapter.
 FOUNDATION_EXPORT double YouboraAVPlayerAdapterVersionNumber;

@@ -27,7 +27,7 @@ class PlayerViewControllerSwift: UIViewController {
         NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object:nil)
         
         // Set Youbora log level
-        YBLog.setDebugLevel(YBLogLevel.verbose)
+        YBLog.setDebugLevel(.verbose)
         
         self.navigationController?.hidesBarsOnTap = true
         

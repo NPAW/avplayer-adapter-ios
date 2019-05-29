@@ -11,8 +11,8 @@ target 'YouboraAVPlayerAdapter' do
   platform :ios, '9.0'
 
   # Pods for YouboraAVPlayerAdapter
-  #pod 'YouboraLib',:path => '../lib-plugin-ios'
-  pod 'YouboraLib', '~> 6.4.0'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end 
 
 target 'YouboraAVPlayerAdapter tvOS' do
@@ -21,6 +21,18 @@ target 'YouboraAVPlayerAdapter tvOS' do
     use_frameworks!
 
     platform :tvos, '9.0' 
+
+    # Pods for YouboraAVPlayerAdapter
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
+end
+
+target 'YouboraAVPlayerAdapter OSX' do
+    project 'YouboraAVPlayerAdapter.xcodeproj'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+
+    platform :osx, '10.10' 
 
     # Pods for YouboraAVPlayerAdapter
     #pod 'YouboraLib',:path => '../lib-plugin-ios'
@@ -47,4 +59,16 @@ target 'AVPlayerAdaptertvOSExample' do
     
     # Pods for AVPlayerAdapterExample
     #pod 'YouboraLib',:path => '../lib-plugin-ios'
+end
+
+target 'AVPlayerAdapterOSXExample' do
+    project 'AVPlayerAdapterOSXExample/AVPlayerAdapterOSXExample.xcodeproj'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+    
+    platform :macos, '10.10' 
+    
+    # Pods for AVPlayerAdapterExample
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end
