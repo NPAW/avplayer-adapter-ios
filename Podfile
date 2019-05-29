@@ -11,8 +11,8 @@ target 'YouboraAVPlayerAdapter' do
   platform :ios, '9.0'
 
   # Pods for YouboraAVPlayerAdapter
-    pod 'YouboraLib',:path => '../lib-plugin-ios'
-    #pod 'YouboraLib', '~> 6.4.0'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end 
 
 target 'YouboraAVPlayerAdapter tvOS' do
@@ -23,8 +23,8 @@ target 'YouboraAVPlayerAdapter tvOS' do
     platform :tvos, '9.0' 
 
     # Pods for YouboraAVPlayerAdapter
-    pod 'YouboraLib',:path => '../lib-plugin-ios'
-    #pod 'YouboraLib', '~> 6.4.0'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end
 
 target 'YouboraAVPlayerAdapter OSX' do
@@ -35,8 +35,8 @@ target 'YouboraAVPlayerAdapter OSX' do
     platform :osx, '10.10' 
 
     # Pods for YouboraAVPlayerAdapter
-    pod 'YouboraLib',:path => '../lib-plugin-ios'
-    #pod 'YouboraLib', '~> 6.4.0'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end
 
 target 'AVPlayerAdapterExample' do
@@ -69,5 +69,6 @@ target 'AVPlayerAdapterOSXExample' do
     platform :macos, '10.10' 
     
     # Pods for AVPlayerAdapterExample
-    pod 'YouboraLib',:path => '../lib-plugin-ios'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.4.0'
 end
