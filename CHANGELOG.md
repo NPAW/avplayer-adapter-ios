@@ -1,4 +1,8 @@
-## [6.4.1] - 2019-
+## [6.4.2] - 2019-06-05
+### Added
+- Constructor to use custom adapters on the wrapper
+
+## [6.4.1] - 2019-05-29
 ### Added
 - Mac OS support
 ### Upgraded
