@@ -12,21 +12,25 @@
 
 @property(nonatomic,strong) NSObject* player;
 @property(nonatomic,strong) YBPlugin* plugin;
-@property(nonatomic, assign) BOOL autoJoinTime;
+@property(nonatomic,strong) YBAVPlayerAdapter* adapter;
 
 @end
 
 @implementation YBAVPlayerAdapterSwiftWrapper
 
 - (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin{
-    return [self initWithPlayer:player andPlugin:plugin withAutoJoinTime:YES];
-}
-
-- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin withAutoJoinTime:(BOOL) autoJoinTime{
     if (self = [super init]) {
         self.player = player;
         self.plugin = plugin;
-        self.autoJoinTime = autoJoinTime;
+    }
+    [self initAdapterIfNecessary];
+    return self;
+}
+
+- (id) initWithAdapter:(YBAVPlayerAdapter *)adapter andPlugin:(YBPlugin*)plugin{
+    if (self = [super init]) {
+        self.adapter = adapter;
+        self.plugin = plugin;
     }
     [self initAdapterIfNecessary];
     return self;
@@ -34,14 +38,14 @@
 
 - (void) fireStart{
     [self initAdapterIfNecessary];
-    [self.plugin.adapter fireStart];
+    [[self getAdapter] fireStart];
 }
 
 - (void) fireStop{
     if(self.plugin != nil){
         if(self.plugin.adapter != nil){
             [self initAdapterIfNecessary];
-            [self.plugin.adapter fireStop];
+            [[self getAdapter] fireStop];
             //[self.plugin removeAdapter];
         }
     }
@@ -49,19 +53,19 @@
 }
 - (void) firePause{
     [self initAdapterIfNecessary];
-    [self.plugin.adapter firePause];
+    [[self getAdapter] firePause];
 }
 - (void) fireResume{
     [self initAdapterIfNecessary];
-    [self.plugin.adapter fireResume];
+    [[self getAdapter] fireResume];
 }
 - (void) fireJoin{
     [self initAdapterIfNecessary];
-    [self.plugin.adapter fireJoin];
+    [[self getAdapter] fireJoin];
 }
 
 - (YBAVPlayerAdapter *) getAdapter{
-    return (YBAVPlayerAdapter *)self.plugin.adapter;
+    return (YBAVPlayerAdapter *)self.adapter;
 }
 
 - (YBPlugin *) getPlugin{
@@ -71,9 +75,14 @@
 - (void) initAdapterIfNecessary{
     if(self.plugin.adapter == nil){
         if(self.plugin != nil){
-            AVPlayer* avPlayer = (AVPlayer*) self.player;
-            YBAVPlayerAdapter *adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];
-            adapter.autoJoinTime = self.autoJoinTime;
+            YBAVPlayerAdapter *adapter = nil;
+            if ([self getAdapter] != nil) {
+                adapter = [self getAdapter];
+            }
+            if (self.player != nil) {
+                AVPlayer* avPlayer = (AVPlayer*) self.player;
+                adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:avPlayer];
+            }
             [self.plugin setAdapter:adapter];
         }
     }

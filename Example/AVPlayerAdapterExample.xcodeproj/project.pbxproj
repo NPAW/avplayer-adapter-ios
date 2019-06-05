@@ -30,6 +30,13 @@
 			remoteGlobalIDString = 4E4956601E9F6CAA00FF6280;
 			remoteInfo = YouboraAVPlayerAdapter;
 		};
+		CD1A916622A7CE82005A9927 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0F612A1ECC89910004B081 /* YouboraAVPlayerAdapter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD5237FF228DCD880013BA16;
+			remoteInfo = "YouboraAVPlayerAdapter OSX";
+		};
 		CDCCF6B81FFF7D2800147EA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E0F612A1ECC89910004B081 /* YouboraAVPlayerAdapter.xcodeproj */;
@@ -106,6 +113,7 @@
 			children = (
 				4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */,
 				CDCCF6B91FFF7D2800147EA9 /* YouboraAVPlayerAdapter.framework */,
+				CD1A916722A7CE82005A9927 /* YouboraAVPlayerAdapter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +268,13 @@
 			fileType = wrapper.framework;
 			path = YouboraAVPlayerAdapter.framework;
 			remoteRef = 4E0F612E1ECC89910004B081 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD1A916722A7CE82005A9927 /* YouboraAVPlayerAdapter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraAVPlayerAdapter.framework;
+			remoteRef = CD1A916622A7CE82005A9927 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CDCCF6B91FFF7D2800147EA9 /* YouboraAVPlayerAdapter.framework */ = {

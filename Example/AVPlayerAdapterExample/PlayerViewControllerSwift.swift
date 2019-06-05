@@ -68,7 +68,8 @@ class PlayerViewControllerSwift: UIViewController {
     }
     
     func startYoubora(){
-        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController?.player, andPlugin: self.youboraPlugin!)
+        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(adapter: adapter, andPlugin: self.youboraPlugin)
+        //self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController?.player, andPlugin: self.youboraPlugin!)
     }
     
     @objc func appWillResignActive(notification: NSNotification){

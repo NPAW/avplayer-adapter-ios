@@ -11,7 +11,7 @@
 @interface YBAVPlayerAdapterSwiftWrapper : NSObject
 
 - (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin;
-- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin withAutoJoinTime:(BOOL) autoJoinTime;
+- (id) initWithAdapter:(YBAVPlayerAdapter *)adapter andPlugin:(YBPlugin*)plugin;
 - (void) fireStart;
 - (void) fireStop;
 - (void) firePause;
