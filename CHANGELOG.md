@@ -1,3 +1,7 @@
+## [6.5.0] - 2019-06-26
+### Updated
+- Bump Youboralib to 6.5.0
+
 ## [6.4.2] - 2019-06-05
 ### Added
 - Constructor to use custom adapters on the wrapper
