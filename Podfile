@@ -5,7 +5,7 @@ workspace 'YouboraAVPlayerAdapter.xcworkspace'
 
 def common_pods
     #pod 'YouboraLib',:path => '../lib-plugin-ios'
-    pod 'YouboraLib', '~> 6.4.0'
+    pod 'YouboraLib', '~> 6.5.0'
 end
 
 target 'YouboraAVPlayerAdapter' do

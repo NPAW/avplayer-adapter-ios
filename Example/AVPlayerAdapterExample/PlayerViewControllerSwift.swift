@@ -32,8 +32,8 @@ class PlayerViewControllerSwift: UIViewController {
         self.navigationController?.hidesBarsOnTap = true
         
         // Create Youbora plugin
-        let options = YouboraConfigManager.getOptions()
-        options?.offline = false
+        let options = YBOptions()
+        options.offline = false
         youboraPlugin = YBPlugin.init(options: options)
         
         // Send init - this creates a new view in Youbora
@@ -68,8 +68,8 @@ class PlayerViewControllerSwift: UIViewController {
     }
     
     func startYoubora(){
-        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(adapter: adapter, andPlugin: self.youboraPlugin)
-        //self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController?.player, andPlugin: self.youboraPlugin!)
+        //self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(adapter: adapter, andPlugin: self.youboraPlugin)
+        self.wrapper = YBAVPlayerAdapterSwiftWrapper.init(player: self.playerViewController?.player, andPlugin: self.youboraPlugin!)
     }
     
     @objc func appWillResignActive(notification: NSNotification){
