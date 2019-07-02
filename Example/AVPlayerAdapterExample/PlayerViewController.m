@@ -10,6 +10,8 @@
 #import <YouboraConfigUtils/YouboraConfigUtils.h>
 #import <YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h>
 
+#import "CustomAVPlayerAdapter.h"
+
 @import AVFoundation;
 @import AVKit;
 
@@ -19,6 +21,8 @@
 
 @property (nonatomic, strong) YBAVPlayerAdapter * adapter;
 @property (nonatomic, strong) YBPlugin * youboraPlugin;
+
+@property (nonatomic, strong) YBTimer * adsTimer;
 
 @end
 
@@ -35,9 +39,26 @@
     
      [self.navigationController setHidesBarsOnTap:YES];
     
+    __weak typeof(self) weakSelf = self;
+    self.adsTimer = [[YBTimer alloc] initWithCallback:^(YBTimer *timer, long long diffTime) {
+        if (weakSelf.youboraPlugin.adapter == nil) {
+            weakSelf.adapter = [[CustomAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+            weakSelf.adapter.supportPlaylists = NO;
+            [weakSelf.youboraPlugin setAdapter:self.adapter];
+        }
+        if (weakSelf.youboraPlugin.adsAdapter == nil) {
+            [weakSelf.youboraPlugin setAdsAdapter:[[YBAVPlayerAdsAdapter alloc] initWithPlayer:weakSelf.playerViewController.player]];
+            [weakSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:@"https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8"]]];
+        } else {
+            [weakSelf.youboraPlugin removeAdsAdapter];
+            [weakSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:self.resourceUrl]]];
+        }
+    } andInterval:15000];
+    
     // Create Youbora plugin
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     youboraOptions.offline = NO;
+    youboraOptions.waitForMetadata = NO;
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
@@ -60,16 +81,19 @@
     
     // Start playback
     [self.playerViewController.player play];
+    [self.adsTimer start];
     
     // Uncomment this to test changing the rate
     //self.playerViewController.player.rate = 1.5;
 }
 
 - (void) startYoubora {
-    YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    //YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    YBAVPlayerAdsAdapter * adsAdapter = [[YBAVPlayerAdsAdapter alloc] initWithPlayer:self.playerViewController.player];
     //Uncomment this if you don't want to create a new view every time playerItem is changed
     //adapter.supportPlaylists = NO;
-    [self.youboraPlugin setAdapter:adapter];
+    //[self.youboraPlugin setAdapter:adapter];
+    [self.youboraPlugin setAdsAdapter:adsAdapter];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +103,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     
+    [self.youboraPlugin removeAdsAdapter];
     [self.youboraPlugin removeAdapter];
     [super viewWillDisappear:animated];
 }
@@ -89,6 +114,7 @@
 }
 
 -(void)appWillResignActive:(NSNotification*)notification {
+    [self.youboraPlugin removeAdsAdapter];
     [self.youboraPlugin removeAdapter];
 }
 

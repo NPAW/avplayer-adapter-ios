@@ -18,3 +18,5 @@ FOUNDATION_EXPORT const unsigned char YouboraAVPlayerAdapterVersionString[];
 
 #import <YouboraAVPlayerAdapter/YBAVPlayerAdapter.h>
 #import <YouboraAVPlayerAdapter/YBAVPlayerAdapterSwiftWrapper.h>
+
+#import <YouboraAVPlayerAdapter/YBAVPlayerAdsAdapter.h>
