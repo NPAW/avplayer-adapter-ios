@@ -330,7 +330,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/YouboraLib-macOS/YouboraLib.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS9.2/YouboraLib.framework",
 				"${BUILT_PRODUCTS_DIR}/AVPlayerDNAPlugin/AVPlayerDNAPlugin.framework",
 				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
