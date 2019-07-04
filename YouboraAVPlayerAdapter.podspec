@@ -39,4 +39,12 @@ Pod::Spec.new do |s|
   # Dependency
   s.dependency "YouboraLib", "~>6.5.0"
 
+  s.subspec 'Streamroot' do |streamroot|
+
+    streamroot.ios.deployment_target = '9.2'
+    streamroot.tvos.deployment_target = '10.2'
+
+    streamroot.dependency 'AVPlayerDNAPlugin', '~> 1.1.8'
+  end
+
 end
