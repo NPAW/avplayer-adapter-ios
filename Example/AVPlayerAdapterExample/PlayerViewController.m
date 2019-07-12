@@ -24,13 +24,23 @@
 
 @property (nonatomic, strong) YBTimer * adsTimer;
 
+/// Time observer for seeks
+@property (nonatomic, strong) id seekDetectionPeriodicTimeObserver;
+
+@property (nonatomic, strong) NSArray<NSNumber *> * adTimes;
+@property (nonatomic, strong) NSMutableArray<NSValue *> * adTimesPlayed;
+@property (nonatomic, assign) CMTime lastPlayhead;
+
 @end
 
 @implementation PlayerViewController
 
+static void * const observationContext = (void *) &observationContext;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.adTimes = @[@0, @10, @15];
+    self.adTimesPlayed = [[NSMutableArray alloc] initWithArray:@[@NO, @NO, @NO]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
@@ -40,25 +50,12 @@
      [self.navigationController setHidesBarsOnTap:YES];
     
     __weak typeof(self) weakSelf = self;
-    self.adsTimer = [[YBTimer alloc] initWithCallback:^(YBTimer *timer, long long diffTime) {
-        if (weakSelf.youboraPlugin.adapter == nil) {
-            weakSelf.adapter = [[CustomAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
-            weakSelf.adapter.supportPlaylists = NO;
-            [weakSelf.youboraPlugin setAdapter:self.adapter];
-        }
-        if (weakSelf.youboraPlugin.adsAdapter == nil) {
-            [weakSelf.youboraPlugin setAdsAdapter:[[YBAVPlayerAdsAdapter alloc] initWithPlayer:weakSelf.playerViewController.player]];
-            [weakSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:@"https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8"]]];
-        } else {
-            [weakSelf.youboraPlugin removeAdsAdapter];
-            [weakSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:self.resourceUrl]]];
-        }
-    } andInterval:15000];
     
     // Create Youbora plugin
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     youboraOptions.offline = NO;
     youboraOptions.waitForMetadata = NO;
+    youboraOptions.accountCode = @"powerdev";
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
@@ -78,6 +75,25 @@
     
     // As soon as we have the player instance, create an Adapter to listen for the player events
     [self startYoubora];
+    //__weak typeof(self) weakSelf = self;
+    
+    self.adsTimer = [[YBTimer alloc] initWithCallback:^(YBTimer *timer, long long difftime) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        //[YBLog debug:@"PLAYHEAD: %lf", CMTimeGetSeconds(strongSelf.playerViewController.player.currentTime)];
+        for (int k = 0; k < self.adTimes.count; k++) {
+            if ([strongSelf.adTimesPlayed[k] isEqualToValue:@NO] && round(CMTimeGetSeconds(strongSelf.playerViewController.player.currentTime)) == round([strongSelf.adTimes[k] doubleValue]) && strongSelf.youboraPlugin.adsAdapter == nil) {
+                strongSelf.adTimesPlayed[k] = @YES;
+                [strongSelf.youboraPlugin setAdsAdapter:[[YBAVPlayerAdsAdapter alloc] initWithPlayer:weakSelf.playerViewController.player]];
+                strongSelf.lastPlayhead = strongSelf.playerViewController.player.currentTime;
+                [strongSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:@"https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8"]]];
+            }
+            if (strongSelf.youboraPlugin.adsAdapter != nil && round(CMTimeGetSeconds(strongSelf.playerViewController.player.currentTime)) >= 15) {
+                [strongSelf.youboraPlugin removeAdsAdapter];
+                [strongSelf.playerViewController.player replaceCurrentItemWithPlayerItem: [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:strongSelf.resourceUrl]]];
+                [strongSelf.playerViewController.player seekToTime:strongSelf.lastPlayhead];
+            }
+        }
+    } andInterval:99];
     
     // Start playback
     [self.playerViewController.player play];
@@ -88,12 +104,13 @@
 }
 
 - (void) startYoubora {
-    //YBAVPlayerAdapter * adapter = [[YBAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
-    YBAVPlayerAdsAdapter * adsAdapter = [[YBAVPlayerAdsAdapter alloc] initWithPlayer:self.playerViewController.player];
+    YBAVPlayerAdapter * adapter = [[CustomAVPlayerAdapter alloc] initWithPlayer:self.playerViewController.player];
+    adapter.supportPlaylists = NO;
+    //YBAVPlayerAdsAdapter * adsAdapter = [[YBAVPlayerAdsAdapter alloc] initWithPlayer:self.playerViewController.player];
     //Uncomment this if you don't want to create a new view every time playerItem is changed
     //adapter.supportPlaylists = NO;
-    //[self.youboraPlugin setAdapter:adapter];
-    [self.youboraPlugin setAdsAdapter:adsAdapter];
+    [self.youboraPlugin setAdapter:adapter];
+    //[self.youboraPlugin setAdsAdapter:adsAdapter];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,17 +122,25 @@
     
     [self.youboraPlugin removeAdsAdapter];
     [self.youboraPlugin removeAdapter];
+    if (self.adsTimer != nil) {
+        [self.adsTimer stop];
+        self.adsTimer = nil;
+    }
     [super viewWillDisappear:animated];
 }
 
 -(void)appDidBecomeActive:(NSNotification*)notification {
-    [self startYoubora];
+    //[self startYoubora];
     [self.playerViewController.player play];
 }
 
 -(void)appWillResignActive:(NSNotification*)notification {
-    [self.youboraPlugin removeAdsAdapter];
+    /*[self.youboraPlugin removeAdsAdapter];
     [self.youboraPlugin removeAdapter];
+    if (self.adsTimer != nil) {
+        [self.adsTimer stop];
+        self.adsTimer = nil;
+    }*/
 }
 
 /*

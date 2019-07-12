@@ -8,8 +8,25 @@
 
 #import "YBAVPlayerAdsAdapter.h"
 
+@interface YBAVPlayerAdsAdapter()
+
+@property (nonatomic, assign) BOOL hasReallyStarted;
+
+@end
+
 @implementation YBAVPlayerAdsAdapter
 
+- (void) registerListeners {
+    self.hasReallyStarted = false;
+    [super registerListeners];
+}
+
+- (void) fireStart:(NSDictionary<NSString *,NSString *> *)params {
+    if (self.hasReallyStarted == false) {
+        self.hasReallyStarted = true;
+        [super fireStart:params];
+    }
+}
 
 -(YBAdPosition) getPosition {
     if (self.plugin != nil) {
