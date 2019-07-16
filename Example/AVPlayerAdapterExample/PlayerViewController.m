@@ -47,7 +47,7 @@ static void * const observationContext = (void *) &observationContext;
     // Set Youbora log level
     [YBLog setDebugLevel:YBLogLevelVerbose];
     
-     [self.navigationController setHidesBarsOnTap:YES];
+     //[self.navigationController setHidesBarsOnTap:YES];
     
     __weak typeof(self) weakSelf = self;
     
@@ -56,6 +56,7 @@ static void * const observationContext = (void *) &observationContext;
     youboraOptions.offline = NO;
     youboraOptions.waitForMetadata = NO;
     youboraOptions.accountCode = @"powerdev";
+    youboraOptions.contentResource = @"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8";
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
