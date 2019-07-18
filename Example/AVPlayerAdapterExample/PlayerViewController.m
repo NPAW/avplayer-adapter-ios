@@ -38,6 +38,7 @@
     // Create Youbora plugin
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     youboraOptions.offline = NO;
+    youboraOptions.waitForMetadata = false;
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
