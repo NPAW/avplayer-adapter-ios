@@ -31,7 +31,7 @@ class PlayerViewControllerSwift: UIViewController {
         // Create Youbora plugin
         let options = YBOptions()
         options.offline = false
-        options.accountCode = "nicetest" //Change this with your own account code
+        options.accountCode = "powerdev" //Change this with your own account code
         youboraPlugin = YBPlugin.init(options: options)
         
         // Send init - this creates a new view in Youbora

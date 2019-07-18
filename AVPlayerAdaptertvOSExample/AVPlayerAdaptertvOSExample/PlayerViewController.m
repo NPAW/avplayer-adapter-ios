@@ -36,7 +36,7 @@
     // Create Youbora plugin
     YBOptions * youboraOptions = [YBOptions new];
     youboraOptions.offline = NO;
-    youboraOptions.accountCode = @"nicetest"; //Change this with your own account code
+    youboraOptions.accountCode = @"powerdev"; //Change this with your own account code
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
