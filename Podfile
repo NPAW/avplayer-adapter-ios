@@ -4,8 +4,8 @@
 workspace 'YouboraAVPlayerAdapter.xcworkspace'
 
 def common_pods
-    pod 'YouboraLib',:path => '../lib-plugin-ios'
-    #pod 'YouboraLib', '~> 6.5.0'
+    #pod 'YouboraLib',:path => '../lib-plugin-ios'
+    pod 'YouboraLib', '~> 6.5.0'
 end
 
 target 'YouboraAVPlayerAdapter' do
@@ -17,7 +17,6 @@ target 'YouboraAVPlayerAdapter' do
 
   # Pods for YouboraAVPlayerAdapter
     common_pods
-    #pod 'AVPlayerDNAPlugin', '~> 1.1.8'
 end 
 
 target 'YouboraAVPlayerAdapter tvOS' do
@@ -58,11 +57,11 @@ target 'AVPlayerAdapterExampleP2P' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
   
-  platform :ios, '9.2'
+  platform :ios, '10.2'
   
   # Pods for YouboraAVPlayerAdapter
   common_pods
-  pod 'AVPlayerDNAPlugin', '~> 1.1.8'
+  pod 'AVPlayerDNAPlugin', '~> 1.1.9'
 end
 
 target 'AVPlayerAdaptertvOSExample' do
