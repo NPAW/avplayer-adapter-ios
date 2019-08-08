@@ -83,8 +83,7 @@ target 'AVPlayerAdapterOSXExample' do
     platform :macos, '10.10' 
     
     # Pods for AVPlayerAdapterExample
-    #pod 'YouboraLib',:path => '../lib-plugin-ios'
-    #pod 'YouboraLib', '~> 6.4.0'
+    common_pods
 end
 
 target 'CastVideos-objc' do
