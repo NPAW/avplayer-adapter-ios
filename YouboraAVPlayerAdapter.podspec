@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YouboraAVPlayerAdapter"
-  s.version      = "6.5.3"
+  s.version      = "6.5.4"
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"
@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://bitbucket.org/npaw/avplayer-adapter-ios.git', :tag => s.version}
 
   # Source files
-  s.source_files  = 'YouboraAVPlayerAdapter/adapter/**/*.{h,m}', 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
-  s.public_header_files = "YouboraAVPlayerAdapter/adapter/**/*.h", 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
+  s.source_files  = 'YouboraAVPlayerAdapter/adapter/**/*.{h,m}', 'YouboraAVPlayerAdapter/adsAdapter/**/*.{h,m}', 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
+  s.public_header_files = "YouboraAVPlayerAdapter/adapter/**/*.h", "YouboraAVPlayerAdapter/adsAdapter/**/*.h",'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
 
   # Project settings
   s.requires_arc = true
