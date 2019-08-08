@@ -327,7 +327,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS/YouboraLib.framework",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS9.0/YouboraLib.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

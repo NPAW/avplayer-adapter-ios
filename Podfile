@@ -52,6 +52,18 @@ target 'AVPlayerAdapterExample' do
   #pod 'YouboraLib',:path => '../lib-plugin-ios'
 end
 
+target 'AVPlayerAdapterExampleP2P' do
+  project 'ExampleP2P/AVPlayerAdapterExampleP2P.xcodeproj'
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+  
+  platform :ios, '10.2'
+  
+  # Pods for YouboraAVPlayerAdapter
+  common_pods
+  pod 'AVPlayerDNAPlugin', '~> 1.1.9'
+end
+
 target 'AVPlayerAdaptertvOSExample' do
     project 'AVPlayerAdaptertvOSExample/AVPlayerAdaptertvOSExample.xcodeproj'
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -73,4 +85,24 @@ target 'AVPlayerAdapterOSXExample' do
     # Pods for AVPlayerAdapterExample
     #pod 'YouboraLib',:path => '../lib-plugin-ios'
     #pod 'YouboraLib', '~> 6.4.0'
+end
+
+target 'CastVideos-objc' do
+    project 'ExampleChromecast/CastVideos-ios.xcodeproj'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+
+    platform :ios, '9.0'
+    pod 'google-cast-sdk', '< 5.0', '>=4.4.2'
+    common_pods
+end
+
+target 'CastVideos-swift' do
+    project 'ExampleChromecast/CastVideos-ios.xcodeproj'
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+
+    platform :ios, '9.0'
+    pod 'google-cast-sdk', '< 5.0', '>=4.4.2'
+    common_pods
 end

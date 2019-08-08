@@ -1,0 +1,6 @@
+binary "https://sdk.streamroot.io/ios/StreamrootSDK.json" "3.13"
+git "https://bitbucket.org/npaw/lib-plugin-ios.git" "6.5.2"
+github "apple/swift-protobuf" "1.5.0"
+github "daltoniam/Starscream" "3.1.0"
+github "getsentry/sentry-cocoa" "4.3.4"
+github "streamroot/avplayer-dna-plugin" "1.1.9"

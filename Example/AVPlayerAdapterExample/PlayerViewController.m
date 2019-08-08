@@ -55,12 +55,12 @@ static void * const observationContext = (void *) &observationContext;
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     youboraOptions.offline = NO;
     youboraOptions.waitForMetadata = NO;
-    youboraOptions.accountCode = @"powerdev";
+    youboraOptions.accountCode = @"nicetest";
     youboraOptions.contentResource = @"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8";
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
     // Send init - this creates a new view in Youbora
-    [self.youboraPlugin fireInit];
+    //[self.youboraPlugin fireInit];
     // Video player controller
     self.playerViewController = [[AVPlayerViewController alloc] init];
     
