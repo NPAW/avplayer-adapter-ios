@@ -1,4 +1,8 @@
-## [6.5.2] - 
+## [6.5.3] - 2019-08-08
+### Fixed
+- Optional Streamroot dependency
+
+## [6.5.2] - 2019-08-08
 ### Added
 - Support for Streamroot
 

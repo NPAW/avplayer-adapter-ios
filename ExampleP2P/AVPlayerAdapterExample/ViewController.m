@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <YouboraConfigUtils/YouboraConfigUtils.h>
 #import "PlayerViewController.h"
-#import "AVPlayerAdapterExample-Swift.h"
+#import "AVPlayerAdapterExampleP2P-Swift.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textFieldResource;

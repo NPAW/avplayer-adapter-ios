@@ -8,16 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2D3489819120A38ECE76743E /* Pods_AVPlayerAdapterOSXExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D179EBE5ABE509519F918759 /* Pods_AVPlayerAdapterOSXExample.framework */; };
+		CD7DCC0422FC629E00C64FDB /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD10BB6229545990066036B /* YouboraAVPlayerAdapter.framework */; };
+		CD7DCC0522FC629E00C64FDB /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDD10BB6229545990066036B /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDD10B96229545120066036B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD10B95229545120066036B /* AppDelegate.swift */; };
 		CDD10B98229545120066036B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD10B97229545120066036B /* ViewController.swift */; };
 		CDD10B9A229545130066036B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD10B99229545130066036B /* Assets.xcassets */; };
 		CDD10B9D229545130066036B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD10B9B229545130066036B /* Main.storyboard */; };
 		CDD10BA82295457B0066036B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD10BA72295457B0066036B /* AVFoundation.framework */; };
 		CDD10BAA2295458B0066036B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD10BA92295458B0066036B /* AVKit.framework */; };
-		CDD10BB7229545BB0066036B /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD10BB6229545990066036B /* YouboraAVPlayerAdapter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD7DCC0622FC629E00C64FDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDD10BAB229545990066036B /* YouboraAVPlayerAdapter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CD5237FE228DCD880013BA16;
+			remoteInfo = "YouboraAVPlayerAdapter OSX";
+		};
 		CDD10BB1229545990066036B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDD10BAB229545990066036B /* YouboraAVPlayerAdapter.xcodeproj */;
@@ -41,6 +49,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CD7DCC0822FC629E00C64FDB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD7DCC0522FC629E00C64FDB /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8EEF89E227BB7256A6CE9947 /* Pods-AVPlayerAdapterOSXExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterOSXExample.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerAdapterOSXExample/Pods-AVPlayerAdapterOSXExample.release.xcconfig"; sourceTree = "<group>"; };
 		CDD10B92229545120066036B /* AVPlayerAdapterOSXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerAdapterOSXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD10BB7229545BB0066036B /* YouboraAVPlayerAdapter.framework in Frameworks */,
+				CD7DCC0422FC629E00C64FDB /* YouboraAVPlayerAdapter.framework in Frameworks */,
 				CDD10BAA2295458B0066036B /* AVKit.framework in Frameworks */,
 				CDD10BA82295457B0066036B /* AVFoundation.framework in Frameworks */,
 				2D3489819120A38ECE76743E /* Pods_AVPlayerAdapterOSXExample.framework in Frameworks */,
@@ -145,10 +167,13 @@
 				CDD10B8E229545120066036B /* Sources */,
 				CDD10B8F229545120066036B /* Frameworks */,
 				CDD10B90229545120066036B /* Resources */,
+				CD7DCC0822FC629E00C64FDB /* Embed Frameworks */,
+				AF1407AF8D017EEBCF948312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CD7DCC0722FC629E00C64FDB /* PBXTargetDependency */,
 			);
 			name = AVPlayerAdapterOSXExample;
 			productName = AVPlayerAdapterOSXExample;
@@ -253,6 +278,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF1407AF8D017EEBCF948312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterOSXExample/Pods-AVPlayerAdapterOSXExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-macOS10.10/YouboraLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterOSXExample/Pods-AVPlayerAdapterOSXExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,6 +313,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD7DCC0722FC629E00C64FDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YouboraAVPlayerAdapter OSX";
+			targetProxy = CD7DCC0622FC629E00C64FDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDD10B9B229545130066036B /* Main.storyboard */ = {

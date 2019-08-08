@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char YouboraAVPlayerAdapter_OSXVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <YouboraAVPlayerAdapter_OSX/PublicHeader.h>
 
-
+#import <YouboraAVPlayerAdapter/YBAVPlayerAdapter.h>
+#import <YouboraAVPlayerAdapter/YBAVPlayerAdapterSwiftWrapper.h>
