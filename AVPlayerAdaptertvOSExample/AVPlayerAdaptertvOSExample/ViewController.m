@@ -77,16 +77,16 @@
 - (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if (!self.resourceSelected) {
         UIAlertController * noResource = [UIAlertController
-                                     alertControllerWithTitle:@"Resource"
-                                     message:@"No resource selected"
-                                     preferredStyle:UIAlertControllerStyleAlert];
+                                          alertControllerWithTitle:@"Resource"
+                                          message:@"No resource selected"
+                                          preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* action = [UIAlertAction
-                                   actionWithTitle:@"Ok"
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action) {
-                                       //No action for now
-                                   }];
+                                 actionWithTitle:@"Ok"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                     //No action for now
+                                 }];
         
         [noResource addAction:action];
         
