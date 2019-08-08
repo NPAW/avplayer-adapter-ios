@@ -3,7 +3,7 @@
 //  AVPlayerAdapterExample
 //
 //  Created by Joan on 20/04/2017.
-//  Copyright © 2017 NPAW. All rights reserved.
+//  Copyright Â© 2017 NPAW. All rights reserved.
 //
 
 #import "PlayerViewController.h"
@@ -33,7 +33,7 @@
     // Set Youbora log level
     [YBLog setDebugLevel:YBLogLevelVerbose];
     
-     [self.navigationController setHidesBarsOnTap:YES];
+    [self.navigationController setHidesBarsOnTap:YES];
     
     // Create Youbora plugin
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
@@ -94,13 +94,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

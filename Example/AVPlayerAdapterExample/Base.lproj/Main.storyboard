@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jSd-75-OFq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jSd-75-OFq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -78,6 +77,13 @@
                                     <segue destination="lw0-1z-IyZ" kind="show" identifier="PlayerObjCSegue" id="DC0-js-aJa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8it-Jl-Fiw">
+                                <rect key="frame" x="79" y="501" width="151" height="30"/>
+                                <state key="normal" title="Play in Obj-C with ads"/>
+                                <connections>
+                                    <segue destination="0dS-IJ-qAE" kind="show" identifier="PlayerObjCAdsSegue" id="Tlh-27-mLh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -87,6 +93,8 @@
                             <constraint firstItem="eBz-TB-Lga" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="79" id="Fed-YB-B32"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7AC-Kt-Mya" secondAttribute="trailing" constant="51" id="JTT-JQ-pCq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xdt-cr-IPz" secondAttribute="leading" id="OPm-cu-k9V"/>
+                            <constraint firstItem="Qrb-Ky-o3J" firstAttribute="top" secondItem="8it-Jl-Fiw" secondAttribute="bottom" constant="47" id="R6P-PL-YeJ"/>
+                            <constraint firstItem="8it-Jl-Fiw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="79" id="SiV-o8-azk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nrs-Nt-X1E" secondAttribute="trailing" id="YC8-yi-zDf"/>
                             <constraint firstItem="Qrb-Ky-o3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="79" id="dzr-PF-Zw7"/>
                             <constraint firstItem="eBz-TB-Lga" firstAttribute="top" secondItem="Qrb-Ky-o3J" secondAttribute="bottom" constant="39" id="fqg-ha-eb3"/>
@@ -124,6 +132,24 @@
             </objects>
             <point key="canvasLocation" x="943" y="-399"/>
         </scene>
+        <!--Player View Controller Ads-->
+        <scene sceneID="xEG-TZ-xCa">
+            <objects>
+                <viewController id="0dS-IJ-qAE" customClass="PlayerViewControllerAds" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpz-Vy-Ect"/>
+                        <viewControllerLayoutGuide type="bottom" id="wto-ra-MA7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HTk-Rs-QgP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1N-ot-6dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547" y="299"/>
+        </scene>
         <!--Swift Player View Controller-->
         <scene sceneID="Tyg-Gk-ERn">
             <objects>
@@ -141,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veX-Qx-7vK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="372"/>
+            <point key="canvasLocation" x="594" y="930"/>
         </scene>
     </scenes>
 </document>
