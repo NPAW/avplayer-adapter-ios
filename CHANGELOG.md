@@ -1,3 +1,7 @@
+## [6.5.2] - 
+### Added
+- Support for Streamroot
+
 ## [6.5.1] - 2019-07-24
 ### Fix
 - Certain conditions were triggering a fake fireStop in case of content being live
