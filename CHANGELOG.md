@@ -1,3 +1,7 @@
+## [6.5.4] - 2019-08-08
+### Added
+- Sample showcasing avplayer ad adapter
+
 ## [6.5.3] - 2019-08-08
 ### Fixed
 - Optional Streamroot dependency

@@ -22,14 +22,14 @@
 		CD56F96B1FEA86D800286ACA /* YouboraAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96C1FEA8C2800286ACA /* YBAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956941E9F87F900FF6280 /* YBAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD56F96D1FEA8C2800286ACA /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CD13D3051FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD7DCBFF22FC622400C64FDB /* YBAVPlayerP2PAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A8A9522CCBEA000712DF0 /* YBAVPlayerP2PAdapter.m */; };
+		CD7DCC0022FC622600C64FDB /* YBAVPlayerP2PAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0A8A9422CCBEA000712DF0 /* YBAVPlayerP2PAdapter.h */; };
 		CD92C74F22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92C74D22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD92C75022CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92C74D22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h */; };
 		CD92C75122CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD92C74D22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h */; };
 		CD92C75222CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */; };
 		CD92C75322CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */; };
 		CD92C75422CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */; };
-		CD7DCBFF22FC622400C64FDB /* YBAVPlayerP2PAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0A8A9522CCBEA000712DF0 /* YBAVPlayerP2PAdapter.m */; };
-		CD7DCC0022FC622600C64FDB /* YBAVPlayerP2PAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = CD0A8A9422CCBEA000712DF0 /* YBAVPlayerP2PAdapter.h */; };
 		CDC81F9920FD1B4800B00781 /* YBAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */; };
 		CDC81F9A20FD1B4B00B00781 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */; };
 /* End PBXBuildFile section */

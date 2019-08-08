@@ -17,6 +17,7 @@
 		4E4956841E9F6E3600FF6280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956831E9F6E3600FF6280 /* Assets.xcassets */; };
 		4E4956871E9F6E3600FF6280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956851E9F6E3600FF6280 /* LaunchScreen.storyboard */; };
 		6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */; };
+		CD7DCC2122FC7FAA00C64FDB /* PlayerViewControllerAds.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7DCC2022FC7FAA00C64FDB /* PlayerViewControllerAds.m */; };
 		CD92C75722CB5D0000286DF9 /* CustomAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD92C75622CB5D0000286DF9 /* CustomAVPlayerAdapter.m */; };
 		CDCCF6B61FFF7D2700147EA9 /* PlayerViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */; };
 		CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; };
@@ -88,6 +89,8 @@
 		4E4956861E9F6E3600FF6280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4956881E9F6E3600FF6280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraConfigUtils.framework; path = Carthage/Build/iOS/YouboraConfigUtils.framework; sourceTree = "<group>"; };
+		CD7DCC1F22FC7FAA00C64FDB /* PlayerViewControllerAds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewControllerAds.h; sourceTree = "<group>"; };
+		CD7DCC2022FC7FAA00C64FDB /* PlayerViewControllerAds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewControllerAds.m; sourceTree = "<group>"; };
 		CD92C75522CB5D0000286DF9 /* CustomAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAVPlayerAdapter.h; sourceTree = "<group>"; };
 		CD92C75622CB5D0000286DF9 /* CustomAVPlayerAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAVPlayerAdapter.m; sourceTree = "<group>"; };
 		CDBA56081FB076AF00A9A35C /* YouboraAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				4E2DCD5C1EA8EFCA0016D46A /* PlayerViewController.h */,
 				4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */,
 				CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */,
+				CD7DCC1F22FC7FAA00C64FDB /* PlayerViewControllerAds.h */,
+				CD7DCC2022FC7FAA00C64FDB /* PlayerViewControllerAds.m */,
 				CD92C75522CB5D0000286DF9 /* CustomAVPlayerAdapter.h */,
 				CD92C75622CB5D0000286DF9 /* CustomAVPlayerAdapter.m */,
 				4E4956801E9F6E3600FF6280 /* Main.storyboard */,
@@ -368,6 +373,7 @@
 				4E49567C1E9F6E3600FF6280 /* AppDelegate.m in Sources */,
 				4E4956791E9F6E3600FF6280 /* main.m in Sources */,
 				CD92C75722CB5D0000286DF9 /* CustomAVPlayerAdapter.m in Sources */,
+				CD7DCC2122FC7FAA00C64FDB /* PlayerViewControllerAds.m in Sources */,
 				CDCCF6B61FFF7D2700147EA9 /* PlayerViewControllerSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

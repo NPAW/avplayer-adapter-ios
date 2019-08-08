@@ -1,14 +1,16 @@
 //
-//  PlayerViewController.h
+//  PlayerViewControllerAds.h
 //  AVPlayerAdapterExample
 //
-//  Created by Joan on 20/04/2017.
-//  Copyright Â© 2017 NPAW. All rights reserved.
+//  Created by Enrique Alfonso Burillo on 08/08/2019.
+//  Copyright © 2019 NPAW. All rights reserved.
 //
 
 @import UIKit;
 
-@interface PlayerViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface PlayerViewControllerAds : UIViewController
 
 /**
  * The resource url to load onto the player.
@@ -18,4 +20,7 @@
  */
 @property (nonatomic, strong) NSString * resourceUrl;
 
+
 @end
+
+NS_ASSUME_NONNULL_END
