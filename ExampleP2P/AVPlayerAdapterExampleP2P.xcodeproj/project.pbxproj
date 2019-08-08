@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C33539D02D7861DD1AE30A /* Pods_AVPlayerAdapterExampleP2P.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A8D5EE4794EF7D5CF49BAD /* Pods_AVPlayerAdapterExampleP2P.framework */; };
 		4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */; };
 		4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD591EA8E9C40016D46A /* AVKit.framework */; };
 		4E2DCD5E1EA8EFCB0016D46A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */; };
@@ -70,13 +71,14 @@
 /* Begin PBXFileReference section */
 		22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.release.xcconfig"; sourceTree = "<group>"; };
+		32C0ECF5B3DA2DEA6403A70A /* Pods-AVPlayerAdapterExampleP2P.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExampleP2P.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P.release.xcconfig"; sourceTree = "<group>"; };
 		4721A9BC75669A9A3E908320 /* Pods-AVPlayerAdapterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.debug.xcconfig"; sourceTree = "<group>"; };
 		4E0F612A1ECC89910004B081 /* YouboraAVPlayerAdapter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouboraAVPlayerAdapter.xcodeproj; path = ../YouboraAVPlayerAdapter.xcodeproj; sourceTree = "<group>"; };
 		4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E2DCD591EA8E9C40016D46A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		4E2DCD5C1EA8EFCA0016D46A /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
-		4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerAdapterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExampleP2P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerAdapterExampleP2P.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4956781E9F6E3600FF6280 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E49567A1E9F6E3600FF6280 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E49567B1E9F6E3600FF6280 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		4E4956861E9F6E3600FF6280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4956881E9F6E3600FF6280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraConfigUtils.framework; path = Carthage/Build/iOS/YouboraConfigUtils.framework; sourceTree = "<group>"; };
+		4F86FA694A9F5481F9BB60FE /* Pods-AVPlayerAdapterExampleP2P.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExampleP2P.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P.debug.xcconfig"; sourceTree = "<group>"; };
+		54A8D5EE4794EF7D5CF49BAD /* Pods_AVPlayerAdapterExampleP2P.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerAdapterExampleP2P.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBA56081FB076AF00A9A35C /* YouboraAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter.h; sourceTree = "<group>"; };
 		CDBA56091FB076AF00A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCCF6B41FFF7D2700147EA9 /* AVPlayerAdapterExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVPlayerAdapterExample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */,
 				CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */,
 				6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */,
+				39C33539D02D7861DD1AE30A /* Pods_AVPlayerAdapterExampleP2P.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 				4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */,
 				4E2DCD591EA8E9C40016D46A /* AVKit.framework */,
 				22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */,
+				54A8D5EE4794EF7D5CF49BAD /* Pods_AVPlayerAdapterExampleP2P.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,7 +150,7 @@
 		4E4956751E9F6E3600FF6280 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExample.app */,
+				4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExampleP2P.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +188,8 @@
 			children = (
 				4721A9BC75669A9A3E908320 /* Pods-AVPlayerAdapterExample.debug.xcconfig */,
 				2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */,
+				4F86FA694A9F5481F9BB60FE /* Pods-AVPlayerAdapterExampleP2P.debug.xcconfig */,
+				32C0ECF5B3DA2DEA6403A70A /* Pods-AVPlayerAdapterExampleP2P.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -198,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E4956731E9F6E3600FF6280 /* AVPlayerAdapterExample */ = {
+		4E4956731E9F6E3600FF6280 /* AVPlayerAdapterExampleP2P */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E49568B1E9F6E3600FF6280 /* Build configuration list for PBXNativeTarget "AVPlayerAdapterExample" */;
+			buildConfigurationList = 4E49568B1E9F6E3600FF6280 /* Build configuration list for PBXNativeTarget "AVPlayerAdapterExampleP2P" */;
 			buildPhases = (
 				C41008F68129E3FA47EF4840 /* [CP] Check Pods Manifest.lock */,
 				4E4956701E9F6E3600FF6280 /* Sources */,
@@ -215,9 +223,9 @@
 			dependencies = (
 				CDF8C54B1F7BDE8A00470644 /* PBXTargetDependency */,
 			);
-			name = AVPlayerAdapterExample;
+			name = AVPlayerAdapterExampleP2P;
 			productName = AVPlayerAdapterExample;
-			productReference = 4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExample.app */;
+			productReference = 4E4956741E9F6E3600FF6280 /* AVPlayerAdapterExampleP2P.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E49566F1E9F6E3600FF6280 /* Build configuration list for PBXProject "AVPlayerAdapterExample" */;
+			buildConfigurationList = 4E49566F1E9F6E3600FF6280 /* Build configuration list for PBXProject "AVPlayerAdapterExampleP2P" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -257,7 +265,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				4E4956731E9F6E3600FF6280 /* AVPlayerAdapterExample */,
+				4E4956731E9F6E3600FF6280 /* AVPlayerAdapterExampleP2P */,
 			);
 		};
 /* End PBXProject section */
@@ -321,16 +329,28 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS9.0/YouboraLib.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YouboraLib-iOS10.2/YouboraLib.framework",
+				"${BUILT_PRODUCTS_DIR}/AVPlayerDNAPlugin/AVPlayerDNAPlugin.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${PODS_ROOT}/StreamrootSDK/Carthage/Build/iOS/StreamrootSDK.framework",
+				"${PODS_ROOT}/StreamrootSDK/Carthage/Build/iOS/StreamrootSDK.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/SwiftProtobuf/SwiftProtobuf.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVPlayerDNAPlugin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamrootSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/StreamrootSDK.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftProtobuf.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C41008F68129E3FA47EF4840 /* [CP] Check Pods Manifest.lock */ = {
@@ -344,7 +364,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVPlayerAdapterExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayerAdapterExampleP2P-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -492,7 +512,7 @@
 		};
 		4E49568C1E9F6E3600FF6280 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4721A9BC75669A9A3E908320 /* Pods-AVPlayerAdapterExample.debug.xcconfig */;
+			baseConfigurationReference = 4F86FA694A9F5481F9BB60FE /* Pods-AVPlayerAdapterExampleP2P.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -504,9 +524,9 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AVPlayerAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdapterExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdapterExampleP2P;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerAdapterExample/AVPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -516,7 +536,7 @@
 		};
 		4E49568D1E9F6E3600FF6280 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */;
+			baseConfigurationReference = 32C0ECF5B3DA2DEA6403A70A /* Pods-AVPlayerAdapterExampleP2P.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -528,9 +548,9 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AVPlayerAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdapterExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.AVPlayerAdapterExampleP2P;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerAdapterExample/AVPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -540,7 +560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E49566F1E9F6E3600FF6280 /* Build configuration list for PBXProject "AVPlayerAdapterExample" */ = {
+		4E49566F1E9F6E3600FF6280 /* Build configuration list for PBXProject "AVPlayerAdapterExampleP2P" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E4956891E9F6E3600FF6280 /* Debug */,
@@ -549,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E49568B1E9F6E3600FF6280 /* Build configuration list for PBXNativeTarget "AVPlayerAdapterExample" */ = {
+		4E49568B1E9F6E3600FF6280 /* Build configuration list for PBXNativeTarget "AVPlayerAdapterExampleP2P" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E49568C1E9F6E3600FF6280 /* Debug */,

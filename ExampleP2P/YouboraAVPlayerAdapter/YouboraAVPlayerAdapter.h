@@ -1,12 +1,12 @@
 //
 //  YouboraAVPlayerAdapter.h
-//  YouboraAVPlayerAdapter 
+//  YouboraAVPlayerAdapter
 //
-//  Created by Joan on 13/04/2017.
+//  Created by Enrique Alfonso Burillo on 06/11/2017.
 //  Copyright © 2017 NPAW. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for YouboraAVPlayerAdapter.
 FOUNDATION_EXPORT double YouboraAVPlayerAdapterVersionNumber;
@@ -16,9 +16,4 @@ FOUNDATION_EXPORT const unsigned char YouboraAVPlayerAdapterVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <YouboraAVPlayerAdapter/PublicHeader.h>
 
-#import <YouboraAVPlayerAdapter/YBAVPlayerAdapter.h>
-#import <YouboraAVPlayerAdapter/YBAVPlayerAdapterSwiftWrapper.h>
 
-#if __has_include("YBAVPlayerP2PAdapter.h") && __has_include(<stdint.h>)
-#import <YouboraAVPlayerAdapter/YBAVPlayerP2PAdapter.h>
-#endif

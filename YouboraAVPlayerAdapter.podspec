@@ -29,14 +29,28 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://bitbucket.org/npaw/avplayer-adapter-ios.git', :tag => s.version}
 
   # Source files
-  s.source_files  = 'YouboraAVPlayerAdapter/**/*.{h,m}'
-  s.public_header_files = "YouboraAVPlayerAdapter/**/*.h"
+  s.source_files  = 'YouboraAVPlayerAdapter/adapter/**/*.{h,m}', 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
+  s.public_header_files = "YouboraAVPlayerAdapter/adapter/**/*.h", 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h'
 
   # Project settings
   s.requires_arc = true
   s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOUBORAADAPTER_VERSION=' + s.version.to_s }
 
+  s.default_subspec = 'Default'
+
+  s.subspec 'Default' do |default|
+  # just the plain adapter
+  end
+
   # Dependency
   s.dependency "YouboraLib", "~>6.5.0"
+
+  s.subspec 'Streamroot' do |streamroot|
+
+    streamroot.ios.deployment_target = '10.2'
+    streamroot.tvos.deployment_target = '10.2'
+
+    streamroot.dependency 'AVPlayerDNAPlugin', '~> 1.1.9'
+  end
 
 end
