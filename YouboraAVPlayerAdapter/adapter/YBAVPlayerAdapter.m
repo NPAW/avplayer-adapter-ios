@@ -349,7 +349,7 @@ bool firstSeek;
                 
                 [strongSelf fireJoin];
                 
-                if (self.flags.joined) {
+                if (self.flags.joined && self.player.currentItem != nil && self.player.rate != 0) {
                     [strongSelf.player removeTimeObserver:strongSelf.joinTimePeriodicTimeObserver];
                     strongSelf.joinTimePeriodicTimeObserver = nil;
                     [YBLog debug:@"Join sent, removed time observer"];
