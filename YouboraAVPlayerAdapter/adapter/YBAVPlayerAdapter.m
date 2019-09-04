@@ -346,10 +346,11 @@ bool firstSeek;
                 if (self.plugin != nil && self.plugin.isStarted && !self.flags.joined) {
                     [YBLog debug:@"YBPluginAVPlayer detected join time at: %f", CMTimeGetSeconds(time)];
                 }
+                if (self.player.rate != 0) {
+                    [strongSelf fireJoin];
+                }
                 
-                [strongSelf fireJoin];
-                
-                if (self.flags.joined) {
+                if (self.flags.joined && self.player.currentItem != nil) {
                     [strongSelf.player removeTimeObserver:strongSelf.joinTimePeriodicTimeObserver];
                     strongSelf.joinTimePeriodicTimeObserver = nil;
                     [YBLog debug:@"Join sent, removed time observer"];

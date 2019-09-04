@@ -1,3 +1,7 @@
+## [6.5.5] - 2019-09-04
+### Improved
+- Now no join time is fired unless the rate is different from 0 and the playhead greater than 100ms
+
 ## [6.5.4] - 2019-08-08
 ### Added
 - Extra ad adapter to use along with avplayer itself
