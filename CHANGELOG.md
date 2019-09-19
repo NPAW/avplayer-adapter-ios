@@ -1,3 +1,7 @@
+## [6.5.6] - 2019-09-19
+### Misc
+- Dummy update to test new travis CI config file
+
 ## [6.5.5] - 2019-09-04
 ### Improved
 - Now no join time is fired unless the rate is different from 0 and the playhead greater than 100ms
