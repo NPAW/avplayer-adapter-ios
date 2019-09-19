@@ -35,7 +35,7 @@ jobs:
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM  --verbose
+      script: carthage build --no-skip-current --platform $PLATFORM  --verbose
     - <<: *carthage
       name: tvOS
       env: PLATFORM=tvos
