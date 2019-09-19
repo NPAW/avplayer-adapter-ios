@@ -14,8 +14,6 @@ stages:
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
     if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: test
-    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
@@ -37,37 +35,13 @@ jobs:
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM  --verbose
     - <<: *carthage
       name: tvOS
       env: PLATFORM=tvos
     - <<: *carthage
       name: macOS
       env: PLATFORM=macos
-
-    - &test
-      stage: test
-      name: iOS
-      xcode_scheme: 'YouboraAVPlayerAdapter'
-      xcode_project: YouboraAVPlayerAdapter.xcodeproj
-      xcode_destination: 'platform=iOS Simulator,OS=12.2,name=iPhone SE'
-      before_install:
-        - brew update
-        - brew outdated carthage || brew upgrade carthage
-      install:
-        - carthage update
-        - pod update
-        - pod install
-      after_success: bash <(curl -s https://codecov.io/bash)
-    - <<: *test
-      name: tvOS
-      xcode_scheme: 'YouboraAVPlayerAdapter tvOS'
-      xcode_destination: 'platform=tvOS Simulator,OS=12.2,name=Apple TV'
-      #This one below stays commented since it seems that there is some problems with the mocking, will have to go back to it
-    # - <<: *test
-    #   name: macOS
-    #   xcode_scheme: 'YouboraLib OSX'
-    #   xcode_destination: 'platform=macOS'
 
     # - name: '`pod trunk push`'
     #   stage: deploy
