@@ -25,7 +25,7 @@ jobs:
     - &pod
       stage: lint
       install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --allow-warnings
+      script: pod lib lint --fail-fast --allow-warnings --verbose --subspec=YouboraAVPlayerAdapter/Default
 
     - &carthage
       stage: carthage
