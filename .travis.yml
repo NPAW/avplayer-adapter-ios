@@ -29,7 +29,7 @@ jobs:
       stage: carthage
       name: iOS
       env: PLATFORM=ios
-      install: carthage update
+      install: carthage update  --platform $PLATFORM
       before_install:
       - brew update
       - brew outdated carthage || brew upgrade carthage
@@ -40,15 +40,15 @@ jobs:
     - <<: *carthage
       name: tvOS
       env: PLATFORM=tvos
-    # - <<: *carthage
-    #   name: macOS
-    #   env: PLATFORM=macos
+    - <<: *carthage
+      name: macOS
+      env: PLATFORM=macos
 
-    # - name: '`pod trunk push`'
-    #   stage: deploy
-    #   install: gem install cocoapods -v '~> 1.7.0'
-    #   script: |
-    #     set -exo pipefail
-    #     pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-    #   after_failure: cat pod.log | grep error
+    - name: '`pod trunk push`'
+      stage: deploy
+      install: gem install cocoapods -v '~> 1.7.0'
+      script: |
+        set -exo pipefail
+        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
 
