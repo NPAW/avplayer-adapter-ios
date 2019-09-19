@@ -29,6 +29,7 @@ jobs:
       stage: carthage
       name: iOS
       env: PLATFORM=ios
+      install: true
       before_install:
       - brew update
       - brew outdated carthage || brew upgrade carthage
