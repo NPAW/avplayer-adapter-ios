@@ -42,6 +42,7 @@ jobs:
       env: PLATFORM=tvos
     - <<: *carthage
       name: macOS
+      install: carthage update  --platform $PLATFORM && pod install
       env: PLATFORM=macos
 
     - name: '`pod trunk push`'
