@@ -45,9 +45,8 @@
         
     }
     if ([segue.identifier isEqualToString:@"PlayerSwiftSegue"]) {
-        
-        PlayerViewControllerSwift * playerViewController = segue.destinationViewController;
-        playerViewController.resourceUrl = self.textFieldResource.text;
+        PlayerViewControllerSwift *playerViewController = segue.destinationViewController;
+        playerViewController.viewModel = [[PlayerViewModelSwift alloc] initWithUrl:self.textFieldResource.text];
     }
     if ([segue.identifier isEqualToString:@"PlayerObjCAdsSegue"]) {
         PlayerViewControllerAds * playerViewController = segue.destinationViewController;

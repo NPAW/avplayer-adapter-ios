@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B5BFFC23392747003650BA /* PlayerViewModelSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5BFFB23392747003650BA /* PlayerViewModelSwift.swift */; };
 		4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */; };
 		4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2DCD591EA8E9C40016D46A /* AVKit.framework */; };
 		4E2DCD5E1EA8EFCB0016D46A /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06B5BFFB23392747003650BA /* PlayerViewModelSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelSwift.swift; sourceTree = "<group>"; };
 		22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.release.xcconfig"; sourceTree = "<group>"; };
 		4721A9BC75669A9A3E908320 /* Pods-AVPlayerAdapterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B5BFF8233926D8003650BA /* PlayerViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */,
+				06B5BFFB23392747003650BA /* PlayerViewModelSwift.swift */,
+			);
+			path = PlayerViewSwift;
+			sourceTree = "<group>";
+		};
 		4E0F612B1ECC89910004B081 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,13 +169,13 @@
 		4E4956761E9F6E3600FF6280 /* AVPlayerAdapterExample */ = {
 			isa = PBXGroup;
 			children = (
+				06B5BFF8233926D8003650BA /* PlayerViewSwift */,
 				4E49567A1E9F6E3600FF6280 /* AppDelegate.h */,
 				4E49567B1E9F6E3600FF6280 /* AppDelegate.m */,
 				4E49567D1E9F6E3600FF6280 /* ViewController.h */,
 				4E49567E1E9F6E3600FF6280 /* ViewController.m */,
 				4E2DCD5C1EA8EFCA0016D46A /* PlayerViewController.h */,
 				4E2DCD5D1EA8EFCA0016D46A /* PlayerViewController.m */,
-				CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */,
 				CD7DCC1F22FC7FAA00C64FDB /* PlayerViewControllerAds.h */,
 				CD7DCC2022FC7FAA00C64FDB /* PlayerViewControllerAds.m */,
 				CD92C75522CB5D0000286DF9 /* CustomAVPlayerAdapter.h */,
@@ -369,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E49567F1E9F6E3600FF6280 /* ViewController.m in Sources */,
+				06B5BFFC23392747003650BA /* PlayerViewModelSwift.swift in Sources */,
 				4E2DCD5E1EA8EFCB0016D46A /* PlayerViewController.m in Sources */,
 				4E49567C1E9F6E3600FF6280 /* AppDelegate.m in Sources */,
 				4E4956791E9F6E3600FF6280 /* main.m in Sources */,
