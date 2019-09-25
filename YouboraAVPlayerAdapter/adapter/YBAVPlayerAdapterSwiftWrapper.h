@@ -10,7 +10,7 @@
 
 @interface YBAVPlayerAdapterSwiftWrapper : NSObject
 
-- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin;
+- (id) initWithPlayer:(NSObject*)player andPlugin:(YBPlugin*)plugin __deprecated_msg("Use initWithAdapter instead");;
 - (id) initWithAdapter:(YBAVPlayerAdapter *)adapter andPlugin:(YBPlugin*)plugin;
 - (void) fireStart;
 - (void) fireStop;
