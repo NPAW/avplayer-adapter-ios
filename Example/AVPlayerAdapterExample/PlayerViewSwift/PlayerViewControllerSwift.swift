@@ -26,7 +26,7 @@ class PlayerViewControllerSwift: UIViewController {
         self.initializePlayer()
         
         // As soon as we have the player instance, create an Adapter to listen for the player events and create a new view in Youbora
-        self.viewModel?.startYoubora(player: self.playerViewController)
+        self.viewModel?.startYoubora(player: self.playerViewController?.player)
         
         // Start playback
         playerViewController?.player?.play()

@@ -8,6 +8,7 @@
 
 import Foundation
 import YouboraAVPlayerAdapter
+import AVKit
 
 @objc class PlayerViewModelSwift: NSObject {
     private var options:YBOptions {
@@ -35,9 +36,13 @@ import YouboraAVPlayerAdapter
         self.videoUrlString = url
     }
     
-    public func startYoubora(player: Any?) {
+    public func startYoubora(player: AVPlayer?) {
+        guard let nonOptionalPlayer = player else {
+            return
+        }
+        
         self.plugin.fireInit()
-        self.wrapper = YBAVPlayerAdapterSwiftWrapper(player: player as? NSObject, andPlugin: self.plugin);
+        self.wrapper = YBAVPlayerAdapterSwiftWrapper(adapter: YBAVPlayerAdapter(player: nonOptionalPlayer), andPlugin: self.plugin);
     }
     
     public func stopYoubora() {
