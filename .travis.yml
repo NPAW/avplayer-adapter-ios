@@ -4,10 +4,15 @@ os: osx
 osx_image: xcode10.3
 language: swift
 
-branches:
-  only:
-  - master
-  - /^\d+\.\d+\.\d+$/
+env:
+  global:
+    - APP_NAME=YouboraAVPlayerAdapter
+    - INFO_PLIST=$PWD/$APP_NAME/Info.plist
+    - INFO_PLIST_TV_OS=$PWD/$APP_NAME tvOS/Info.plist
+    - INFO_PLIST_MAC_OS=$PWD/$APP_NAME OSX/Info.plist
+    - PLATFORMS=ios,tvos,macos
+    - GENERIC_VERSION=0.0.1
+    - ADAPTER_VERSION_TAG=YOUBORAAVPLAYERADAPTER_VERSION_SETTING
 
 stages:
   - name: lint
@@ -19,37 +24,64 @@ stages:
 
 jobs:
   include:
-
     - &pod
-      stage: lint
+      stage: podLint
+      osx_image: xcode9.2
+      env: SWIFT=4.0
       install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --allow-warnings --verbose --subspec=YouboraAVPlayerAdapter/Default
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+    - <<: *pod
+      osx_image: xcode9.4
+      env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
 
     - &carthage
       stage: carthage
-      name: iOS
-      env: PLATFORM=ios
-      install: carthage update  --platform $PLATFORM
-      before_install:
-      - brew update
-      - brew outdated carthage || brew upgrade carthage
+      name: Swift 4.0.3 / Xcode 9.2
+      osx_image: xcode9.2
+      before_install: pod deintegrate
+      install: carthage update --platform $PLATFORMS --cache-builds
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --platform $PLATFORM  --verbose
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORMS
     - <<: *carthage
-      name: tvOS
-      env: PLATFORM=tvos
+      osx_image: xcode9.3
+      name: Swift 4.1.0 / Xcode 9.3.1
     - <<: *carthage
-      name: macOS
-      install: carthage update  --platform $PLATFORM && pod install
-      env: PLATFORM=macos
-
-    - name: '`pod trunk push`'
+      osx_image: xcode9.4
+      name: Swift 4.1.2 / Xcode 9.4.1
+    - <<: *carthage
+      osx_image: xcode10.1
+      name: Swift 4.1.50 / Xcode 10.1
+    - <<: *carthage
+      osx_image: xcode10.3
+      name: Swift 4.1.51 / Xcode 10.3
+    - <<: *carthage
+      osx_image: xcode11
+      name: Swift 4.1.52 / Xcode 11
+      before_install:
+        - pod deintegrate
+        - rm -f Cartfile.private
+    - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
-      script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      # UNCOMMENT WHEN MAKE SURE THAT WORKS AS EXPECTED
+      before_script:
+        - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
+        - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj
+      script:
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
-

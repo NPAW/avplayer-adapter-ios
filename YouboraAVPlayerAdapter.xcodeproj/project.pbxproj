@@ -231,6 +231,7 @@
 				4E49565C1E9F6CAA00FF6280 /* Frameworks */,
 				4E49565D1E9F6CAA00FF6280 /* Headers */,
 				4E49565E1E9F6CAA00FF6280 /* Resources */,
+				06A41C5A236094EB00ECAE6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,6 +250,7 @@
 				CD5237FB228DCD880013BA16 /* Sources */,
 				CD5237FC228DCD880013BA16 /* Frameworks */,
 				CD5237FD228DCD880013BA16 /* Resources */,
+				06A41C5C2360952C00ECAE6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +269,7 @@
 				CDBA56101FB0771900A9A35C /* Frameworks */,
 				CDBA56111FB0771900A9A35C /* Headers */,
 				CDBA56121FB0771900A9A35C /* Resources */,
+				06A41C5B2360952200ECAE6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -348,6 +351,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06A41C5A236094EB00ECAE6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n";
+		};
+		06A41C5B2360952200ECAE6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n";
+		};
+		06A41C5C2360952C00ECAE6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E49565B1E9F6CAA00FF6280 /* Sources */ = {
@@ -433,11 +490,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = YouboraAVPlayerAdapter;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.6;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 0.0.1;
 			};
 			name = Debug;
 		};
@@ -482,12 +539,12 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_MODULE_NAME = YouboraAVPlayerAdapter;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.6;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 0.0.1;
 			};
 			name = Release;
 		};
@@ -514,6 +571,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.1;
 				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = "$(inherited)";
 			};
 			name = Debug;
@@ -540,6 +598,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.1;
 				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = "$(inherited)";
 			};
 			name = Release;

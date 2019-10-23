@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AVPlayerAdapterOSXExample/AVPlayerAdapterOSXExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AVPlayerAdaptertvOSExample/AVPlayerAdaptertvOSExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/AVPlayerAdapterExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ExampleChromecast/CastVideos-ios.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ExampleP2P/AVPlayerAdapterExampleP2P.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YouboraAVPlayerAdapter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
