@@ -17,7 +17,6 @@
 		4E4956821E9F6E3600FF6280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956801E9F6E3600FF6280 /* Main.storyboard */; };
 		4E4956841E9F6E3600FF6280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956831E9F6E3600FF6280 /* Assets.xcassets */; };
 		4E4956871E9F6E3600FF6280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4956851E9F6E3600FF6280 /* LaunchScreen.storyboard */; };
-		6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */; };
 		CDCCF6B61FFF7D2700147EA9 /* PlayerViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCCF6B51FFF7D2700147EA9 /* PlayerViewControllerSwift.swift */; };
 		CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; };
 		CDF8C5491F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0F612F1ECC89910004B081 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -69,7 +68,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA786835A5BDA404ED04448 /* Pods-AVPlayerAdapterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.release.xcconfig"; sourceTree = "<group>"; };
 		32C0ECF5B3DA2DEA6403A70A /* Pods-AVPlayerAdapterExampleP2P.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExampleP2P.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExampleP2P/Pods-AVPlayerAdapterExampleP2P.release.xcconfig"; sourceTree = "<group>"; };
 		4721A9BC75669A9A3E908320 /* Pods-AVPlayerAdapterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerAdapterExample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AVPlayerAdapterExample/Pods-AVPlayerAdapterExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				4E2DCD5A1EA8E9C40016D46A /* AVFoundation.framework in Frameworks */,
 				4E2DCD5B1EA8E9C40016D46A /* AVKit.framework in Frameworks */,
 				CDF8C5481F7BDE8A00470644 /* YouboraAVPlayerAdapter.framework in Frameworks */,
-				6CDF10F7947EB1AA77E1D373 /* Pods_AVPlayerAdapterExample.framework in Frameworks */,
 				39C33539D02D7861DD1AE30A /* Pods_AVPlayerAdapterExampleP2P.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +126,6 @@
 				4E6CEDAF1EBC5EEA00CC6A2B /* YouboraConfigUtils.framework */,
 				4E2DCD581EA8E9C40016D46A /* AVFoundation.framework */,
 				4E2DCD591EA8E9C40016D46A /* AVKit.framework */,
-				22D9C2E6C18D48396913F193 /* Pods_AVPlayerAdapterExample.framework */,
 				54A8D5EE4794EF7D5CF49BAD /* Pods_AVPlayerAdapterExampleP2P.framework */,
 			);
 			name = Frameworks;
