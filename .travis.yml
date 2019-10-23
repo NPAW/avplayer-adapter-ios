@@ -4,11 +4,6 @@ os: osx
 osx_image: xcode10.3
 language: swift
 
-branches:
-  only:
-  - master
-  - /^\d+\.\d+\.\d+$/
-
 stages:
   - name: lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
@@ -19,11 +14,27 @@ stages:
 
 jobs:
   include:
-
     - &pod
-      stage: lint
+      stage: podLint
+      osx_image: xcode9.2
+      env: SWIFT=4.0
       install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --allow-warnings --verbose --subspec=YouboraAVPlayerAdapter/Default
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+    - <<: *pod
+      osx_image: xcode9.4
+      env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
 
     - &carthage
       stage: carthage
@@ -31,8 +42,8 @@ jobs:
       env: PLATFORM=ios
       install: carthage update  --platform $PLATFORM
       before_install:
-      - brew update
-      - brew outdated carthage || brew upgrade carthage
+        - brew update
+        - brew outdated carthage || brew upgrade carthage
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
@@ -45,11 +56,10 @@ jobs:
       install: carthage update  --platform $PLATFORM && pod install
       env: PLATFORM=macos
 
-    - name: '`pod trunk push`'
+    - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
       script: |
         set -exo pipefail
         pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
-
