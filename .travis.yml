@@ -71,6 +71,9 @@ jobs:
     - <<: *carthage
       osx_image: xcode11
       name: Swift 4.1.52 / Xcode 11
+      before_install:
+        - pod deintegrate
+        - rm -f Cartfile.private
     - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
