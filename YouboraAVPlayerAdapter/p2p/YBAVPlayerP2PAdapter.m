@@ -8,6 +8,7 @@
 
 #import "YBAVPlayerP2PAdapter.h"
 
+#if __has_include(<StreamrootSDK/StreamrootSDK-Swift.h>)
 @interface YBAVPlayerP2PAdapter()
 
 @property (nonatomic, assign) NSNumber * lastP2PTraffic;
@@ -76,3 +77,4 @@
 }
 
 @end
+#endif

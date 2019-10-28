@@ -7,13 +7,17 @@
 //
 
 #import <YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h>
-#import <StreamrootSDK/StreamrootSDK-Swift.h>
+#if __has_include(<StreamrootSDK/StreamrootSDK-Swift.h>)
+    #import <StreamrootSDK/StreamrootSDK-Swift.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YBAVPlayerP2PAdapter : YBAVPlayerAdapter
 
-- (instancetype) initWithDnaClient:(nullable DNAClient *) dnaClient andPlayer:(nullable AVPlayer *) player;
+#if __has_include(<StreamrootSDK/StreamrootSDK-Swift.h>)
+    - (instancetype) initWithDnaClient:(nullable DNAClient *) dnaClient andPlayer:(nullable AVPlayer *) player;
+#endif
 
 @end
 
