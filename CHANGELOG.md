@@ -1,3 +1,7 @@
+## [6.5.7] - 
+### Add
+- Add Swift wrapper for ads
+
 ## [6.5.6] - 2019-09-19
 ### Misc
 - Dummy update to test new travis CI config file
