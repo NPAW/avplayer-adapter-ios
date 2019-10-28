@@ -52,7 +52,7 @@ static void * const observationContext = (void *) &observationContext;
     YBOptions * youboraOptions = [YouboraConfigManager getOptions]; // [YBOptions new];
     youboraOptions.offline = NO;
     youboraOptions.waitForMetadata = NO;
-    youboraOptions.accountCode = @"powerdev";
+    youboraOptions.accountCode = @"nicetest";
     youboraOptions.contentResource = @"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8";
     self.youboraPlugin = [[YBPlugin alloc] initWithOptions:youboraOptions];
     
