@@ -15,10 +15,10 @@ env:
     - ADAPTER_VERSION_TAG=YOUBORAAVPLAYERADAPTER_VERSION_SETTING
 
 stages:
-  - name: lint
+  - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
-    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
@@ -28,8 +28,9 @@ jobs:
       stage: podLint
       osx_image: xcode9.2
       env: SWIFT=4.0
-      install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+      install: gem install cocoapods
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --subspec=Default --verbose
+      after_failure: cat pod.log | grep error
     - <<: *pod
       osx_image: xcode9.4
       env: SWIFT=4.1
@@ -50,12 +51,16 @@ jobs:
       stage: carthage
       name: Swift 4.0.3 / Xcode 9.2
       osx_image: xcode9.2
-      before_install: pod deintegrate
-      install: carthage update --platform $PLATFORMS --cache-builds
+      install:
+        - rm -f Cartfile.private
+        - gem update xcodeproj
+        - gem install cocoapods
+        - pod deintegrate
+        - carthage update --platform $PLATFORMS --cache-builds
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --configuration Release --platform $PLATFORMS
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORMS --verbose
     - <<: *carthage
       osx_image: xcode9.3
       name: Swift 4.1.0 / Xcode 9.3.1
@@ -71,13 +76,9 @@ jobs:
     - <<: *carthage
       osx_image: xcode11
       name: Swift 4.1.52 / Xcode 11
-      before_install:
-        - pod deintegrate
-        - rm -f Cartfile.private
     - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
-      # UNCOMMENT WHEN MAKE SURE THAT WORKS AS EXPECTED
       before_script:
         - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
         - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj

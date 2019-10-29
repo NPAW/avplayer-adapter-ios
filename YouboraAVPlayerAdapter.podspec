@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
 
   # Platforms
-  s.swift_version = "5.0"
+  s.swift_version = "4.0", "4.1", "4.2", "4.3", "5.0", "5.1"
 
   # Source Location
   s.source       = { :git => 'https://bitbucket.org/npaw/avplayer-adapter-ios.git', :tag => s.version}
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   end
 
   # Dependency
-  s.dependency "YouboraLib", "~>6.5.0"
+  s.dependency "YouboraLib"
 
   s.subspec 'Streamroot' do |streamroot|
 
