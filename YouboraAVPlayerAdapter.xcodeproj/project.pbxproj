@@ -32,6 +32,12 @@
 		CD92C75422CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */; };
 		CDC81F9920FD1B4800B00781 /* YBAVPlayerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4956951E9F87F900FF6280 /* YBAVPlayerAdapter.m */; };
 		CDC81F9A20FD1B4B00B00781 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13D3061FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m */; };
+		CDFE7BED235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDFE7BEE235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
+		CDFE7BEF235F56A4000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDFE7BF0235F56A5000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDFE7BF1235F56A7000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
+		CDFE7BF2235F56A7000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +53,6 @@
 		CD5237FF228DCD880013BA16 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter_OSX.h; sourceTree = "<group>"; };
 		CD523802228DCD880013BA16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8BF1162155411C00137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
-		CD8BF1192155413100137480 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
 		CD91947E203208D1002A8507 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		CD92C74D22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdsAdapter.h; sourceTree = "<group>"; };
 		CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdsAdapter.m; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		CDBA56161FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouboraAVPlayerAdapter tvOS.h"; sourceTree = "<group>"; };
 		CDBA56171FB0771900A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDBA732A2334DDB4008716B5 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/Mac/YouboraLib.framework; sourceTree = "<group>"; };
+		CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdsAdapterSwiftWrapper.h; sourceTree = "<group>"; };
+		CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdsAdapterSwiftWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,6 @@
 				CDBA56151FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS */,
 				CD523800228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */,
 				4E4956611E9F6CAA00FF6280 /* Products */,
-				809F1C8FAC23BCA9EFCB0E1E /* Frameworks */,
 				4E5371AC69C8477291A40A2E /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -136,16 +141,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		809F1C8FAC23BCA9EFCB0E1E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CDBA732A2334DDB4008716B5 /* YouboraLib.framework */,
-				CD8BF1192155413100137480 /* YouboraLib.framework */,
-				CD8BF1162155411C00137480 /* YouboraLib.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CD0A8A9322CCBE5B00712DF0 /* p2p */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +164,8 @@
 			children = (
 				CD92C74D22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h */,
 				CD92C74E22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m */,
+				CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */,
+				CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */,
 			);
 			path = adsAdapter;
 			sourceTree = "<group>";
@@ -193,6 +190,7 @@
 				4E4956961E9F87F900FF6280 /* YBAVPlayerAdapter.h in Headers */,
 				CD92C74F22CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */,
 				CD0A8A9622CCBEA000712DF0 /* YBAVPlayerP2PAdapter.h in Headers */,
+				CDFE7BED235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
 				CD13D3071FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +202,7 @@
 				CD523807228DCE040013BA16 /* YBAVPlayerAdapter.h in Headers */,
 				CD523865228DED070013BA16 /* YouboraAVPlayerAdapter.h in Headers */,
 				CD92C75122CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */,
+				CDFE7BF0235F56A5000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
 				CD523809228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +215,7 @@
 				CD56F96C1FEA8C2800286ACA /* YBAVPlayerAdapter.h in Headers */,
 				CD92C75022CB4FF100286DF9 /* YBAVPlayerAdsAdapter.h in Headers */,
 				CD7DCC0022FC622600C64FDB /* YBAVPlayerP2PAdapter.h in Headers */,
+				CDFE7BEF235F56A4000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
 				CD56F96D1FEA8C2800286ACA /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,20 +291,17 @@
 				TargetAttributes = {
 					4E49565F1E9F6CAA00FF6280 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = DAR8GLKRWU;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					CD5237FE228DCD880013BA16 = {
 						CreatedOnToolsVersion = 10.2.1;
-						DevelopmentTeam = S65Y3ZP8PG;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					CDBA56131FB0771900A9A35C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DAR8GLKRWU;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -414,6 +411,7 @@
 				CD92C75222CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */,
 				CD13D3081FC50F23001D20A0 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				CD0A8A9922CCBEA000712DF0 /* YBAVPlayerP2PAdapter.m in Sources */,
+				CDFE7BEE235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 				4E4956971E9F87F900FF6280 /* YBAVPlayerAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +423,7 @@
 				CD92C75422CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */,
 				CD52380A228DCE040013BA16 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				CD523808228DCE040013BA16 /* YBAVPlayerAdapter.m in Sources */,
+				CDFE7BF2235F56A7000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +434,7 @@
 				CD92C75322CB4FF100286DF9 /* YBAVPlayerAdsAdapter.m in Sources */,
 				CDC81F9A20FD1B4B00B00781 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				CD7DCBFF22FC622400C64FDB /* YBAVPlayerP2PAdapter.m in Sources */,
+				CDFE7BF1235F56A7000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 				CDC81F9920FD1B4800B00781 /* YBAVPlayerAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +490,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = YouboraAVPlayerAdapter;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -539,7 +539,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_MODULE_NAME = YouboraAVPlayerAdapter;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -553,8 +553,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -569,9 +570,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 4.0;
 				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = "$(inherited)";
 			};
 			name = Debug;
@@ -581,8 +584,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -597,8 +601,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 4.0;
 				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = "$(inherited)";
 			};
 			name = Release;
@@ -618,10 +624,10 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S65Y3ZP8PG;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -644,8 +650,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -664,10 +672,10 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = S65Y3ZP8PG;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -685,8 +693,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -695,8 +705,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -716,9 +727,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -729,8 +742,9 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -746,8 +760,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
