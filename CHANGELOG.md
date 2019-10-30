@@ -1,3 +1,9 @@
+## [6.5.7] - 2019-10-30
+### Added
+- Swift wrapper for ads adapter
+### Fixed
+- Carthage now supports Streamroot (up until Swift 5.0)
+
 ## [6.5.6] - 2019-09-19
 ### Misc
 - Dummy update to test new travis CI config file
