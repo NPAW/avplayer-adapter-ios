@@ -1,3 +1,7 @@
+## [6.5.8] - 2019-
+### Fixed
+- Playrate now has a default value of 1 in case of seek or buffer
+
 ## [6.5.7] - 2019-10-30
 ### Added
 - Swift wrapper for ads adapter
