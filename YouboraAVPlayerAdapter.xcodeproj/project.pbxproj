@@ -59,7 +59,6 @@
 		CDBA56141FB0771900A9A35C /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBA56161FB0771900A9A35C /* YouboraAVPlayerAdapter tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouboraAVPlayerAdapter tvOS.h"; sourceTree = "<group>"; };
 		CDBA56171FB0771900A9A35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDBA732A2334DDB4008716B5 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/Mac/YouboraLib.framework; sourceTree = "<group>"; };
 		CDFE7BEB235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBAVPlayerAdsAdapterSwiftWrapper.h; sourceTree = "<group>"; };
 		CDFE7BEC235F569E000EA8FA /* YBAVPlayerAdsAdapterSwiftWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBAVPlayerAdsAdapterSwiftWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
