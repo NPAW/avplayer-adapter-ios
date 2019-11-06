@@ -1,4 +1,4 @@
-## [6.5.8] - 2019-
+## [6.5.8] - 2019-11-06
 ### Fixed
 - Playrate now has a default value of 1 in case of seek or buffer
 
