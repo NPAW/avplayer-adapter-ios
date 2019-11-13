@@ -1,3 +1,7 @@
+## [6.5.9] - 2019-11-13
+### Fixed
+- Swift wrapper now is set as the adAdapter
+
 ## [6.5.8] - 2019-11-06
 ### Fixed
 - Playrate now has a default value of 1 in case of seek or buffer

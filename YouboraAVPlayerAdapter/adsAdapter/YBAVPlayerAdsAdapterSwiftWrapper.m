@@ -83,7 +83,7 @@
                 AVPlayer* avPlayer = (AVPlayer*) self.player;
                 adapter = [[YBAVPlayerAdsAdapter alloc] initWithPlayer:avPlayer];
             }
-            [self.plugin setAdapter:adapter];
+            [self.plugin setAdsAdapter:adapter];
         }
     }
 }
