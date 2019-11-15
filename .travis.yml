@@ -84,9 +84,6 @@ jobs:
     - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
-      before_script:
-        - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
-        - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj
       script:
         - set -exo pipefail
         - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
