@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   end
 
   # Dependency
-  s.dependency "YouboraLib"
+  s.dependency YouboraLib', '~> 6.5.0'
 
   s.subspec 'Streamroot' do |streamroot|
 
