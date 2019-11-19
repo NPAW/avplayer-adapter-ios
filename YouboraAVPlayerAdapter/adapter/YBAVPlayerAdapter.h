@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YouboraLib/YouboraLib.h>
+@import YouboraLib;
 
 @class AVPlayer;
 
