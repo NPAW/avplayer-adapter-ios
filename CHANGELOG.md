@@ -1,3 +1,7 @@
+## [6.5.9] - 2019-11-19
+### Fixed
+- Import not working properly for YouboraLib 6.5.9
+
 ## [6.5.9] - 2019-11-13
 ### Fixed
 - Swift wrapper now is set as the adAdapter
