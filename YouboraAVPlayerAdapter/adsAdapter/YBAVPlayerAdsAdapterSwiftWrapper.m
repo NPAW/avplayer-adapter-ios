@@ -73,7 +73,7 @@
 }
 
 - (void) initAdapterIfNecessary{
-    if(self.plugin.adapter == nil){
+    if(self.plugin.adsAdapter == nil){
         if(self.plugin != nil){
             YBAVPlayerAdsAdapter *adapter = nil;
             if ([self getAdapter] != nil) {
