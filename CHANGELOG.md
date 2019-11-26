@@ -1,3 +1,7 @@
+## [6.5.10] - 2019-11-26
+### Fixed
+- Proper null check on the ad adapter wrapper
+
 ## [6.5.9] - 2019-11-19
 ### Fixed
 - Swift wrapper now is set as the adAdapter
