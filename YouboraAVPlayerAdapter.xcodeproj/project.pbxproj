@@ -364,7 +364,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		06A41C5B2360952200ECAE6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -381,7 +382,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		06A41C5C2360952C00ECAE6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,7 +400,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -493,7 +496,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.9;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.10;
 			};
 			name = Debug;
 		};
@@ -543,7 +546,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.9;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.10;
 			};
 			name = Release;
 		};
