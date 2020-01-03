@@ -1,3 +1,9 @@
+## [6.5.11] - 2019-12-29
+### Added
+- Swift transformer that will give swift compatibility to the adapter 
+### Removed
+- Swift wrapper
+
 ## [6.5.10] - 2019-11-26
 ### Fixed
 - Proper null check on the ad adapter wrapper

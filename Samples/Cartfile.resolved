@@ -1,0 +1,5 @@
+git "https://bitbucket.org/npaw/configutil-plugin-ios.git" "7499a5c9826386ba988d0d5ee8589bd9a0ae579e"
+git "https://bitbucket.org/npaw/lib-plugin-ios.git" "6.5.12"
+github "apple/swift-protobuf" "1.7.0"
+github "daltoniam/Starscream" "3.1.1"
+github "getsentry/sentry-cocoa" "4.4.3"
