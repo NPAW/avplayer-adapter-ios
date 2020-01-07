@@ -61,7 +61,7 @@ var options: YBOptions {
 lazy var plugin = YBPlugin(options: self.options)
 ```
 
-#### Objc
+#### Obj-c
 
 ```objectivec
 
