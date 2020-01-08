@@ -1,3 +1,6 @@
+## [6.5.12] - 2020-01-08
+### Fixed
+- Fix issue with the headers with cocoa pods
 ## [6.5.11] - 2019-12-29
 ### Added
 - Swift transformer that will give swift compatibility to the adapter 
