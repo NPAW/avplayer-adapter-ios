@@ -83,7 +83,7 @@ jobs:
       name: Swift 4.1.52 / Xcode 11
     - name: "`pod trunk push`"
       stage: deploy
-      install: gem install cocoapods -v '~> 1.7.0'
+      install: gem install cocoapods
       script:
         - set -exo pipefail
         - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
