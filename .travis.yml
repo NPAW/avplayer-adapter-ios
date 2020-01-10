@@ -1,7 +1,7 @@
 #Thanks to Max Howell for this AMAZING article https://medium.com/@mxcl/deploying-to-cocoapods-with-travis-1150b1008342
 
 os: osx
-osx_image: xcode10.3
+osx_image: xcode11.0
 language: swift
 
 env:
@@ -29,7 +29,8 @@ jobs:
       install: gem install cocoapods
       script:
         - set -exo pipefail
-        - pod trunk push --verbose --allow-warnings
+        - pod spec lint
+        - pod trunk push --allow-warnings
       after_failure: cat pod.log | grep error
     # - &pod
     #   stage: podLint
