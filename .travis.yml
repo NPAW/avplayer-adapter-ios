@@ -29,7 +29,7 @@ jobs:
       install: gem install cocoapods
       script:
         - set -exo pipefail
-        - pod spec lint
+        - pod spec lint --verbose
         - pod trunk push --allow-warnings
       after_failure: cat pod.log | grep error
     # - &pod
