@@ -1,3 +1,6 @@
+## [6.5.13] - 2020-01-14
+### Fixed
+- Fix issue with the headers for tvOS target
 ## [6.5.12] - 2020-01-08
 ### Fixed
 - Fix issue with the headers with cocoa pods
