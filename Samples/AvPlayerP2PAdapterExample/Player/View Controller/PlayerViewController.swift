@@ -24,11 +24,7 @@ class PlayerViewController: UIViewController {
             return
         }
         
-        if viewModel.getSelectedP2P() == .Streamroot {
-            self.setStreamroot()
-        } else {
-            self.setSystem73()
-        }
+        self.setStreamroot()
         
         setPlayer()
         
@@ -107,12 +103,5 @@ extension PlayerViewController: DNAClientDelegate {
         }
         
         currentItem.preferredPeakBitRate = bitRate
-    }
-}
-
-//MARK: System 73 Section
-extension PlayerViewController {
-    func setSystem73() {
-        
     }
 }

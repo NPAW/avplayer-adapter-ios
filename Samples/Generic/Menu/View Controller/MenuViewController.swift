@@ -216,7 +216,7 @@ extension MenuViewController {
             return
         }
         
-        navigateToViewController(viewController: YouboraConfigViewController())
+        navigateToViewController(viewController: YouboraConfigViewController.initFromXIB())
     }
     
     

@@ -10,8 +10,6 @@
 
 @implementation YBAVPlayerAdapterSwiftTranformer
 
-+(YBPlayerAdapter<id>*)transformFromAdapter:(YBAVPlayerAdapter*)adapter {
-    return adapter;
-}
++(YBPlayerAdapter<id>*)transformFromAdapter:(YBAVPlayerAdapter*)adapter { return adapter; }
 
 @end

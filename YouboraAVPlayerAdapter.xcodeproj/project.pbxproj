@@ -11,8 +11,12 @@
 		064D9E0C23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0A23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		064D9E0F23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0D23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		064D9E1023C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E0E23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
-		0661E28F23CDFB8A00E33B8A /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0D23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0661E29023CDFB8F00E33B8A /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03DF23A8D89B0000F792 /* YBAVPlayerAdsAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064D9E2223C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2023C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064D9E2323C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2123C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m */; };
+		064D9E2623C72A9900631E8F /* YBAVPlayerPolynetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2423C72A9900631E8F /* YBAVPlayerPolynetAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064D9E2723C72A9900631E8F /* YBAVPlayerPolynetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2423C72A9900631E8F /* YBAVPlayerPolynetAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064D9E2823C72A9900631E8F /* YBAVPlayerPolynetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2523C72A9900631E8F /* YBAVPlayerPolynetAdapter.m */; };
+		064D9E2923C72A9900631E8F /* YBAVPlayerPolynetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2523C72A9900631E8F /* YBAVPlayerPolynetAdapter.m */; };
 		066C03D223A8D88A0000F792 /* YBAVPlayerP2PAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03D023A8D88A0000F792 /* YBAVPlayerP2PAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		066C03D323A8D88A0000F792 /* YBAVPlayerP2PAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03D023A8D88A0000F792 /* YBAVPlayerP2PAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		066C03D423A8D88A0000F792 /* YBAVPlayerP2PAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 066C03D123A8D88A0000F792 /* YBAVPlayerP2PAdapter.m */; };
@@ -27,6 +31,20 @@
 		066C03E123A8D89B0000F792 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 066C03DE23A8D89B0000F792 /* YBAVPlayerAdsAdapter.m */; };
 		066C03E223A8D89B0000F792 /* YBAVPlayerAdsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 066C03DE23A8D89B0000F792 /* YBAVPlayerAdsAdapter.m */; };
 		066C03E323A8D89B0000F792 /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03DF23A8D89B0000F792 /* YBAVPlayerAdsAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0680041923C8BC52008B4C4B /* YBAVPlayerAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0A23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0680041A23C8BC58008B4C4B /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E0923C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.m */; };
+		068DD79823DB175500229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E0E23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
+		068DD79923DB175500229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E0E23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m */; };
+		068DD79A23DB176200229F30 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E0923C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.m */; };
+		068DD79B23DB176D00229F30 /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03DF23A8D89B0000F792 /* YBAVPlayerAdsAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068DD79C23DB177400229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0D23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068DD79D23DB177E00229F30 /* YBAVPlayerP2PAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 066C03D123A8D88A0000F792 /* YBAVPlayerP2PAdapter.m */; };
+		068DD79E23DB178300229F30 /* YBAVPlayerStreamrootAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2023C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068DD79F23DB178400229F30 /* YBAVPlayerStreamrootAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2023C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068DD7A023DB178900229F30 /* YBAVPlayerStreamrootAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2123C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m */; };
+		068DD7A123DB178900229F30 /* YBAVPlayerStreamrootAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2123C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m */; };
+		068DD7A223DB178C00229F30 /* YBAVPlayerPolynetAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E2423C72A9900631E8F /* YBAVPlayerPolynetAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068DD7A323DB179300229F30 /* YBAVPlayerPolynetAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 064D9E2523C72A9900631E8F /* YBAVPlayerPolynetAdapter.m */; };
 		06A8100523A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A8100323A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06A8100623A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A8100323A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06A8100723A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A8100323A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +84,10 @@
 		064D9E0A23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAVPlayerAdapterSwiftWrapper.h; path = YouboraAVPlayerAdapter/Generic/adapter/YBAVPlayerAdapterSwiftWrapper.h; sourceTree = SOURCE_ROOT; };
 		064D9E0D23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAVPlayerAdsAdapterSwiftWrapper.h; path = YouboraAVPlayerAdapter/Generic/adsAdapter/YBAVPlayerAdsAdapterSwiftWrapper.h; sourceTree = SOURCE_ROOT; };
 		064D9E0E23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerAdsAdapterSwiftWrapper.m; path = YouboraAVPlayerAdapter/Generic/adsAdapter/YBAVPlayerAdsAdapterSwiftWrapper.m; sourceTree = SOURCE_ROOT; };
+		064D9E2023C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YBAVPlayerStreamrootAdapter.h; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerStreamrootAdapter.h; sourceTree = SOURCE_ROOT; };
+		064D9E2123C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerStreamrootAdapter.m; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerStreamrootAdapter.m; sourceTree = SOURCE_ROOT; };
+		064D9E2423C72A9900631E8F /* YBAVPlayerPolynetAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YBAVPlayerPolynetAdapter.h; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerPolynetAdapter.h; sourceTree = SOURCE_ROOT; };
+		064D9E2523C72A9900631E8F /* YBAVPlayerPolynetAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerPolynetAdapter.m; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerPolynetAdapter.m; sourceTree = SOURCE_ROOT; };
 		066C03D023A8D88A0000F792 /* YBAVPlayerP2PAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YBAVPlayerP2PAdapter.h; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerP2PAdapter.h; sourceTree = SOURCE_ROOT; };
 		066C03D123A8D88A0000F792 /* YBAVPlayerP2PAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerP2PAdapter.m; path = YouboraAVPlayerAdapter/Generic/p2p/YBAVPlayerP2PAdapter.m; sourceTree = SOURCE_ROOT; };
 		066C03D623A8D8930000F792 /* YBAVPlayerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YBAVPlayerAdapter.m; path = YouboraAVPlayerAdapter/Generic/adapter/YBAVPlayerAdapter.m; sourceTree = SOURCE_ROOT; };
@@ -79,7 +101,7 @@
 		4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter.h; sourceTree = "<group>"; };
 		4E4956641E9F6CAA00FF6280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5237FF228DCD880013BA16 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter_OSX.h; sourceTree = "<group>"; };
+		CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraAVPlayerAdapter.h; sourceTree = "<group>"; };
 		CD523802228DCD880013BA16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD91947E203208D1002A8507 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		CDBA56141FB0771900A9A35C /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +229,10 @@
 			children = (
 				066C03D023A8D88A0000F792 /* YBAVPlayerP2PAdapter.h */,
 				066C03D123A8D88A0000F792 /* YBAVPlayerP2PAdapter.m */,
+				064D9E2023C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h */,
+				064D9E2123C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m */,
+				064D9E2423C72A9900631E8F /* YBAVPlayerPolynetAdapter.h */,
+				064D9E2523C72A9900631E8F /* YBAVPlayerPolynetAdapter.m */,
 			);
 			name = p2p;
 			path = "../YouboraAVPlayerAdapter iOS/p2p";
@@ -215,7 +241,7 @@
 		CD523800228DCD880013BA16 /* YouboraAVPlayerAdapter OSX */ = {
 			isa = PBXGroup;
 			children = (
-				CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter_OSX.h */,
+				CD523801228DCD880013BA16 /* YouboraAVPlayerAdapter.h */,
 				CD523802228DCD880013BA16 /* Info.plist */,
 			);
 			path = "YouboraAVPlayerAdapter OSX";
@@ -251,6 +277,8 @@
 			files = (
 				4E4956651E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h in Headers */,
 				066C03DB23A8D8930000F792 /* YBAVPlayerAdapter.h in Headers */,
+				064D9E2223C72A7500631E8F /* YBAVPlayerStreamrootAdapter.h in Headers */,
+				064D9E2623C72A9900631E8F /* YBAVPlayerPolynetAdapter.h in Headers */,
 				066C03E323A8D89B0000F792 /* YBAVPlayerAdsAdapter.h in Headers */,
 				064D9E0C23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 				06A8100523A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */,
@@ -266,6 +294,8 @@
 			files = (
 				06B6E17323CE094B00E5DEAC /* YBAVPlayerP2PAdapter.h in Headers */,
 				066C03DD23A8D8930000F792 /* YBAVPlayerAdapter.h in Headers */,
+				068DD79F23DB178400229F30 /* YBAVPlayerStreamrootAdapter.h in Headers */,
+				068DD7A223DB178C00229F30 /* YBAVPlayerPolynetAdapter.h in Headers */,
 				06B6E17023CE076D00E5DEAC /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 				CD92C75122CB4FF100286DF9 /* (null) in Headers */,
 				06B6E17223CE093E00E5DEAC /* YouboraAVPlayerAdapter.h in Headers */,
@@ -279,14 +309,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0661E28F23CDFB8A00E33B8A /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
 				066C03DC23A8D8930000F792 /* YBAVPlayerAdapter.h in Headers */,
 				06A8100623A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */,
+				064D9E2723C72A9900631E8F /* YBAVPlayerPolynetAdapter.h in Headers */,
 				06B6E16B23CE011700E5DEAC /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
+				068DD79E23DB178300229F30 /* YBAVPlayerStreamrootAdapter.h in Headers */,
 				06B6E17123CE093E00E5DEAC /* YouboraAVPlayerAdapter.h in Headers */,
+				068DD79B23DB176D00229F30 /* YBAVPlayerAdsAdapter.h in Headers */,
 				066C03D323A8D88A0000F792 /* YBAVPlayerP2PAdapter.h in Headers */,
-				0661E29023CDFB8F00E33B8A /* YBAVPlayerAdsAdapter.h in Headers */,
 				CD92C75022CB4FF100286DF9 /* (null) in Headers */,
+				068DD79C23DB177400229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
+				0680041923C8BC52008B4C4B /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +390,7 @@
 		4E4956571E9F6CAA00FF6280 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = NPAW;
 				TargetAttributes = {
@@ -482,9 +516,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064D9E2823C72A9900631E8F /* YBAVPlayerPolynetAdapter.m in Sources */,
 				06A8100823A7A4B1007976CD /* YBAVPlayerAdapterTranformer.m in Sources */,
 				064D9E1023C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 				064D9E0B23C6485E00631E8F /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
+				064D9E2323C72A7500631E8F /* YBAVPlayerStreamrootAdapter.m in Sources */,
 				066C03E023A8D89B0000F792 /* YBAVPlayerAdsAdapter.m in Sources */,
 				066C03D823A8D8930000F792 /* YBAVPlayerAdapter.m in Sources */,
 				066C03D423A8D88A0000F792 /* YBAVPlayerP2PAdapter.m in Sources */,
@@ -495,9 +531,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068DD7A323DB179300229F30 /* YBAVPlayerPolynetAdapter.m in Sources */,
 				066C03E223A8D89B0000F792 /* YBAVPlayerAdsAdapter.m in Sources */,
+				068DD79D23DB177E00229F30 /* YBAVPlayerP2PAdapter.m in Sources */,
 				066C03DA23A8D8930000F792 /* YBAVPlayerAdapter.m in Sources */,
+				068DD7A023DB178900229F30 /* YBAVPlayerStreamrootAdapter.m in Sources */,
+				068DD79A23DB176200229F30 /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				06A8100A23A7A4B1007976CD /* YBAVPlayerAdapterTranformer.m in Sources */,
+				068DD79923DB175500229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,9 +546,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068DD7A123DB178900229F30 /* YBAVPlayerStreamrootAdapter.m in Sources */,
+				068DD79823DB175500229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.m in Sources */,
 				06A8100923A7A4B1007976CD /* YBAVPlayerAdapterTranformer.m in Sources */,
 				066C03E123A8D89B0000F792 /* YBAVPlayerAdsAdapter.m in Sources */,
+				0680041A23C8BC58008B4C4B /* YBAVPlayerAdapterSwiftWrapper.m in Sources */,
 				066C03D923A8D8930000F792 /* YBAVPlayerAdapter.m in Sources */,
+				064D9E2923C72A9900631E8F /* YBAVPlayerPolynetAdapter.m in Sources */,
 				066C03D523A8D88A0000F792 /* YBAVPlayerP2PAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,6 +856,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
+					"${PROJECT_DIR}/Samples/Carthage/Build/tvOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -849,6 +895,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(inherited)",
 					"$(PROJECT_DIR)/YouboraAVPlayerAdapter",
+					"${PROJECT_DIR}/Samples/Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

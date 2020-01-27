@@ -17,6 +17,7 @@ typealias UpdateClosure = () -> Void
         DashResource(resourceLink: "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd"),
         DashResource(resourceLink: "http://192.168.1.99/asd.mpd"),
         LiveResource(resourceLink: "http://aljazeera-ara-apple-live.adaptive.level3.net/apple/aljazeera/arabic/160.m3u8"),
+        LiveResource(resourceLink: PolynetConstants.POLYNET_RESOURCE_ULR),
         BrokenResource(resourceLink: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/l.m3u8")
     ]
     

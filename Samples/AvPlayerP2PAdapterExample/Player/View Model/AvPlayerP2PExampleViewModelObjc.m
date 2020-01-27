@@ -21,7 +21,6 @@
 @property NSArray <NSNumber*> *adsInterval;
 @property NSInteger currentAdPosition;
 @property NSString *currentAdLink;
-@property AvailableP2P selectedP2P;
 
 @end
 
@@ -51,7 +50,7 @@
 
 - (void)startYouboraWithPlayer:(AVPlayer * _Nullable)player andDnaClient:(DNAClient * _Nullable)dnaClient {
     [self.plugin fireInit];
-    [self.plugin setAdapter:[[YBAVPlayerP2PAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
+    [self.plugin setAdapter:[[YBAVPlayerStreamrootAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
 }
 
 - (NSURL *)getVideoUrl {
@@ -97,12 +96,6 @@
 - (void)adsDidFinish {
     self.currentAdLink = nil;
     [self.plugin removeAdsAdapter];
-}
-
-- (AvailableP2P)getSelectedP2P {
-    if (self.selectedP2P) { return self.selectedP2P; }
-    
-    return Streamroot;
 }
 
 

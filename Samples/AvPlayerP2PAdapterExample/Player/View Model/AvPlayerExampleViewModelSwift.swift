@@ -28,8 +28,6 @@ class AvPlayerExampleViewModelSwift: AvPlayerExampleViewModel {
     private (set) var resource: MenuResourceOption;
     private (set) var ad: MenuAdOption?;
     
-    private (set) var selectedP2P: AvailableP2P?;
-    
     private var adsInterval: [Int] {
         if self.containAds() {
             return [10,20,30]
@@ -46,21 +44,10 @@ class AvPlayerExampleViewModelSwift: AvPlayerExampleViewModel {
         self.ad = ad
     }
     
-    func getSelectedP2P() -> AvailableP2P {
-         guard let selectedP2P = self.selectedP2P else {
-             return .Streamroot
-         }
-         return selectedP2P
-     }
-    
-    func setSelectedP2P(_ selectedP2P: AvailableP2P) {
-        self.selectedP2P = selectedP2P
-    }
-    
     func startYoubora(with player: AVPlayer?, andDnaClient dnaClient: DNAClient?) {
         self.plugin.fireInit()
         
-        self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerP2PAdapter(dnaClient: dnaClient, andPlayer: player))
+        self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerStreamrootAdapter(dnaClient: dnaClient, andPlayer: player))
     }
     
     func getVideoUrl() -> URL? {

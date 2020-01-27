@@ -12,6 +12,18 @@ Insert into your Podfile
 pod 'YouboraAVPlayerAdapter'
 ```
 
+or if you are using Streamroot
+
+```bash
+pod 'YouboraAVPlayerAdapter/Streamroot'
+```
+
+or for System73
+
+```bash
+pod 'YouboraAVPlayerAdapter/Polynet'
+```
+
 and then run
 
 ```bash
@@ -61,7 +73,7 @@ var options: YBOptions {
 lazy var plugin = YBPlugin(options: self.options)
 ```
 
-#### Obj-c
+#### Obj-C
 
 ```objectivec
 
@@ -121,7 +133,7 @@ self.plugin.removeAdapter()
 self.plugin.removeAdsAdapter()
 ```
 
-#### Obj-c
+#### Obj-C
 
 ```objectivec
 #import <YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h>
@@ -149,7 +161,13 @@ self.plugin.removeAdsAdapter()
 [self.plugin removeAdsAdapter];
 ```
 
-### YBAVPlayerP2PAdapter
+### YBAVPlayerStreamrootAdapter
+
+To install with pods
+
+```bash
+pod 'YouboraAVPlayerAdapter/Streamroot'
+```
 
 #### Swift
 
@@ -160,7 +178,7 @@ import YouboraAVPlayerAdapter
 
 //Once you have your player, plugin and dnaClient initialized you can set the adapter
 self.plugin.fireInit()
-self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerP2PAdapter(dnaClient: dnaClient, andPlayer: player))
+self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerStreamrootAdapter(dnaClient: dnaClient, andPlayer: player))
 
 ...
 
@@ -169,7 +187,7 @@ self.plugin.fireStop()
 self.plugin.removeAdapter()
 ```
 
-#### Obj-c
+#### Obj-C
 
 ```objectivec
 #import <YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h>
@@ -178,7 +196,7 @@ self.plugin.removeAdapter()
 
 //Once you have your player, dnaClient and plugin initialized you can set the adapter
 [self.plugin fireInit];
-[self.plugin setAdapter:[[YBAVPlayerP2PAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
+[self.plugin setAdapter:[[YBAVPlayerStreamrootAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
 
 ...
 
@@ -186,6 +204,52 @@ self.plugin.removeAdapter()
 [self.plugin fireStop];
 [self.plugin removeAdapter];
 ```
+
+### YBAVPlayerPolynetAdapter
+
+To install with pods
+
+```bash
+pod 'YouboraAVPlayerAdapter/Polynet'
+```
+
+#### Swift
+
+```swift
+import YouboraAVPlayerAdapter
+
+...
+
+//Once you have your player, plugin and polynet initialized you can set the adapter
+self.plugin.fireInit()
+self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerPolynetAdapter(polyNet: polynet, player: player, andDelegate: polynetDelegate))
+
+...
+
+// When the view gonna be destroyed you can force stop and clean the adapters in order to make sure you avoid retain cycles  
+self.plugin.fireStop()
+self.plugin.removeAdapter()
+```
+
+#### Obj-C
+
+```objectivec
+#import <YouboraAVPlayerAdapter/YouboraAVPlayerAdapter.h>
+
+...
+
+//Once you have your player, polynet and plugin initialized you can set the adapter
+[self.plugin fireInit];
+[self.plugin setAdapter:[[YBAVPlayerPolynetAdapter alloc] initWithPolyNet:polynet player:player andDelegate:polynetDelegate]];
+
+...
+
+// When the view gonna be destroyed you can force stop and clean the adapters in order to make sure you avoid retain cycles  
+[self.plugin fireStop];
+[self.plugin removeAdapter];
+```
+
+By the examples code you can see that the adapter allows to pass the polynet delegate by reference. This is because polynet allows just one delegate. So if you want to use this delegate you need to send it by our adapter
 
 ## Run samples project
 
@@ -198,11 +262,17 @@ Navigate to the root folder and then execute:
 pod install
 ```
 
+Case you want to run Streamroot or Polynet examples then you have to go to the **Podfile** and uncomment inside of **p2p_pods** the one that you want to use. You can't use both at the same time because they share a dependency with different versions what will cause a compatibility issue.
+
 1. Now you have to go to your **target > General > Frameworks, Libraries and Embedded Content** and change the frameworks that you are using in cocoapods from **Embed & Sign** to **Do Not Embed**
-2. To run the target **AvPlayerP2PAdapterExample** in Samples project you have to use xCode with Swift 5.1 compiler (Xcode 11) because StreamrootSDK was compiled in the version
+2. To run the target **AvPlayerP2PAdapterExample** in Samples project you have to use Xcode with Swift 5.1 compiler (Xcode 11) because StreamrootSDK was compiled in the version
 
 
 ###### Via carthage (Default)
+Similar to cocoapods if you want to use **Streamroot** or **Polynet** examples you should go to the carthage file inside of **Samples** folder and uncomment the one you wish to use. Once more you **can't use both** at the same time since they share a dependecy with different versions
+
+Case you run **Polynet** example then you have to use **Xcode 11.3** because **PolyNetSDK** was build with swift compiler 5.1.3
+
 Navigate to the root folder and then execute: 
 ```bash
 carthage update && cd Samples && carthage update

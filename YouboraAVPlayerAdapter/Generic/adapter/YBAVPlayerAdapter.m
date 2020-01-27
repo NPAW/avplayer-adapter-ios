@@ -52,7 +52,7 @@
 @property (nonatomic, strong) NSString * rendition;
 
 /// Error codes for known fatal errors
-@property (nonatomic, strong) NSArray * fatalErrors;
+@property (nonatomic, strong) NSMutableArray * fatalErrors;
 
 @property (nonatomic, assign) double lastRenditionBitrate;
 
@@ -67,10 +67,20 @@ static void * const observationContext = (void *) &observationContext;
 //Just to skip false seeks (such as de first one)
 bool firstSeek;
 
+- (instancetype)initWithPlayer:(id)player {
+    self = [super initWithPlayer:player];
+    
+    if (self) {
+        self.supportPlaylists = YES;
+    }
+    
+    return self;
+}
+
 - (void)registerListeners {
     [super registerListeners];
-    
-    self.fatalErrors = @[@-1100 , @-11853, @-1005, @-11819, @-11800, @-1008];
+   
+    self.fatalErrors =  [NSMutableArray arrayWithArray:@[@-1100 , @-11853, @-1005, @-11819, @-11800, @-1008]];
     self.autoJoinTime = YES;
     @try {
         [self resetValues];
@@ -394,7 +404,6 @@ bool firstSeek;
     self.lastPlayhead = 0;
     self.bitrate = -1;
     self.throughput = -1;
-    self.supportPlaylists = YES;
     self.rendition = [super getRendition];
     self.lastRenditionBitrate = -1;
     self.shouldPause = true;
