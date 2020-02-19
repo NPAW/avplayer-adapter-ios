@@ -1,3 +1,10 @@
+## [6.5.14] - 2020-02-19
+### Added
+- Support to Polynet
+### Improved
+- P2P adapters struct
+### Fixed
+- Fix issue with supportPlaylists
 ## [6.5.13] - 2020-01-14
 ### Fixed
 - Fix issue with the headers for tvOS target
