@@ -42,7 +42,7 @@ import YouboraConfigUtils
     
     func addViewControllerContainer(button: UIButton) {
         let viewControllerContainer = UIViewController()
-        self.addChild(viewControllerContainer)
+        self.addChildViewController(viewControllerContainer)
         
         self.view.addSubview(viewControllerContainer.view)
         

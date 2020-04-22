@@ -59,9 +59,9 @@
 		06B6E17423CE096100E5DEAC /* YBAVPlayerAdsAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 066C03DF23A8D89B0000F792 /* YBAVPlayerAdsAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06B6E17523CE096400E5DEAC /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 064D9E0D23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E4956651E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4956631E9F6CAA00FF6280 /* YouboraAVPlayerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD92C74F22CB4FF100286DF9 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
-		CD92C75022CB4FF100286DF9 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
-		CD92C75122CB4FF100286DF9 /* (null) in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		CD92C74F22CB4FF100286DF9 /* BuildFile in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		CD92C75022CB4FF100286DF9 /* BuildFile in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
+		CD92C75122CB4FF100286DF9 /* BuildFile in Headers */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -284,7 +284,7 @@
 				06A8100523A7A4B1007976CD /* YBAVPlayerAdapterTranformer.h in Headers */,
 				066C03D223A8D88A0000F792 /* YBAVPlayerP2PAdapter.h in Headers */,
 				064D9E0F23C6487500631E8F /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
-				CD92C74F22CB4FF100286DF9 /* (null) in Headers */,
+				CD92C74F22CB4FF100286DF9 /* BuildFile in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 				068DD79F23DB178400229F30 /* YBAVPlayerStreamrootAdapter.h in Headers */,
 				068DD7A223DB178C00229F30 /* YBAVPlayerPolynetAdapter.h in Headers */,
 				06B6E17023CE076D00E5DEAC /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
-				CD92C75122CB4FF100286DF9 /* (null) in Headers */,
+				CD92C75122CB4FF100286DF9 /* BuildFile in Headers */,
 				06B6E17223CE093E00E5DEAC /* YouboraAVPlayerAdapter.h in Headers */,
 				06B6E17423CE096100E5DEAC /* YBAVPlayerAdsAdapter.h in Headers */,
 				06B6E17523CE096400E5DEAC /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
@@ -317,7 +317,7 @@
 				06B6E17123CE093E00E5DEAC /* YouboraAVPlayerAdapter.h in Headers */,
 				068DD79B23DB176D00229F30 /* YBAVPlayerAdsAdapter.h in Headers */,
 				066C03D323A8D88A0000F792 /* YBAVPlayerP2PAdapter.h in Headers */,
-				CD92C75022CB4FF100286DF9 /* (null) in Headers */,
+				CD92C75022CB4FF100286DF9 /* BuildFile in Headers */,
 				068DD79C23DB177400229F30 /* YBAVPlayerAdsAdapterSwiftWrapper.h in Headers */,
 				0680041923C8BC52008B4C4B /* YBAVPlayerAdapterSwiftWrapper.h in Headers */,
 			);
@@ -470,8 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		06A41C5B2360952200ECAE6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -488,8 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		06A41C5C2360952C00ECAE6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -506,8 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -621,7 +618,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.14;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.15;
 			};
 			name = Debug;
 		};
@@ -680,7 +677,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.14;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.15;
 			};
 			name = Release;
 		};

@@ -5,15 +5,15 @@ workspace 'YouboraAVPlayerAdapter.xcworkspace'
 
 def p2p_pods
     #pod 'AVPlayerDNAPlugin', '~> 1.1.9'
-    pod 'PolyNetSDK' , '4.33.113'
+    pod 'PolyNetSDK', '~> 4.33.113'
 end
 
 def common_pods
-    pod 'YouboraLib', '~> 6.5.0'
+    pod 'YouboraLib', '~> 6.5.19'
 end
 
 def tv_pods
-    pod 'PolyNetSDKtvOS'
+    pod 'PolyNetSDKtvOS', '~> 4.33.113'
 end
 
 target 'YouboraAVPlayerAdapter' do

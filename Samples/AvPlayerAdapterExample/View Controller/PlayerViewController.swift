@@ -21,8 +21,8 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self,selector: #selector(self.appWillResignActive), name: UIApplication.willResignActiveNotification, object:nil)
-        NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object:nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appWillResignActive), name: NSNotification.Name.UIApplicationWillResignActive, object:nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.appDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object:nil)
         
         // Initialize player on this view controller
         self.initializePlayer()
@@ -66,7 +66,7 @@ extension PlayerViewController {
         self.playerViewController = AVPlayerViewController()
         
         // Add view to the current screen
-        self.addChild(playerViewController!)
+        self.addChildViewController(playerViewController!)
         self.view.addSubview((self.playerViewController?.view)!)
         
         // We use the playerView view as a guide for the video
@@ -108,7 +108,7 @@ extension PlayerViewController {
         self.adsPlayerViewController = AVPlayerViewController()
         
         // Add view to the current screen
-        self.addChild(adsPlayerViewController!)
+        self.addChildViewController(adsPlayerViewController!)
         self.view.addSubview((self.adsPlayerViewController?.view)!)
         
         // We use the playerView view as a guide for the video
@@ -131,7 +131,7 @@ extension PlayerViewController {
         }
         
         self.adsPlayerViewController?.view.removeFromSuperview()
-        self.adsPlayerViewController?.removeFromParent()
+        self.adsPlayerViewController?.removeFromParentViewController()
         self.adsPlayerViewController = nil
         
         self.playerViewController?.player?.play()

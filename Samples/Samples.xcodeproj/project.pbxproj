@@ -1369,7 +1369,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
@@ -1397,7 +1397,7 @@
 				SDKROOT = appletvos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
@@ -1429,7 +1429,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1458,7 +1458,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1483,7 +1483,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AvPlayerPolynetAdapterExample/ObjcBridgingHeader.h;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1509,7 +1509,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AvPlayerPolynetAdapterExample/ObjcBridgingHeader.h;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1651,7 +1651,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1678,7 +1678,7 @@
 				PRODUCT_NAME = AVAdapterExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "Generic/Obj-Bridge/AvPlayerAdapterExample-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1702,7 +1702,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.AvPlayerPolynetAdapterExample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
@@ -1727,7 +1727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.AvPlayerPolynetAdapterExample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
@@ -1754,7 +1754,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = AvPlayerP2PAdapterExample/ObjcBridgingHeader.h;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1779,7 +1779,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AvPlayerP2PAdapterExample/ObjcBridgingHeader.h;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,3 +1,7 @@
+## [6.5.15] - 2020-04-22
+### Added
+- Add total bytes support
+- Fix version youboralib dependency to support total bytes
 ## [6.5.14] - 2020-02-19
 ### Added
 - Support to Polynet

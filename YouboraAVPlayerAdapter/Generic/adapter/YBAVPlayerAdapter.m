@@ -110,9 +110,6 @@ bool firstSeek;
         
         // Notification when the playback ends successfully
         [nc addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-        
-        // Notification accesslog - we use this to get the bitrate
-        //[nc addObserver:self selector:@selector(accessLogEntry:) name:AVPlayerItemNewAccessLogEntryNotification object:nil];
     } @catch (NSException *exception) {
         [YBLog logException:exception];
     }
@@ -447,7 +444,7 @@ bool firstSeek;
 - (NSNumber *)getBitrate {
     
     AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
-    
+    NSArray* events = self.player.currentItem.accessLog.events;
     if (logEvent) {
         
         double br;
@@ -522,6 +519,13 @@ bool firstSeek;
 
 - (NSString *)getVersion {
     return PLUGIN_VERSION;
+}
+
+- (NSNumber *)getTotalBytes {
+    AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
+    if (!logEvent) { return nil; }
+    [YBLog debug:@"Total bytes %lld", logEvent.numberOfBytesTransferred];
+    return [NSNumber numberWithUnsignedLongLong:logEvent.numberOfBytesTransferred];
 }
 
 //Static method as a workaround for swift

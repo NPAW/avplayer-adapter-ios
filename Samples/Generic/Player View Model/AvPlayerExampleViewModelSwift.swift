@@ -19,6 +19,7 @@ class AvPlayerExampleViewModelSwift: AvPlayerExampleViewModel {
         options.accountCode = "powerdev"
         options.adResource = self.ad?.adLink
         options.contentIsLive = NSNumber(value: self.resource.isLive)
+        options.sendTotalBytes = NSNumber(value: true)
         return options;
     }
     
@@ -47,7 +48,7 @@ class AvPlayerExampleViewModelSwift: AvPlayerExampleViewModel {
         guard let player = player else {
             return
         }
-        
+        YBLog.setDebugLevel(.verbose)
         self.plugin.fireInit()
         
         self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdapter(player: player))
