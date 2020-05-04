@@ -21,7 +21,7 @@ target 'YouboraAVPlayerAdapter' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
 
-  platform :ios, '10.2'
+  platform :ios, '9.0'
 
   # Pods for YouboraAVPlayerAdapter
     common_pods
@@ -61,7 +61,7 @@ target 'AvPlayerAdapterExample' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
   
-    platform :ios, '10.2'
+    platform :ios, '9.0'
   
     # Pods for AVPlayerAdapterExample
     sample_common_pods
@@ -94,7 +94,7 @@ target 'AvPlayerP2PAdapterExample' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
   
-  platform :ios, '10.2'
+  platform :ios, '9.0'
   
   # Pods for YouboraAVPlayerAdapter
   sample_common_pods
@@ -106,7 +106,7 @@ target 'AvPlayerPolynetAdapterExample' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
     
-    platform :ios, '10'
+    platform :ios, '9.0'
     
     # Pods for YouboraAVPlayerAdapter
     sample_common_pods

@@ -54,7 +54,7 @@ class PlayerViewController: UIViewController {
             playerViewController?.player = player
             
             // Add view to the current screen
-            self.addChild(playerViewController!)
+            self.addChildViewController(playerViewController!)
             self.view.addSubview((self.playerViewController?.view)!)
             
             // We use the playerView view as a guide for the video
@@ -78,7 +78,7 @@ class PlayerViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if self.isMovingFromParent {
+        if self.isMovingFromParentViewController {
             self.deactivateBufferEmptyCountermeasure()
             self.plugin.fireStop()
             self.plugin.removeAdapter()
@@ -109,7 +109,7 @@ extension PlayerViewController: PolyNetDataSource {
     
     func getTimeRange(timeRanges: [NSValue], forCurrentTime time: CMTime) -> CMTimeRange? {
         let timeRange = timeRanges.first(where: { (value) -> Bool in
-            CMTimeRangeContainsTime(value.timeRangeValue, time: time)
+            CMTimeRangeContainsTime(value.timeRangeValue, time)
         })
         // Workaround: When pause the player, the item loaded ranges moves whereas the current time
         // remains equal. In time, the current time is out of the range, so the buffer health cannot
@@ -227,19 +227,23 @@ extension PlayerViewController {
             return
         }
         
-        bufferEmptyCountermeasureTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
-            let currentItem: AVPlayerItem = (self.player?.currentItem)!
-            self.removeObserversForPlayerItem(playerItem: currentItem)
-            
-            let asset = currentItem.asset
-            
-            guard let urlAsset = asset as? AVURLAsset else {
-                return
+        if #available(tvOS 10.0, *) {
+            bufferEmptyCountermeasureTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+                let currentItem: AVPlayerItem = (self.player?.currentItem)!
+                self.removeObserversForPlayerItem(playerItem: currentItem)
+                
+                let asset = currentItem.asset
+                
+                guard let urlAsset = asset as? AVURLAsset else {
+                    return
+                }
+                
+                let item: AVPlayerItem = AVPlayerItem.init(url: urlAsset.url)
+                self.addObserversForPlayerItem(playerItem: item)
+                self.player?.replaceCurrentItem(with: item)
             }
-            
-            let item: AVPlayerItem = AVPlayerItem.init(url: urlAsset.url)
-            self.addObserversForPlayerItem(playerItem: item)
-            self.player?.replaceCurrentItem(with: item)
+        } else {
+            // Fallback on earlier versions
         }
     }
     

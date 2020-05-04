@@ -11,14 +11,8 @@
 		060DFFD523AB879D00715D06 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFFD323AB879D00715D06 /* Utils.swift */; };
 		060DFFD623AB879D00715D06 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFFD323AB879D00715D06 /* Utils.swift */; };
 		060DFFD723AB879D00715D06 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFFD323AB879D00715D06 /* Utils.swift */; };
-		060DFFE423AB8F0E00715D06 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; };
-		060DFFE523AB8F0E00715D06 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		060DFFE623AB8F0F00715D06 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83223AA21E2006A35E4 /* YouboraLib.framework */; };
-		060DFFE723AB8F1000715D06 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83223AA21E2006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		060DFFE823AB8F9D00715D06 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82723AA2156006A35E4 /* YouboraConfigUtils.framework */; };
 		060DFFE923AB8F9D00715D06 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82723AA2156006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		060DFFEA23AB8F9F00715D06 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83E23AA253B006A35E4 /* YouboraLib.framework */; };
-		060DFFEB23AB8F9F00715D06 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83E23AA253B006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		060DFFEC23AB905000715D06 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82D23AA2165006A35E4 /* YouboraConfigUtils.framework */; };
 		060DFFED23AB905000715D06 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82D23AA2165006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		060DFFEE23AB905100715D06 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83923AA2516006A35E4 /* YouboraLib.framework */; };
@@ -90,6 +84,21 @@
 		066C041623A8E10B0000F792 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C041423A8E10A0000F792 /* MenuViewController.swift */; };
 		066C041723A8E10B0000F792 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C041423A8E10A0000F792 /* MenuViewController.swift */; };
 		066C041923A8E10B0000F792 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 066C041523A8E10B0000F792 /* MenuViewController.xib */; };
+		06783B9C2459D6D800EC0855 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82623AA2156006A35E4 /* YouboraLib.framework */; };
+		06783B9D2459D6D800EC0855 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82623AA2156006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06783B9E2459DA4200EC0855 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06287BD623AB74E500639092 /* Starscream.framework */; };
+		06783BA12459DBB600EC0855 /* PolyNetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680043A23C8CE3D008B4C4B /* PolyNetSDK.framework */; };
+		06783BA22459DBB600EC0855 /* PolyNetSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0680043A23C8CE3D008B4C4B /* PolyNetSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06783BA32459DC1C00EC0855 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; };
+		06783BA42459DC1C00EC0855 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06783BA82459DF2200EC0855 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06783BA72459DF2200EC0855 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06783BA92459DF3C00EC0855 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06783BA72459DF2200EC0855 /* YouboraLib.framework */; };
+		06783BBF245B0E1200EC0855 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DC23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; };
+		06783BC0245B0E1200EC0855 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DC23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06783BD724600F9100EC0855 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; };
+		06783BD824600F9100EC0855 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06783BD924600F9100EC0855 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; };
+		06783BDA24600F9100EC0855 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0680041623C8BB71008B4C4B /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DE23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; };
 		0680041723C8BB71008B4C4B /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DE23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680041E23C8C01D008B4C4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0680041D23C8C01D008B4C4B /* Constants.swift */; };
@@ -110,18 +119,12 @@
 		0680042F23C8C674008B4C4B /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680043023C8C675008B4C4B /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; };
 		0680043123C8C675008B4C4B /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82023AA2145006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0680043223C8CC5D008B4C4B /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83223AA21E2006A35E4 /* YouboraLib.framework */; };
-		0680043323C8CC5D008B4C4B /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83223AA21E2006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680043423C8CE3D008B4C4B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06287BD623AB74E500639092 /* Starscream.framework */; };
 		0680043523C8CE3D008B4C4B /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06287BD623AB74E500639092 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680043623C8CE3D008B4C4B /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06287BD723AB74E600639092 /* SwiftProtobuf.framework */; };
 		0680043723C8CE3D008B4C4B /* SwiftProtobuf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06287BD723AB74E600639092 /* SwiftProtobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680043823C8CE3D008B4C4B /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; };
 		0680043923C8CE3D008B4C4B /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0680043B23C8CE3D008B4C4B /* PolyNetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680043A23C8CE3D008B4C4B /* PolyNetSDK.framework */; };
-		0680043C23C8CE3D008B4C4B /* PolyNetSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0680043A23C8CE3D008B4C4B /* PolyNetSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0680043D23C8D073008B4C4B /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83E23AA253B006A35E4 /* YouboraLib.framework */; };
-		0680043E23C8D073008B4C4B /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC83E23AA253B006A35E4 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680043F23C8D084008B4C4B /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82723AA2156006A35E4 /* YouboraConfigUtils.framework */; };
 		0680044023C8D084008B4C4B /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 067BC82723AA2156006A35E4 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0680044423C8D084008B4C4B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680044123C8D084008B4C4B /* Starscream.framework */; };
@@ -131,8 +134,6 @@
 		0680044A23C8D1A2008B4C4B /* PolyNetSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680044223C8D084008B4C4B /* PolyNetSDK.framework */; };
 		0680044B23C8D1A2008B4C4B /* PolyNetSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0680044223C8D084008B4C4B /* PolyNetSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		068DD77F23D9B55B00229F30 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068DD77E23D9B55B00229F30 /* PlayerViewController.swift */; };
-		069EA2E123A8EF5B00819D94 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DC23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; };
-		069EA2E223A8EF5B00819D94 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DC23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		069EA2E823A8F0CD00819D94 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DE23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; };
 		069EA2E923A8F0CD00819D94 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2DE23A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		069EA2EB23A8F0D500819D94 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA2E023A8EF5200819D94 /* YouboraAVPlayerAdapter.framework */; };
@@ -213,31 +214,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		064A883023A7E48D00047B17 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				060DFFE723AB8F1000715D06 /* YouboraLib.framework in Embed Frameworks */,
-				060DFFE523AB8F0E00715D06 /* YouboraConfigUtils.framework in Embed Frameworks */,
-				069EA2E223A8EF5B00819D94 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0657101023C74AEB0085A7E9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0680043323C8CC5D008B4C4B /* YouboraLib.framework in Embed Frameworks */,
-				0680043C23C8CE3D008B4C4B /* PolyNetSDK.framework in Embed Frameworks */,
+				06783BA22459DBB600EC0855 /* PolyNetSDK.framework in Embed Frameworks */,
 				0680043723C8CE3D008B4C4B /* SwiftProtobuf.framework in Embed Frameworks */,
 				0680043523C8CE3D008B4C4B /* Starscream.framework in Embed Frameworks */,
+				06783BA42459DC1C00EC0855 /* YouboraLib.framework in Embed Frameworks */,
 				0657100F23C74AEB0085A7E9 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
 				0680043923C8CE3D008B4C4B /* YouboraConfigUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06783BC1245B0E1200EC0855 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				06783BDA24600F9100EC0855 /* YouboraLib.framework in Embed Frameworks */,
+				06783BD824600F9100EC0855 /* YouboraConfigUtils.framework in Embed Frameworks */,
+				06783BC0245B0E1200EC0855 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,11 +249,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				06783BA82459DF2200EC0855 /* YouboraLib.framework in Embed Frameworks */,
 				0680044923C8D085008B4C4B /* SwiftProtobuf.framework in Embed Frameworks */,
 				0680044B23C8D1A2008B4C4B /* PolyNetSDK.framework in Embed Frameworks */,
 				0680044023C8D084008B4C4B /* YouboraConfigUtils.framework in Embed Frameworks */,
 				0680044523C8D084008B4C4B /* Starscream.framework in Embed Frameworks */,
-				0680043E23C8D073008B4C4B /* YouboraLib.framework in Embed Frameworks */,
 				0680041723C8BB71008B4C4B /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -264,7 +265,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				060DFFEB23AB8F9F00715D06 /* YouboraLib.framework in Embed Frameworks */,
+				06783B9D2459D6D800EC0855 /* YouboraLib.framework in Embed Frameworks */,
 				060DFFE923AB8F9D00715D06 /* YouboraConfigUtils.framework in Embed Frameworks */,
 				069EA2E923A8F0CD00819D94 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */,
 			);
@@ -304,6 +305,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0593955B350AB68150B68F84 /* Pods_AvPlayerPolynetAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerPolynetAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		060DFFD323AB879D00715D06 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		06287BD523AB74E500639092 /* Sentry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sentry.framework; path = Carthage/Build/iOS/Sentry.framework; sourceTree = "<group>"; };
 		06287BD623AB74E500639092 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 		066C040A23A8E04E0000F792 /* VideoResourceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoResourceTableViewCell.xib; sourceTree = "<group>"; };
 		066C041423A8E10A0000F792 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		066C041523A8E10B0000F792 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		06783BA72459DF2200EC0855 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
 		067BC82023AA2145006A35E4 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
 		067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraConfigUtils.framework; path = Carthage/Build/iOS/YouboraConfigUtils.framework; sourceTree = "<group>"; };
 		067BC82623AA2156006A35E4 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
@@ -399,6 +402,11 @@
 		06E8C05E23AA2BEE001A26B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06E8C06123AA2BEE001A26B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06E8C06323AA2BEE001A26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DBE45528848FC0652FA1A0F /* Pods_AvPlayerAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA4FFDD03B6AC67C23748A7 /* Pods_AvPlayerAdapterExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerAdapterExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC69739956B885C9DD9C3202 /* Pods_AvPlayerP2PAdapterExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerP2PAdapterExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3C909205FA9A286DBCC5FB /* Pods_AvPlayerAdapterExample_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerAdapterExample_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0E2649B07527510C3CC76D /* Pods_AvPlayerPolynetAdapterExample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AvPlayerPolynetAdapterExample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,7 +414,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060DFFEA23AB8F9F00715D06 /* YouboraLib.framework in Frameworks */,
+				06783B9C2459D6D800EC0855 /* YouboraLib.framework in Frameworks */,
 				060DFFE823AB8F9D00715D06 /* YouboraConfigUtils.framework in Frameworks */,
 				069EA2E823A8F0CD00819D94 /* YouboraAVPlayerAdapter.framework in Frameworks */,
 			);
@@ -426,11 +434,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0680043223C8CC5D008B4C4B /* YouboraLib.framework in Frameworks */,
-				0680043B23C8CE3D008B4C4B /* PolyNetSDK.framework in Frameworks */,
+				06783BA32459DC1C00EC0855 /* YouboraLib.framework in Frameworks */,
+				06783B9E2459DA4200EC0855 /* Starscream.framework in Frameworks */,
 				0680043623C8CE3D008B4C4B /* SwiftProtobuf.framework in Frameworks */,
 				0680043423C8CE3D008B4C4B /* Starscream.framework in Frameworks */,
 				0657100E23C74AEB0085A7E9 /* YouboraAVPlayerAdapter.framework in Frameworks */,
+				06783BA12459DBB600EC0855 /* PolyNetSDK.framework in Frameworks */,
 				0680043823C8CE3D008B4C4B /* YouboraConfigUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,9 +448,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060DFFE623AB8F0F00715D06 /* YouboraLib.framework in Frameworks */,
-				060DFFE423AB8F0E00715D06 /* YouboraConfigUtils.framework in Frameworks */,
-				069EA2E123A8EF5B00819D94 /* YouboraAVPlayerAdapter.framework in Frameworks */,
+				06783BD924600F9100EC0855 /* YouboraLib.framework in Frameworks */,
+				06783BD724600F9100EC0855 /* YouboraConfigUtils.framework in Frameworks */,
+				06783BBF245B0E1200EC0855 /* YouboraAVPlayerAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +458,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06783BA92459DF3C00EC0855 /* YouboraLib.framework in Frameworks */,
 				0680044823C8D085008B4C4B /* SwiftProtobuf.framework in Frameworks */,
 				0680044A23C8D1A2008B4C4B /* PolyNetSDK.framework in Frameworks */,
 				0680043F23C8D084008B4C4B /* YouboraConfigUtils.framework in Frameworks */,
 				0680044423C8D084008B4C4B /* Starscream.framework in Frameworks */,
-				0680043D23C8D073008B4C4B /* YouboraLib.framework in Frameworks */,
 				0680041623C8BB71008B4C4B /* YouboraAVPlayerAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +596,7 @@
 		06A8103523A7CA15007976CD = {
 			isa = PBXGroup;
 			children = (
+				06783BA72459DF2200EC0855 /* YouboraLib.framework */,
 				069EA2D523A8EF5200819D94 /* YouboraAVPlayerAdapter.xcodeproj */,
 				06A8106D23A7CA76007976CD /* Generic */,
 				06A8105A23A7CA61007976CD /* AvPlayerAdapterExample */,
@@ -597,7 +607,6 @@
 				06C8AC9D23C790D7001065FD /* AvPlayerPolynetAdapterExample-tvOS */,
 				06A8103F23A7CA15007976CD /* Products */,
 				C57B9D22D415DC27CFFB2132 /* Frameworks */,
-				2D71C18BD23B5A74DEB729D2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -851,14 +860,6 @@
 			path = AvPlayerP2PAdapterExample;
 			sourceTree = "<group>";
 		};
-		2D71C18BD23B5A74DEB729D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		C57B9D22D415DC27CFFB2132 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +880,12 @@
 				067BC82623AA2156006A35E4 /* YouboraLib.framework */,
 				067BC82123AA2145006A35E4 /* YouboraConfigUtils.framework */,
 				067BC82023AA2145006A35E4 /* YouboraLib.framework */,
+				1DBE45528848FC0652FA1A0F /* Pods_AvPlayerAdapterExample.framework */,
+				BD3C909205FA9A286DBCC5FB /* Pods_AvPlayerAdapterExample_macOS.framework */,
+				7EA4FFDD03B6AC67C23748A7 /* Pods_AvPlayerAdapterExample_tvOS.framework */,
+				AC69739956B885C9DD9C3202 /* Pods_AvPlayerP2PAdapterExample.framework */,
+				0593955B350AB68150B68F84 /* Pods_AvPlayerPolynetAdapterExample.framework */,
+				DC0E2649B07527510C3CC76D /* Pods_AvPlayerPolynetAdapterExample_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -947,7 +954,7 @@
 				06A8105523A7CA61007976CD /* Sources */,
 				06A8105623A7CA61007976CD /* Frameworks */,
 				06A8105723A7CA61007976CD /* Resources */,
-				064A883023A7E48D00047B17 /* Embed Frameworks */,
+				06783BC1245B0E1200EC0855 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1371,7 +1378,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1399,7 +1406,7 @@
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Samples-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1474,7 +1481,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerPolynetAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1500,7 +1507,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerPolynetAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1634,6 +1641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"${PROJECT_DIR}/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/../YouboraPlayerAdapter/Carthage/Build/iOS",
@@ -1641,7 +1649,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1662,6 +1670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"${PROJECT_DIR}/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/../YouboraPlayerAdapter/Carthage/Build/iOS",
@@ -1669,7 +1678,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1704,7 +1713,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1729,7 +1738,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1744,7 +1753,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerP2PAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1770,7 +1779,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AvPlayerP2PAdapterExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

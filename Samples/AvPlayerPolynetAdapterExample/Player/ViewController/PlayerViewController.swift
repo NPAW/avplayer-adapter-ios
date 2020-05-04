@@ -29,7 +29,7 @@ class PlayerViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if self.isBeingDismissed || self.isMovingFromParent {
+        if self.isBeingDismissed || self.isMovingFromParentViewController {
             self.viewModel?.stopYoubora()
         }
     }
@@ -44,7 +44,7 @@ extension PlayerViewController {
         }
         
         let playerViewController = AVPlayerViewController()
-        self.addChild(playerViewController)
+        self.addChildViewController(playerViewController)
         
         self.view.addSubview(playerViewController.view)
         playerViewController.view.frame = self.view.frame
@@ -120,7 +120,7 @@ extension PlayerViewController: PolyNetDataSource {
     
     func getTimeRange(timeRanges: [NSValue], forCurrentTime time: CMTime) -> CMTimeRange? {
         let timeRange = timeRanges.first(where: { (value) -> Bool in
-            CMTimeRangeContainsTime(value.timeRangeValue, time: time)
+            CMTimeRangeContainsTime(value.timeRangeValue, time)
         })
         // Workaround: When pause the player, the item loaded ranges moves whereas the current time
         // remains equal. In time, the current time is out of the range, so the buffer health cannot

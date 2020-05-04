@@ -9,7 +9,7 @@
 #ifndef AvPlayerPolynetExampleViewModel_h
 #define AvPlayerPolynetExampleViewModel_h
 
-#import <PolyNetSDK/PolyNetSDK.h>
+@import PolyNetSDK;
 #import <AVKit/AvKit.h>
 
 @protocol AvPlayerExampleViewModel
