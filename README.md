@@ -112,7 +112,6 @@ import YouboraAVPlayerAdapter
 ...
 
 //Once you have your player and plugin initialized you can set the adapter
-self.plugin.fireInit()
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdapter(player: player))
 
 ...
@@ -141,7 +140,6 @@ self.plugin.removeAdsAdapter()
 ...
 
 //Once you have your player and plugin initialized you can set the adapter
-[self.plugin fireInit];
 [self.plugin setAdapter:[[YBAVPlayerAdapter alloc] initWithPlayer:player]];
 
 ...
@@ -177,7 +175,6 @@ import YouboraAVPlayerAdapter
 ...
 
 //Once you have your player, plugin and dnaClient initialized you can set the adapter
-self.plugin.fireInit()
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerStreamrootAdapter(dnaClient: dnaClient, andPlayer: player))
 
 ...
@@ -195,7 +192,6 @@ self.plugin.removeAdapter()
 ...
 
 //Once you have your player, dnaClient and plugin initialized you can set the adapter
-[self.plugin fireInit];
 [self.plugin setAdapter:[[YBAVPlayerStreamrootAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
 
 ...
@@ -221,7 +217,6 @@ import YouboraAVPlayerAdapter
 ...
 
 //Once you have your player, plugin and polynet initialized you can set the adapter
-self.plugin.fireInit()
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerPolynetAdapter(polyNet: polynet, player: player, andDelegate: polynetDelegate))
 
 ...
@@ -239,7 +234,6 @@ self.plugin.removeAdapter()
 ...
 
 //Once you have your player, polynet and plugin initialized you can set the adapter
-[self.plugin fireInit];
 [self.plugin setAdapter:[[YBAVPlayerPolynetAdapter alloc] initWithPolyNet:polynet player:player andDelegate:polynetDelegate]];
 
 ...
