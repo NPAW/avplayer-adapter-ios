@@ -1,3 +1,6 @@
+## [6.5.16] - 2020-05-20
+### Fixed
+- Remove warnings from not foung modules
 ## [6.5.15] - 2020-04-22
 ### Added
 - Add total bytes support

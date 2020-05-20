@@ -23,11 +23,7 @@ FOUNDATION_EXPORT const unsigned char YouboraAVPlayerAdapterVersionString[];
 #import <YouboraAVPlayerAdapter/YBAVPlayerAdsAdapter.h>
 #import <YouboraAVPlayerAdapter/YBAVPlayerAdsAdapterSwiftWrapper.h>
 
-#if __has_include(<StreamrootSDK/StreamrootSDK-Swift.h>)
 #import <YouboraAVPlayerAdapter/YBAVPlayerP2PAdapter.h>
 #import <YouboraAVPlayerAdapter/YBAVPlayerStreamrootAdapter.h>
-#endif
 
-#if __has_include(<PolyNetSDK/PolyNetSDK.h>)
 #import <YouboraAVPlayerAdapter/YBAVPlayerPolynetAdapter.h>
-#endif

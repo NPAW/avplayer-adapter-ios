@@ -15,11 +15,9 @@
     #import <StreamrootSDK/StreamrootSDK-Swift.h>
 #endif
 
+#if __has_include(<StreamrootSDK/StreamrootSDK.h>)
 __attribute__ ((deprecated)) DEPRECATED_MSG_ATTRIBUTE("This class is deprecated. Use YBAVPlayerStreamrootAdapter instead")
 @interface YBAVPlayerP2PAdapter : YBAVPlayerAdapter
-
-#if __has_include(<StreamrootSDK/StreamrootSDK.h>)
     - (instancetype) initWithDnaClient:(nullable DNAClient *) dnaClient andPlayer:(nullable AVPlayer *) player;
-#endif
-
 @end
+#endif

@@ -16,10 +16,12 @@
 #endif
 
 
+#if __has_include(<StreamrootSDK/StreamrootSDK.h>)
+
 @interface YBAVPlayerStreamrootAdapter : YBAVPlayerAdapter
 
-#if __has_include(<StreamrootSDK/StreamrootSDK.h>)
     - (instancetype) initWithDnaClient:(nullable DNAClient *) dnaClient andPlayer:(nullable AVPlayer *) player;
-#endif
 
 @end
+
+#endif
