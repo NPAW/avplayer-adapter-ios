@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
     streamroot.ios.deployment_target = '10.2'
     streamroot.tvos.deployment_target = '10.2'
 
-    streamroot.dependency 'AVPlayerDNAPlugin', '~> 1.1.9'
+    streamroot.dependency 'AVPlayerDNAPlugin', '1.1.9'
 
     streamroot.public_header_files = "YouboraAVPlayerAdapter/Generic/**/*.h, YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h"
 

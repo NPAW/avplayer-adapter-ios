@@ -4,8 +4,8 @@
 workspace 'YouboraAVPlayerAdapter.xcworkspace'
 
 def p2p_pods
-    #pod 'AVPlayerDNAPlugin', '~> 1.1.9'
-    pod 'PolyNetSDK', '~> 4.33.113'
+    pod 'AVPlayerDNAPlugin', '1.1.9'
+    #pod 'PolyNetSDK', '~> 4.33.113'
 end
 
 def common_pods
@@ -13,7 +13,7 @@ def common_pods
 end
 
 def tv_pods
-    pod 'PolyNetSDKtvOS', '~> 4.33.113'
+    #pod 'PolyNetSDKtvOS', '~> 4.33.113'
 end
 
 target 'YouboraAVPlayerAdapter' do
@@ -21,7 +21,7 @@ target 'YouboraAVPlayerAdapter' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
 
-  platform :ios, '9.0'
+  platform :ios, '10.2'
 
   # Pods for YouboraAVPlayerAdapter
     common_pods
@@ -94,7 +94,7 @@ target 'AvPlayerP2PAdapterExample' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
   
-  platform :ios, '9.0'
+  platform :ios, '10.2'
   
   # Pods for YouboraAVPlayerAdapter
   sample_common_pods
@@ -106,7 +106,7 @@ target 'AvPlayerPolynetAdapterExample' do
     # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
     
-    platform :ios, '9.0'
+    platform :ios, '10.2'
     
     # Pods for YouboraAVPlayerAdapter
     sample_common_pods
