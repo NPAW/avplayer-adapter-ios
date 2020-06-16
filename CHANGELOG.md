@@ -1,3 +1,6 @@
+## [6.5.17] - 2020-06-16
+### Fixed
+- Fix play rate when in pause
 ## [6.5.16] - 2020-05-20
 ### Fixed
 - Remove warnings from not foung modules

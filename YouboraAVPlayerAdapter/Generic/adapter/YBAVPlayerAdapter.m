@@ -414,10 +414,10 @@ bool firstSeek;
 
 - (NSNumber *)getPlayrate {
     
-    if (self.flags.buffering || self.flags.seeking) {
-        return @(1.0);
-    } else if (self.flags.paused) {
+    if (self.flags.paused) {
         return @(0.0);
+    } else if (self.flags.buffering || self.flags.seeking) {
+        return @(1.0);
     }
     
     return @(self.player.rate);
