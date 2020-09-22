@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="AVPlayerSample_tvOS" customModuleProvider="target">
+            <connections>
+                <outlet property="adsSegmentedControl" destination="qZV-vz-NHT" id="dze-ma-eNX"/>
+                <outlet property="playButton" destination="Bcz-rD-JRT" id="Pek-L8-J3G"/>
+                <outlet property="resourceTextField" destination="Ood-ch-k5a" id="7QW-71-saq"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dcA-8P-LsU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ood-ch-k5a">
+                    <rect key="frame" x="760" y="120" width="400" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="400" id="vUX-E1-WHc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-rD-JRT">
+                    <rect key="frame" x="860" y="884" width="200" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="j4M-AQ-YOG"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="Play"/>
+                    <connections>
+                        <action selector="pressButtonToNavigate:" destination="-1" eventType="primaryActionTriggered" id="VTd-SJ-8KA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diw-1Y-wVR">
+                    <rect key="frame" x="927" y="267" width="66" height="46"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-vz-NHT">
+                    <rect key="frame" x="844" y="363" width="232" height="70"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                    <segments>
+                        <segment title="NO"/>
+                        <segment title="YES"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <constraints>
+                <constraint firstItem="qZV-vz-NHT" firstAttribute="top" secondItem="diw-1Y-wVR" secondAttribute="bottom" constant="50" id="MnV-bm-T6J"/>
+                <constraint firstItem="Ood-ch-k5a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O3c-12-zez"/>
+                <constraint firstItem="Ood-ch-k5a" firstAttribute="top" secondItem="Pmt-tb-8Ig" secondAttribute="top" constant="60" id="TFA-sc-Ate"/>
+                <constraint firstItem="Bcz-rD-JRT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VsW-hF-uex"/>
+                <constraint firstItem="diw-1Y-wVR" firstAttribute="top" secondItem="Ood-ch-k5a" secondAttribute="bottom" constant="100" id="bu2-Y7-gmB"/>
+                <constraint firstItem="Pmt-tb-8Ig" firstAttribute="bottom" secondItem="Bcz-rD-JRT" secondAttribute="bottom" constant="50" id="eIB-y7-qua"/>
+                <constraint firstItem="diw-1Y-wVR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r2m-ja-YB0"/>
+                <constraint firstItem="qZV-vz-NHT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vrU-Vz-Gov"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
+            <point key="canvasLocation" x="61" y="96"/>
+        </view>
+    </objects>
+</document>

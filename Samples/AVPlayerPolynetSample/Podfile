@@ -1,0 +1,44 @@
+# Uncomment the next line to define a global platform for your project
+workspace 'AVPlayerPolynetSample.xcworkspace'
+
+target 'YouboraAVPlayerAdapter' do
+  project '../../YouboraAVPlayerAdapter.xcodeproj'
+  platform :ios, '10.2'
+  use_frameworks!
+
+  pod 'PolyNetSDK', '~> 4.33.113'
+  pod 'YouboraLib'
+end
+
+target 'YouboraAVPlayerAdapter tvOS' do
+  project '../../YouboraAVPlayerAdapter.xcodeproj'
+  platform :tvos, '10.0'
+  use_frameworks!
+
+  pod 'PolyNetSDKtvOS', '~> 4.33.113'
+  pod 'YouboraLib'
+end
+
+target 'AVPlayerPolynetSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  platform :ios, '10.2'
+  use_frameworks!
+
+  pod 'YouboraConfigUtils'
+  pod 'PolyNetSDK', '~> 4.33.113'
+  pod 'YouboraLib'
+  # Pods for AVPlayerPolynetSample
+
+end
+
+target 'AVPlayerPolynetSample_tvOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  platform :tvos, '10.0'
+  use_frameworks!
+
+  pod 'YouboraConfigUtils'
+  pod 'PolyNetSDKtvOS', '~> 4.33.113'
+  pod 'YouboraLib'
+  # Pods for AVPlayerPolynetSample_tvOS
+
+end
