@@ -15,7 +15,6 @@
 		06EA7B9A2513BDB80005D4E5 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06EA7B982513BDB80005D4E5 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06EA7B9F2513C0CF0005D4E5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EA7B9D2513C0CF0005D4E5 /* MenuViewController.swift */; };
 		06EA7BA02513C0CF0005D4E5 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06EA7B9E2513C0CF0005D4E5 /* MenuViewController.xib */; };
-		0B671A01AAC489221793F3ED /* Pods_AVPlayerP2PSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B32575245784098A2945E5 /* Pods_AVPlayerP2PSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,9 +41,6 @@
 		06EA7B982513BDB80005D4E5 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EA7B9D2513C0CF0005D4E5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		06EA7B9E2513C0CF0005D4E5 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
-		220999437FF23D08EBCE7EE6 /* Pods-AVPlayerP2PSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerP2PSample.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerP2PSample/Pods-AVPlayerP2PSample.release.xcconfig"; sourceTree = "<group>"; };
-		3A8E1D77E66974FF3F98243F /* Pods-AVPlayerP2PSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerP2PSample.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayerP2PSample/Pods-AVPlayerP2PSample.debug.xcconfig"; sourceTree = "<group>"; };
-		78B32575245784098A2945E5 /* Pods_AVPlayerP2PSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerP2PSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +49,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06EA7B992513BDB80005D4E5 /* YouboraAVPlayerAdapter.framework in Frameworks */,
-				0B671A01AAC489221793F3ED /* Pods_AVPlayerP2PSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +98,6 @@
 		1093D467AEDB03E727F9D9DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3A8E1D77E66974FF3F98243F /* Pods-AVPlayerP2PSample.debug.xcconfig */,
-				220999437FF23D08EBCE7EE6 /* Pods-AVPlayerP2PSample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -113,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				06EA7B982513BDB80005D4E5 /* YouboraAVPlayerAdapter.framework */,
-				78B32575245784098A2945E5 /* Pods_AVPlayerP2PSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,11 +117,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06EA7B952513BC130005D4E5 /* Build configuration list for PBXNativeTarget "AVPlayerP2PSample" */;
 			buildPhases = (
-				9C51DD989BAB8EE2F95E5566 /* [CP] Check Pods Manifest.lock */,
 				06EA7B7D2513BC120005D4E5 /* Sources */,
 				06EA7B7E2513BC120005D4E5 /* Frameworks */,
 				06EA7B7F2513BC120005D4E5 /* Resources */,
-				6ED472E82CADEF7E9B775B28 /* [CP] Embed Pods Frameworks */,
 				06EA7B9B2513BDB80005D4E5 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -186,48 +176,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6ED472E82CADEF7E9B775B28 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerP2PSample/Pods-AVPlayerP2PSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerP2PSample/Pods-AVPlayerP2PSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerP2PSample/Pods-AVPlayerP2PSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C51DD989BAB8EE2F95E5566 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVPlayerP2PSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06EA7B7D2513BC120005D4E5 /* Sources */ = {
@@ -370,7 +318,6 @@
 		};
 		06EA7B962513BC130005D4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A8E1D77E66974FF3F98243F /* Pods-AVPlayerP2PSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,7 +337,6 @@
 		};
 		06EA7B972513BC130005D4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 220999437FF23D08EBCE7EE6 /* Pods-AVPlayerP2PSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

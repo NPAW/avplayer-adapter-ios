@@ -1,6 +1,8 @@
-## [6.5.18] - 2020-11-02
+## [6.5.18] - 2020-11-03
 ### Deprecated
 - autoJoinTime was deprecated since it gonna be removed in future releases
+### Changed 
+- AVPlayerDNAPlugin dependency to >= 1.1.x
 ## [6.5.17] - 2020-06-16
 ### Fixed
 - Fix play rate when in pause
