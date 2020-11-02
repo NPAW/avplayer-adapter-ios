@@ -47,7 +47,7 @@ class ViewController: NSViewController {
 // MARK: - Video Player methods
 extension ViewController {
     private func initializePlayer() {
-        guard let resourceUrl = URL(string: Resource.lhsApple) else {
+        guard let resourceUrl = URL(string: Resource.hlsApple) else {
             return
         }
         

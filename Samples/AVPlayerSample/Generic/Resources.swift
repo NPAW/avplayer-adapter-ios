@@ -9,7 +9,8 @@
 import Foundation
 
 struct Resource {
-    static let lhsApple = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+    static let hlsApple = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+    static let hlsTest = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
     static let dashLivesim = "http://livesim.dashif.org/livesim/testpic_2s/Manifest.mpd"
     static let dashBitmovin = "https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd"
     static let live = "http://aljazeera-ara-apple-live.adaptive.level3.net/apple/aljazeera/arabic/160.m3u8"

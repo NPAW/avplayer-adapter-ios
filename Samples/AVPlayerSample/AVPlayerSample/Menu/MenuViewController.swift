@@ -25,7 +25,7 @@ class MenuViewController: UIViewController {
         
         self.addSettingsButton()
         
-        self.resourceTextField.text = Resource.lhsApple
+        self.resourceTextField.text = Resource.hlsApple
         self.adsToggle.isOn = false
     }
     

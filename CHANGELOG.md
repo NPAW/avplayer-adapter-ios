@@ -1,3 +1,6 @@
+## [6.5.18] - 2020-11-02
+### Deprecated
+- autoJoinTime was deprecated since it gonna be removed in future releases
 ## [6.5.17] - 2020-06-16
 ### Fixed
 - Fix play rate when in pause

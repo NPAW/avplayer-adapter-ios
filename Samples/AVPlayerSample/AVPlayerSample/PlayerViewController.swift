@@ -21,7 +21,7 @@ class PlayerViewController: UIViewController {
     var adsPlayerViewController:AVPlayerViewController?
     var adsTimer: Timer?
     
-    var button = UIButton(type: .custom)
+    var changeItemButton = UIButton(type: .custom)
     var buttonReplay = UIButton(type: .custom)
     var playerContainer = UIView()
     
@@ -48,16 +48,16 @@ class PlayerViewController: UIViewController {
         
         self.plugin = YBPlugin(options: options)
         
-        button.setTitle("Send Offline", for: .normal)
+        changeItemButton.setTitle("Change Item", for: .normal)
         
-        button.addTarget(self, action: #selector(sendOffline), for:.touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(button)
+        changeItemButton.addTarget(self, action: #selector(changeItem), for:.touchUpInside)
+        changeItemButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(changeItemButton)
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
-            button.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
-            button.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
-            button.heightAnchor.constraint(equalToConstant: 100)
+            changeItemButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80),
+            changeItemButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
+            changeItemButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
+            changeItemButton.heightAnchor.constraint(equalToConstant: 20)
         ])
         
         buttonReplay.setTitle("Replay", for: .normal)
@@ -65,10 +65,10 @@ class PlayerViewController: UIViewController {
         buttonReplay.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(buttonReplay)
         NSLayoutConstraint.activate([
-            buttonReplay.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 0),
+            buttonReplay.topAnchor.constraint(equalTo: changeItemButton.bottomAnchor, constant: 20),
             buttonReplay.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
             buttonReplay.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
-            buttonReplay.heightAnchor.constraint(equalToConstant: 100)
+            buttonReplay.heightAnchor.constraint(equalToConstant: 20)
         ])
         
         playerContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -83,16 +83,21 @@ class PlayerViewController: UIViewController {
         // Start playback
         playerViewController?.player?.play()
         
-        
-        
         // Initialize player on this view controller
         self.initializePlayer()
         self.initializeAds()
     }
     
     
-    @objc func sendOffline() {
+    @objc func changeItem() {
+        guard let newResource = [
+            Resource.hlsApple,
+            Resource.hlsTest
+        ].randomElement(), let url = URL(string: newResource) else {
+            return
+        }
         
+        self.playerViewController?.player?.replaceCurrentItem(with: AVPlayerItem(url: url))
     }
     
     @objc func pressToReply() {

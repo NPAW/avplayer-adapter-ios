@@ -30,9 +30,6 @@
 		06EA7B6F2513B8C60005D4E5 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EA7B142513681A0005D4E5 /* Resources.swift */; };
 		06EA7B752513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EA7B742513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework */; };
 		06EA7B762513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06EA7B742513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0D486B84C3826573073206F5 /* Pods_AVPlayerSample_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B58CA6682F1C70CB6FA0AC9 /* Pods_AVPlayerSample_macOS.framework */; };
-		31C5F6A03937677AB6B85AEF /* Pods_AVPlayerSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A082DCD668CBAD1B9E6B2C9C /* Pods_AVPlayerSample.framework */; };
-		8EBDAE306E1F58F1CB0EC5CB /* Pods_AVPlayerSample_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C9076CDBD4B7EDCE658B88 /* Pods_AVPlayerSample_tvOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,15 +100,6 @@
 		06EA7B682513B7FF0005D4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06EA7B702513B9710005D4E5 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EA7B742513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraAVPlayerAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E35311C97C2AB49FCB52023 /* Pods-AVPlayerSample_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample_macOS.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample_macOS/Pods-AVPlayerSample_macOS.release.xcconfig"; sourceTree = "<group>"; };
-		21C9076CDBD4B7EDCE658B88 /* Pods_AVPlayerSample_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerSample_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3914660DE5D66ABC789B351C /* Pods-AVPlayerSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample/Pods-AVPlayerSample.debug.xcconfig"; sourceTree = "<group>"; };
-		3BA18D021226476A91FBE614 /* Pods-AVPlayerSample_tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample_tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample_tvOS/Pods-AVPlayerSample_tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3F763676CFDCB40F72F203B6 /* Pods-AVPlayerSample_tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample_tvOS.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample_tvOS/Pods-AVPlayerSample_tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		79FC689CD890293EB607D365 /* Pods-AVPlayerSample_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample_macOS.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample_macOS/Pods-AVPlayerSample_macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		8B58CA6682F1C70CB6FA0AC9 /* Pods_AVPlayerSample_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerSample_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A082DCD668CBAD1B9E6B2C9C /* Pods_AVPlayerSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVPlayerSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD147454277CD872EFD18293 /* Pods-AVPlayerSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerSample.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerSample/Pods-AVPlayerSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06EA7B0F251362E60005D4E5 /* YouboraAVPlayerAdapter.framework in Frameworks */,
-				31C5F6A03937677AB6B85AEF /* Pods_AVPlayerSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06EA7B522513B6330005D4E5 /* YouboraAVPlayerAdapter.framework in Frameworks */,
-				0D486B84C3826573073206F5 /* Pods_AVPlayerSample_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06EA7B752513B97B0005D4E5 /* YouboraAVPlayerAdapter.framework in Frameworks */,
-				8EBDAE306E1F58F1CB0EC5CB /* Pods_AVPlayerSample_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,9 +228,6 @@
 				0683E3F324FF955C00A4C18D /* YouboraAVPlayerAdapter.framework */,
 				0683E3F224FF955C00A4C18D /* YouboraConfigUtils.framework */,
 				0683E3F124FF955C00A4C18D /* YouboraLib.framework */,
-				A082DCD668CBAD1B9E6B2C9C /* Pods_AVPlayerSample.framework */,
-				21C9076CDBD4B7EDCE658B88 /* Pods_AVPlayerSample_tvOS.framework */,
-				8B58CA6682F1C70CB6FA0AC9 /* Pods_AVPlayerSample_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,12 +235,6 @@
 		D4B7C7E80E9147A0AEC699B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3914660DE5D66ABC789B351C /* Pods-AVPlayerSample.debug.xcconfig */,
-				BD147454277CD872EFD18293 /* Pods-AVPlayerSample.release.xcconfig */,
-				3BA18D021226476A91FBE614 /* Pods-AVPlayerSample_tvOS.debug.xcconfig */,
-				3F763676CFDCB40F72F203B6 /* Pods-AVPlayerSample_tvOS.release.xcconfig */,
-				79FC689CD890293EB607D365 /* Pods-AVPlayerSample_macOS.debug.xcconfig */,
-				0E35311C97C2AB49FCB52023 /* Pods-AVPlayerSample_macOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -270,11 +246,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0678F48624FE87B4008ACB76 /* Build configuration list for PBXNativeTarget "AVPlayerSample" */;
 			buildPhases = (
-				B449C9D6A4943395D01586C8 /* [CP] Check Pods Manifest.lock */,
 				0678F46E24FE87B2008ACB76 /* Sources */,
 				0678F46F24FE87B2008ACB76 /* Frameworks */,
 				0678F47024FE87B2008ACB76 /* Resources */,
-				254003C8BA75B3C956D0415B /* [CP] Embed Pods Frameworks */,
 				06EA7B11251362E60005D4E5 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -290,11 +264,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06EA7B4E2513B4E40005D4E5 /* Build configuration list for PBXNativeTarget "AVPlayerSample_macOS" */;
 			buildPhases = (
-				7B159F430BBC7BD1EF789392 /* [CP] Check Pods Manifest.lock */,
 				06EA7B3D2513B4E20005D4E5 /* Sources */,
 				06EA7B3E2513B4E20005D4E5 /* Frameworks */,
 				06EA7B3F2513B4E20005D4E5 /* Resources */,
-				146EFA0631B78C81BACA4FE0 /* [CP] Embed Pods Frameworks */,
 				06EA7B542513B6330005D4E5 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -310,11 +282,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06EA7B692513B7FF0005D4E5 /* Build configuration list for PBXNativeTarget "AVPlayerSample_tvOS" */;
 			buildPhases = (
-				FD665A624C122DA99832EC55 /* [CP] Check Pods Manifest.lock */,
 				06EA7B562513B7FD0005D4E5 /* Sources */,
 				06EA7B572513B7FD0005D4E5 /* Frameworks */,
 				06EA7B582513B7FD0005D4E5 /* Resources */,
-				D5A7F7E38E1F469A0C552A49 /* [CP] Embed Pods Frameworks */,
 				06EA7B772513B97B0005D4E5 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -396,126 +366,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		146EFA0631B78C81BACA4FE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_macOS/Pods-AVPlayerSample_macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_macOS/Pods-AVPlayerSample_macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_macOS/Pods-AVPlayerSample_macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		254003C8BA75B3C956D0415B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample/Pods-AVPlayerSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample/Pods-AVPlayerSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample/Pods-AVPlayerSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B159F430BBC7BD1EF789392 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVPlayerSample_macOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B449C9D6A4943395D01586C8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVPlayerSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D5A7F7E38E1F469A0C552A49 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_tvOS/Pods-AVPlayerSample_tvOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_tvOS/Pods-AVPlayerSample_tvOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVPlayerSample_tvOS/Pods-AVPlayerSample_tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD665A624C122DA99832EC55 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AVPlayerSample_tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0678F46E24FE87B2008ACB76 /* Sources */ = {
@@ -690,7 +540,6 @@
 		};
 		0678F48724FE87B4008ACB76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3914660DE5D66ABC789B351C /* Pods-AVPlayerSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -712,7 +561,6 @@
 		};
 		0678F48824FE87B4008ACB76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD147454277CD872EFD18293 /* Pods-AVPlayerSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -734,7 +582,6 @@
 		};
 		06EA7B4F2513B4E40005D4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79FC689CD890293EB607D365 /* Pods-AVPlayerSample_macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AVPlayerSample_macOS/AVPlayerSample_macOS.entitlements;
@@ -758,7 +605,6 @@
 		};
 		06EA7B502513B4E40005D4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E35311C97C2AB49FCB52023 /* Pods-AVPlayerSample_macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AVPlayerSample_macOS/AVPlayerSample_macOS.entitlements;
@@ -782,7 +628,6 @@
 		};
 		06EA7B6A2513B7FF0005D4E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BA18D021226476A91FBE614 /* Pods-AVPlayerSample_tvOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
@@ -802,7 +647,6 @@
 		};
 		06EA7B6B2513B7FF0005D4E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F763676CFDCB40F72F203B6 /* Pods-AVPlayerSample_tvOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
