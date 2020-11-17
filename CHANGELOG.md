@@ -1,3 +1,6 @@
+## [6.5.19] - 2020-11-17
+### Fixed
+- Fix issues with durantion and playhead when live video
 ## [6.5.18] - 2020-11-03
 ### Deprecated
 - autoJoinTime was deprecated since it gonna be removed in future releases

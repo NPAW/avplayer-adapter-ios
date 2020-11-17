@@ -408,6 +408,9 @@ bool firstSeek;
 
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
+    if (self.plugin.options.contentIsLive) {
+        return nil;
+    }
     double playhead = CMTimeGetSeconds(self.player.currentTime);
     return [NSNumber numberWithDouble:playhead];
 }
@@ -424,6 +427,10 @@ bool firstSeek;
 }
 
 - (NSNumber *) getDuration {
+    if (self.plugin.options.contentIsLive) {
+        return nil;
+    }
+    
     AVPlayerItem * item = self.player.currentItem;
     
     // Get default value

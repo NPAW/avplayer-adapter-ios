@@ -25,7 +25,7 @@ class MenuViewController: UIViewController {
         
         self.addSettingsButton()
         
-        self.resourceTextField.text = Resource.hlsApple
+        self.resourceTextField.text = Resource.liveAirShow
         self.adsToggle.isOn = false
     }
     
