@@ -408,7 +408,7 @@ bool firstSeek;
 
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
-    if (self.plugin.options.contentIsLive) {
+    if ([self.plugin.options.contentIsLive isEqualToValue:[NSNumber numberWithBool:true]]) {
         return nil;
     }
     double playhead = CMTimeGetSeconds(self.player.currentTime);
@@ -426,8 +426,12 @@ bool firstSeek;
     return @(self.player.rate);
 }
 
+- (NSString *)getTitle {
+    return @"title";
+}
+
 - (NSNumber *) getDuration {
-    if (self.plugin.options.contentIsLive) {
+    if ([self.plugin.options.contentIsLive isEqualToValue:[NSNumber numberWithBool:true]]) {
         return nil;
     }
     
@@ -447,6 +451,8 @@ bool firstSeek;
     
     return duration;
 }
+
+
 
 - (NSNumber *)getBitrate {
     

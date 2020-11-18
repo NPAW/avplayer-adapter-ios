@@ -43,7 +43,7 @@ class PlayerViewController: UIViewController {
         
         let options = YouboraConfigManager.getOptions()
         
-        options.contentIsLive = NSNumber(value: resource == Resource.live)
+        options.contentIsLive = NSNumber(value: resource == Resource.live || resource == Resource.liveAirShow)
         options.contentResource = self.resource
         
         self.plugin = YBPlugin(options: options)
@@ -80,9 +80,6 @@ class PlayerViewController: UIViewController {
             playerContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
         ])
         
-        // Start playback
-        playerViewController?.player?.play()
-        
         // Initialize player on this view controller
         self.initializePlayer()
         self.initializeAds()
@@ -96,7 +93,7 @@ class PlayerViewController: UIViewController {
         ].randomElement(), let url = URL(string: newResource) else {
             return
         }
-        
+        self.plugin?.options.contentIsLive = NSNumber(false)
         self.playerViewController?.player?.replaceCurrentItem(with: AVPlayerItem(url: url))
     }
     
@@ -150,6 +147,11 @@ extension PlayerViewController {
         self.playerViewController?.player = player
         
         self.plugin?.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdapter(player: player))
+        
+       
+        // Start playback
+        playerViewController?.player?.play()
+        self.plugin?.adapter?.fireStart()
     }
 }
 

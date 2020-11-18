@@ -1,4 +1,4 @@
-## [6.5.19] - 2020-11-17
+## [6.5.19] - 2020-11-18
 ### Fixed
 - Fix issues with durantion and playhead when live video
 ## [6.5.18] - 2020-11-03
