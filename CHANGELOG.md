@@ -1,37 +1,53 @@
+## [6.5.20] - 2021-01-26
+### Fixed
+- Fix bufferUnderrun not reported
+
 ## [6.5.19] - 2020-11-18
 ### Fixed
 - Fix issues with durantion and playhead when live video
+
 ## [6.5.18] - 2020-11-03
 ### Deprecated
 - autoJoinTime was deprecated since it gonna be removed in future releases
+
 ### Changed 
 - AVPlayerDNAPlugin dependency to >= 1.1.x
+
 ## [6.5.17] - 2020-06-16
 ### Fixed
 - Fix play rate when in pause
+
 ## [6.5.16] - 2020-05-20
 ### Fixed
 - Remove warnings from not foung modules
+
 ## [6.5.15] - 2020-04-22
 ### Added
 - Add total bytes support
 - Fix version youboralib dependency to support total bytes
+
 ## [6.5.14] - 2020-02-19
 ### Added
 - Support to Polynet
+
 ### Improved
 - P2P adapters struct
+
 ### Fixed
 - Fix issue with supportPlaylists
+
 ## [6.5.13] - 2020-01-14
 ### Fixed
 - Fix issue with the headers for tvOS target
+
 ## [6.5.12] - 2020-01-08
 ### Fixed
 - Fix issue with the headers with cocoa pods
+
 ## [6.5.11] - 2019-12-29
 ### Added
 - Swift transformer that will give swift compatibility to the adapter 
+
 ### Removed
 - Swift wrapper
 
@@ -51,6 +67,7 @@
 ## [6.5.7] - 2019-10-30
 ### Added
 - Swift wrapper for ads adapter
+
 ### Fixed
 - Carthage now supports Streamroot (up until Swift 5.0)
 
@@ -89,8 +106,10 @@
 ## [6.4.1] - 2019-05-29
 ### Added
 - Mac OS support
+
 ### Upgraded
 - Upgrade to Swift 5
+
 ### Improved
 - Removed join time log once join time has been sent
 
@@ -133,6 +152,7 @@
 ## [6.2.3] - 2018-09-04
 ### Updated
  - YouboraLib on project updated to 6.2.X
+
 ### Fixed
  - It was possible to change start flags without actually sending start request
 
@@ -143,8 +163,10 @@
 ## [6.2.0] - 2018-08-22
 ### Updated
 - Updated dependency to YouboraLib 6.2.0
+
 ### Fixed
 - tvOS Deployment target downgraded to iOS 9.0
+
 ### Removed
 - RemoveAdapter is not called anymore when wrapper fireStop is called
 
@@ -204,22 +226,26 @@
 ### Added
 - Swift wrapper
 - Support for tvOS on cocoapods
+
 ### Modified
 - Prevent stop if postrolls
 - Improved buffer reporting
 - Join time to wrapper
+
 ### Deleted
 - Unnecesary cocoapods files
 
 ## [6.0.2] - 2017-11-07
 ### Added
 - Carthage support
+
 ### Deleted
 - Unnecesary cocoapods files
 
 ## [6.0.1] - 2017-11-06
 ### Added
 - Support for tvOS
+
 ### Deleted
 - Remove cocoapods to support Carthage properly
 

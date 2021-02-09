@@ -177,9 +177,12 @@ bool firstSeek;
                         [strongSelf fireSeekBegin:true];
                     } else {
                         // Healthy
-                        [strongSelf fireSeekEnd];
                         strongSelf.shouldPause = true;
-                        //[strongSelf fireBufferEnd];
+                        if (self.flags.buffering) {
+                            [strongSelf fireBufferEnd];
+                        } else {
+                            [strongSelf fireSeekEnd];
+                        }
                     }
                 }
                 strongSelf.lastPlayhead = currentPlayhead;
@@ -286,7 +289,8 @@ bool firstSeek;
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     self.shouldPause = false;
                     if(!self.flags.paused){
-                        //[self fireBufferBegin];
+                        [self fireBufferBegin];
+                        [self.monitor skipNextTick];
                     }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
@@ -296,9 +300,12 @@ bool firstSeek;
                     self.shouldPause = true;
                     if (self.flags.joined) {
                         if(firstSeek){
-                            [self fireSeekEnd];
                             self.shouldPause = true;
-                            //[self fireBufferEnd];
+                            if (self.flags.buffering) {
+                                [self fireBufferEnd];
+                            } else {
+                                [self fireSeekEnd];
+                            }
                         }
                         firstSeek = true;
                     }
