@@ -72,15 +72,6 @@ Pod::Spec.new do |s|
     polynet.tvos.deployment_target = '9.0'
     polynet.tvos.dependency 'PolyNetSDKtvOS', '4.32.113'
 
-    polynet.pod_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-      'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-    }
-    polynet.user_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-      'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-    }
-
     polynet.public_header_files = "YouboraAVPlayerAdapter/Generic/**/*.h, YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h"
 
     # Source files
