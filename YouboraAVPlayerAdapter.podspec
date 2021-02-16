@@ -49,21 +49,21 @@ Pod::Spec.new do |s|
   # Dependency
   s.dependency 'YouboraLib', '~> 6.5.19'
 
-  s.subspec 'Streamroot' do |streamroot|
+  # s.subspec 'Streamroot' do |streamroot|
 
-    streamroot.ios.deployment_target = '10.2'
-    streamroot.tvos.deployment_target = '10.2'
+  #   streamroot.ios.deployment_target = '10.2'
+  #   streamroot.tvos.deployment_target = '10.2'
 
-    streamroot.dependency 'AVPlayerDNAPlugin', '~> 1.1'
+  #   streamroot.dependency 'AVPlayerDNAPlugin', '~> 1.1'
 
-    streamroot.public_header_files = "YouboraAVPlayerAdapter/Generic/**/*.h, YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h"
+  #   streamroot.public_header_files = "YouboraAVPlayerAdapter/Generic/**/*.h, YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h"
 
-    # Source files
-    streamroot.source_files = 'YouboraAVPlayerAdapter/Generic/**/*.{h,m}'
-    streamroot.ios.source_files = 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h'
-    streamroot.tvos.source_files = 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ tvOS/YouboraAVPlayerAdapter.h'
+  #   # Source files
+  #   streamroot.source_files = 'YouboraAVPlayerAdapter/Generic/**/*.{h,m}'
+  #   streamroot.ios.source_files = 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ iOS/YouboraAVPlayerAdapter.h'
+  #   streamroot.tvos.source_files = 'YouboraAVPlayerAdapter/YouboraAVPlayerAdapter\ tvOS/YouboraAVPlayerAdapter.h'
 
-  end
+  # end
 
   s.subspec 'Polynet' do |polynet|
     polynet.ios.deployment_target = '10.2'
