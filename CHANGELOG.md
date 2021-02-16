@@ -1,3 +1,10 @@
+## [6.5.22] - 2021-02-16
+### Added
+- Added xcframeworks compatibility
+
+### Fixed
+- Fix for xcworkspace when building with carthage
+
 ## [6.5.21] - 2021-02-16
 ### Fixed
 - Fix ebvs when using AVPlayerLooper
