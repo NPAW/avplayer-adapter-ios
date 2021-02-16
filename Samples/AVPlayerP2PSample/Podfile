@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-workspace 'AVPlayerSampleP2P.xcworkspace'
+workspace 'AVPlayerP2PSample.xcworkspace'
 
 def generic_pods
   pod 'YouboraLib'
