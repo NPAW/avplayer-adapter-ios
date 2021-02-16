@@ -1,3 +1,7 @@
+## [6.5.21] - 2021-02-16
+### Fixed
+- Fix ebvs when using AVPlayerLooper
+
 ## [6.5.20] - 2021-01-26
 ### Fixed
 - Fix bufferUnderrun not reported

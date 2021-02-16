@@ -268,7 +268,7 @@ bool firstSeek;
                     // Remove its observers
                     [self removeObserversForAVPlayerItem:oldItem];
                     // Close that view
-                    if(self.supportPlaylists == YES){
+                    if(self.supportPlaylists == YES && [player timeControlStatus] != nil){
                         // Close that view
                         [self fireStop];
                         [self resetValues];
