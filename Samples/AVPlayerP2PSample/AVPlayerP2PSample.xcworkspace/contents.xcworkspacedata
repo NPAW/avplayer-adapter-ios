@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../YouboraAVPlayerAdapter.xcodeproj">
+      location = "group:AVPlayerP2PSample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AVPlayerP2PSample.xcodeproj">
+      location = "group:../../YouboraAVPlayerAdapter.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
