@@ -1,3 +1,10 @@
+## [6.5.23] - 2021-03-18
+### Added
+- Wrap of fireStop to enable its use outside the adapter
+
+### Fixed
+- Negative bitrate in AOD content
+
 ## [6.5.22] - 2021-02-16
 ### Added
 - Added xcframeworks compatibility
