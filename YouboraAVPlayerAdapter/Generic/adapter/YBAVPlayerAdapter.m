@@ -413,6 +413,10 @@ bool firstSeek;
     self.shouldPause = true;
 }
 
+- (void) fireStop {
+    [super fireStop];
+}
+
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
     if ([self.plugin.options.contentIsLive isEqualToValue:[NSNumber numberWithBool:true]]) {
