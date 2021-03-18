@@ -268,7 +268,7 @@ bool firstSeek;
                     // Remove its observers
                     [self removeObserversForAVPlayerItem:oldItem];
                     // Close that view
-                    if(self.supportPlaylists == YES && [player timeControlStatus] != nil){
+                    if (self.supportPlaylists == YES) {
                         // Close that view
                         [self fireStop];
                         [self resetValues];
@@ -413,6 +413,10 @@ bool firstSeek;
     self.shouldPause = true;
 }
 
+- (void) fireStop {
+    [super fireStop];
+}
+
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
     if ([self.plugin.options.contentIsLive isEqualToValue:[NSNumber numberWithBool:true]]) {
@@ -475,7 +479,7 @@ bool firstSeek;
             br = (logEvent.numberOfBytesTransferred * 8) / logEvent.segmentsDownloadedDuration;
         }
         
-        return @(round(br));
+        return @(fmax(round(br), -1));
     }
     
     return [super getBitrate];
