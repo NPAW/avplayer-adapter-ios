@@ -479,7 +479,7 @@ bool firstSeek;
             br = (logEvent.numberOfBytesTransferred * 8) / logEvent.segmentsDownloadedDuration;
         }
         
-        return @(round(br));
+        return @(fmax(round(br), -1));
     }
     
     return [super getBitrate];
