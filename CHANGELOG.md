@@ -1,3 +1,7 @@
+## [6.5.24] - 2021-04-30
+### Added
+- Method to add fatal errors
+
 ## [6.5.23] - 2021-03-18
 ### Added
 - Wrap of fireStop to enable its use outside the adapter

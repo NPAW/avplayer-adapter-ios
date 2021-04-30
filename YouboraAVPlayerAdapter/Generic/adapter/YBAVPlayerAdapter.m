@@ -141,6 +141,10 @@ bool firstSeek;
     }
 }
 
+- (void)addFatalErrors:(NSMutableArray *)fatalErrors {
+    [self.fatalErrors addObjectsFromArray:fatalErrors];
+}
+
 - (void) prepareForNewViewWithPlayerItem:(AVPlayerItem *) playerItem {
     @try {
         [playerItem addObserver:self forKeyPath:@"playbackBufferEmpty" options:NSKeyValueObservingOptionNew context:observationContext];
@@ -325,13 +329,9 @@ bool firstSeek;
                         error = player.currentItem.error;
                     }
                     
-                    if([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]){
+                    if ([self.fatalErrors containsObject:[NSNumber numberWithInteger:error.code]]) {
                         [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
-                        //TODO Add this to adapter
-                        if(self.plugin != nil && !self.flags.started){
-                            [self.plugin fireStop];
-                        }
-                    }else{
+                    } else {
                         [self sendError:error];
                     }
                 }
