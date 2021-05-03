@@ -1,3 +1,7 @@
+## [6.5.25] - 2021-05-03
+### Fixed
+- Monitor buffer events
+
 ## [6.5.24] - 2021-04-30
 ### Added
 - Method to add fatal errors
