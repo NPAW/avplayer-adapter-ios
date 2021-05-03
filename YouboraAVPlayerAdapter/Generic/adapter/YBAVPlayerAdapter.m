@@ -85,7 +85,6 @@ bool firstSeek;
     @try {
         [self resetValues];
         [self monitorPlayheadWithBuffers:true seeks:false andInterval:MONITOR_INTERVAL]; // [buffer, seek, interval] in this case we monitor buffers, but not seeks every 800 milliseconds
-        [self.monitor stop];
         
         AVPlayer * avplayer = self.player;
         
@@ -118,6 +117,8 @@ bool firstSeek;
 - (void) unregisterListeners {
     
     @try {
+        [self.monitor stop];
+        
         AVPlayer * avplayer = self.player;
         
         // Remove observers and notifications
@@ -181,12 +182,10 @@ bool firstSeek;
                         [strongSelf fireSeekBegin:true];
                     } else {
                         // Healthy
-                        strongSelf.shouldPause = true;
-                        if (self.flags.buffering) {
-                            [strongSelf fireBufferEnd];
-                        } else {
+                        if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
                         }
+                        strongSelf.shouldPause = true;
                     }
                 }
                 strongSelf.lastPlayhead = currentPlayhead;
@@ -292,10 +291,6 @@ bool firstSeek;
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     self.shouldPause = false;
-                    if(!self.flags.paused){
-                        [self fireBufferBegin];
-                        [self.monitor skipNextTick];
-                    }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
                 bool isLikely = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];
@@ -303,14 +298,12 @@ bool firstSeek;
                     [YBLog debug:@"AVPlayer playbackLikelyToKeepUp"];
                     self.shouldPause = true;
                     if (self.flags.joined) {
-                        if(firstSeek){
-                            self.shouldPause = true;
-                            if (self.flags.buffering) {
-                                [self fireBufferEnd];
-                            } else {
+                        if (firstSeek) {
+                            if (!self.flags.buffering) {
                                 [self fireSeekEnd];
                             }
                         }
+                        self.shouldPause = true;
                         firstSeek = true;
                     }
                 }
@@ -419,9 +412,6 @@ bool firstSeek;
 
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
-    if ([self.plugin.options.contentIsLive isEqualToValue:[NSNumber numberWithBool:true]]) {
-        return nil;
-    }
     double playhead = CMTimeGetSeconds(self.player.currentTime);
     return [NSNumber numberWithDouble:playhead];
 }
@@ -437,7 +427,7 @@ bool firstSeek;
     return @(self.player.rate);
 }
 
-- (NSString *)getTitle {
+- (NSString *)getTitle {
     return @"title";
 }
 
