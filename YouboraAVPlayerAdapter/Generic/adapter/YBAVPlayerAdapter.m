@@ -109,6 +109,7 @@ bool firstSeek;
         
         // Notification when the playback ends successfully
         [nc addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+        [nc addObserver:self selector:@selector(itemFailedToPlayToEndTime:) name:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
     } @catch (NSException *exception) {
         [YBLog logException:exception];
     }
@@ -134,7 +135,8 @@ bool firstSeek;
         // Remove all notifications
         //[nc removeObserver:self];
         [nc removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-        
+        [nc removeObserver:self name:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
+
         // This will send /stop if necessary, stop timers and set the player to nil
         [super unregisterListeners];
     } @catch (NSException *exception) {
@@ -376,6 +378,18 @@ bool firstSeek;
             [YBLog notice:@"itemDidFinishPlaying, stopping"];
             [self fireStop];
             [self resetValues];
+        }
+    } @catch (NSException *exception) {
+        [YBLog logException:exception];
+    }
+}
+
+- (void) itemFailedToPlayToEndTime:(NSNotification *) notification {
+    @try {
+        AVPlayer * player = self.player;
+        if (notification.object == player.currentItem) {
+            NSError * error = notification.userInfo[AVPlayerItemFailedToPlayToEndTimeErrorKey];
+            [self fireFatalErrorWithMessage:error.localizedDescription code:[NSString stringWithFormat:@"%ld",(long)error.code] andMetadata:nil];
         }
     } @catch (NSException *exception) {
         [YBLog logException:exception];
