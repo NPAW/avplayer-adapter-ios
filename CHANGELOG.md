@@ -1,3 +1,7 @@
+## [6.5.26] - 2021-05-13
+### Added
+- Fatal error when redirecting the resource during the playback
+
 ## [6.5.25] - 2021-05-04
 ### Fixed
 - Monitor buffer events
