@@ -1,3 +1,7 @@
+## [6.5.27] - 2021-05-18
+### Added
+- Time observer in ads to send ad quartile request
+
 ## [6.5.26] - 2021-05-13
 ### Added
 - Fatal error when redirecting the resource during the playback
