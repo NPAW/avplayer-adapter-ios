@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YouboraAVPlayerAdapter"
-  s.version = '6.5.26'
+  s.version = '6.5.27'
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"

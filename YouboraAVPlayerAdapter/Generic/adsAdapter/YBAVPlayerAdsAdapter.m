@@ -12,6 +12,8 @@
 @interface YBAVPlayerAdsAdapter()
 
 @property (nonatomic, assign) BOOL hasReallyStarted;
+@property (nonatomic, strong) id quartilePeriodicTimeObserver;
+@property int lastQuartileSent;
 
 @end
 
@@ -20,16 +22,23 @@
 - (void) registerListeners {
     self.hasReallyStarted = false;
     [super registerListeners];
+    [self addBoundaryTimeObserver];
+}
+
+- (void) unregisterListeners {
+    [super unregisterListeners];
+    [self removeBoundaryTimeObserver];
 }
 
 - (void) fireStart:(NSDictionary<NSString *,NSString *> *)params {
     if (self.hasReallyStarted == false) {
         self.hasReallyStarted = true;
+        self.lastQuartileSent = 0;
         [super fireStart:params];
     }
 }
 
--(YBAdPosition) getPosition {
+- (YBAdPosition) getPosition {
     if (self.plugin != nil) {
         if (self.plugin.adapter != nil) {
             return self.plugin.adapter.flags.joined ? YBAdPositionMid : YBAdPositionPre;
@@ -37,6 +46,39 @@
         return YBAdPositionPre;
     }
     return YBAdPositionUnknown;
+}
+
+- (void) addBoundaryTimeObserver {
+    
+    // Divide the asset's duration into quarters.
+    AVPlayer * avplayer = self.player;
+    AVAsset * currentPlayerAsset = avplayer.currentItem.asset;
+    float currentAssetDuration = CMTimeGetSeconds(currentPlayerAsset.duration);
+    float interval = CMTimeGetSeconds(CMTimeMultiplyByFloat64(currentPlayerAsset.duration, .25));
+    float currentTime = CMTimeGetSeconds(kCMTimeZero);
+    NSMutableArray<NSValue *> * times = [[NSMutableArray alloc] init];
+    
+    // Calculate boundary times
+    while(currentTime < currentAssetDuration) {
+        currentTime += interval;
+        [times addObject:[NSValue valueWithCMTime:CMTimeMakeWithSeconds(currentTime, 1)]];
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    self.quartilePeriodicTimeObserver = [self.player addBoundaryTimeObserverForTimes:times queue:0 usingBlock:^ {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf fireQuartile: ++strongSelf.lastQuartileSent];
+        }
+    }];
+
+}
+
+- (void) removeBoundaryTimeObserver {
+    if (self.quartilePeriodicTimeObserver) {
+        [self.player removeTimeObserver:self.quartilePeriodicTimeObserver];
+        self.quartilePeriodicTimeObserver = nil;
+    }
 }
 
 @end

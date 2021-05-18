@@ -110,6 +110,7 @@ bool firstSeek;
         // Notification when the playback ends successfully
         [nc addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
         [nc addObserver:self selector:@selector(itemFailedToPlayToEndTime:) name:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
+        
     } @catch (NSException *exception) {
         [YBLog logException:exception];
     }
