@@ -22,7 +22,6 @@
 - (void) registerListeners {
     self.hasReallyStarted = false;
     [super registerListeners];
-    [self addBoundaryTimeObserver];
 }
 
 - (void) unregisterListeners {
@@ -32,6 +31,9 @@
 
 - (void) fireStart:(NSDictionary<NSString *,NSString *> *)params {
     if (self.hasReallyStarted == false) {
+        if ((self.plugin.adapter.player && self.player != self.plugin.adapter.player)) {
+            [self addBoundaryTimeObserver];
+        }
         self.hasReallyStarted = true;
         self.lastQuartileSent = 0;
         [super fireStart:params];
