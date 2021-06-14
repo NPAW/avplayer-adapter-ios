@@ -1,3 +1,7 @@
+## [6.5.28] - 2021-06-14
+### Fixed
+- Disabled ads time observer when ads adapter player is the same as the adapter player
+
 ## [6.5.27] - 2021-05-18
 ### Added
 - Time observer in ads to send ad quartile request
