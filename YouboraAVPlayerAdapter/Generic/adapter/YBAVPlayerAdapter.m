@@ -240,8 +240,10 @@ bool firstSeek;
                 // it will still set the rate to 0
                 if (player.currentItem != nil) {
                     if ([newRate isEqualToNumber:@0]) {
-                        if([self.getPlayhead intValue] == [self.getDuration intValue]
-                           && self.plugin != nil && self.plugin.options != nil && [self.plugin.options.contentIsLive isEqual:@NO]){
+                        NSNumber *playhead = [self getPlayhead];
+                        NSNumber *duration = [self getDuration];
+                        if (playhead && duration && [playhead intValue] == [duration intValue]
+                            && self.plugin != nil && self.plugin.options != nil && [self.plugin.options.contentIsLive isEqual:@NO]) {
                             [YBLog notice:@"paused at the video end, sending stop"];
                             [self fireStop];
                             [self resetValues];
