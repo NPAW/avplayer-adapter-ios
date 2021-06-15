@@ -1,3 +1,7 @@
+## [6.5.29] - 2021-06-15
+### Fixed
+- Avoid fireStop being called when getDuration or getPlayhead is nil
+
 ## [6.5.28] - 2021-06-14
 ### Fixed
 - Disabled ads time observer when ads adapter player is the same as the adapter player
