@@ -1,3 +1,7 @@
+## [6.6.0] - 2021-09-13
+### Added
+- AdBreakStart and AdBreakStop in ads adapter
+
 ## [6.5.29] - 2021-06-15
 ### Fixed
 - Avoid fireStop being called when getDuration or getPlayhead is nil

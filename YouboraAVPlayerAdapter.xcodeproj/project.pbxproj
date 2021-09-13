@@ -618,7 +618,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.29;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.6.0;
 			};
 			name = Debug;
 		};
@@ -677,12 +677,13 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.5.29;
+				YOUBORAAVPLAYERADAPTER_VERSION_SETTING = 6.6.0;
 			};
 			name = Release;
 		};
 		4E4956691E9F6CAA00FF6280 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3474F9DCCF97A6D4A6BFD2 /* Pods-YouboraAVPlayerAdapter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -702,8 +703,12 @@
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 6.5.9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 6.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -736,8 +741,12 @@
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 6.5.9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 6.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -784,9 +793,13 @@
 				);
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter OSX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 6.5.9;
+				MARKETING_VERSION = 6.6.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
@@ -830,9 +843,13 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter OSX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 6.5.9;
+				MARKETING_VERSION = 6.6.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
@@ -870,8 +887,12 @@
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 6.5.9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 6.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -907,8 +928,12 @@
 				INFOPLIST_FILE = "YouboraAVPlayerAdapter/YouboraAVPlayerAdapter tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 6.5.9;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 6.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraAVPlayerAdapter;
 				PRODUCT_NAME = YouboraAVPlayerAdapter;
 				PROVISIONING_PROFILE_SPECIFIER = "";
