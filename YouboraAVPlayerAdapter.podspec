@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YouboraAVPlayerAdapter"
-  s.version = '6.5.29'
+  s.version = '6.6.0'
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"
@@ -47,7 +47,7 @@ Pod::Spec.new do |s|
   end
 
   # Dependency
-  s.dependency 'YouboraLib', '~> 6.5.19'
+  s.dependency 'YouboraLib', '~> 6.5'
 
   # s.subspec 'Streamroot' do |streamroot|
 

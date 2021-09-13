@@ -36,8 +36,14 @@
         }
         self.hasReallyStarted = true;
         self.lastQuartileSent = 0;
+        [self fireAdBreakStart];
         [super fireStart:params];
     }
+}
+
+- (void)fireStop:(NSDictionary<NSString *,NSString *> *)params {
+    [super fireStop:params];
+    [self fireAdBreakStop];
 }
 
 - (YBAdPosition) getPosition {
