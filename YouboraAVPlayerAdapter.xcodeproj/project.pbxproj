@@ -683,7 +683,6 @@
 		};
 		4E4956691E9F6CAA00FF6280 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A3474F9DCCF97A6D4A6BFD2 /* Pods-YouboraAVPlayerAdapter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
