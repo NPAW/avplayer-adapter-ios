@@ -540,6 +540,12 @@ bool firstSeek;
     return res != nil? res : [super getResource];
 }
 
+- (NSString *)getURLToParse {
+    AVPlayer * avplayer = self.player;
+    AVPlayerItemAccessLogEvent * logEvent = avplayer.currentItem.accessLog.events.lastObject;
+    return logEvent.URI;
+}
+
 - (NSString *)getPlayerName {
     return PLUGIN_NAME;
 }
