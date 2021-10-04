@@ -1,3 +1,7 @@
+## [6.6.1] - 2021-10-04
+### Added
+- `getURLToParse` function to report `URL` obtained directly from the player
+
 ## [6.6.0] - 2021-09-13
 ### Added
 - AdBreakStart and AdBreakStop in ads adapter
