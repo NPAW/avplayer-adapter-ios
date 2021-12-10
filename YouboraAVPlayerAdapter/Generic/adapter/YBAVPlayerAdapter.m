@@ -517,7 +517,12 @@ bool firstSeek;
         if (logEvent.indicatedBitrate > 0 && bitrate != [super getBitrate]) {
             if (self.lastRenditionBitrate != logEvent.indicatedBitrate) {
                 self.lastRenditionBitrate = logEvent.indicatedBitrate;
-                rendition = [YBYouboraUtils buildRenditionStringWithWidth:0 height:0 andBitrate:logEvent.indicatedBitrate];
+                CGSize size = self.player.currentItem.presentationSize;
+                if (size.width > 0 && size.height > 0) {
+                    rendition = [YBYouboraUtils buildRenditionStringWithWidth:size.width height:size.height andBitrate:logEvent.indicatedBitrate];
+                } else {
+                    rendition = [YBYouboraUtils buildRenditionStringWithWidth:0 height:0 andBitrate:logEvent.indicatedBitrate];
+                }
             }
         }
     }
