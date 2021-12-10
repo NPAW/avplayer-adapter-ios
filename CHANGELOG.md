@@ -1,3 +1,7 @@
+## [6.6.2] - 2021-12-10
+### Added
+- Resolution in rendition parameter
+
 ## [6.6.1] - 2021-10-04
 ### Added
 - `getURLToParse` function to report `URL` obtained directly from the player
