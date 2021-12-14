@@ -1,4 +1,6 @@
 ## [6.6.2] - 2021-12-14
+### Added
+- Resolution in rendition parameter
 ### Fixed
 - Xcode 13 framework version
 
