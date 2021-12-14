@@ -11,10 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define MACRO_NAME(f) #f
-#define MACRO_VALUE(f) MACRO_NAME(f)
-
-#define PLUGIN_VERSION_DEF MACRO_VALUE(YOUBORAADAPTER_VERSION)
+#define PLUGIN_VERSION_DEF "6.6.2"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1

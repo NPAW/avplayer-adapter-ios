@@ -1,3 +1,7 @@
+## [6.6.2] - 2021-12-14
+### Fixed
+- Xcode 13 framework version
+
 ## [6.6.1] - 2021-10-04
 ### Added
 - `getURLToParse` function to report `URL` obtained directly from the player
