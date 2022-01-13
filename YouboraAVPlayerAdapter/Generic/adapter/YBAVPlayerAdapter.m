@@ -184,6 +184,8 @@ bool firstSeek;
                         // Healthy
                         if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
+                        } else if ([[self.plugin getIsLive] isEqual:@YES])  {
+                            [strongSelf fireBufferEnd];
                         }
                         strongSelf.shouldPause = true;
                     }
@@ -293,6 +295,10 @@ bool firstSeek;
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     self.shouldPause = false;
+                    if (!self.flags.paused && [[self.plugin getIsLive] isEqual:@YES]) {
+                        [self fireBufferBegin];
+                        [self.monitor skipNextTick];
+                    }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
                 bool isLikely = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];
