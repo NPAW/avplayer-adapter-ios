@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.2"
+#define PLUGIN_VERSION_DEF "6.6.3"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -184,6 +184,8 @@ bool firstSeek;
                         // Healthy
                         if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
+                        } else if ([self.plugin.options.contentIsLive isEqual:@YES])  {
+                            [strongSelf fireBufferEnd];
                         }
                         strongSelf.shouldPause = true;
                     }
@@ -293,6 +295,10 @@ bool firstSeek;
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     self.shouldPause = false;
+                    if (!self.flags.paused && [self.plugin.options.contentIsLive isEqual:@YES]) {
+                        [self fireBufferBegin];
+                        [self.monitor skipNextTick];
+                    }
                 }
             } else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
                 bool isLikely = [((NSValue *)[change objectForKey:NSKeyValueChangeNewKey]) isEqual:@YES];

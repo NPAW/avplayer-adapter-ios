@@ -1,3 +1,7 @@
+## [6.6.3] - 2021-01-13
+### Fixed
+- Firing buffer in live
+
 ## [6.6.2] - 2021-12-14
 ### Added
 - Resolution in rendition parameter
