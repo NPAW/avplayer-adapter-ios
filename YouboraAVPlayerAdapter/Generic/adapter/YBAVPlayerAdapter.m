@@ -184,7 +184,7 @@ bool firstSeek;
                         // Healthy
                         if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
-                        } else if ([[self.plugin getIsLive] isEqual:@YES])  {
+                        } else if ([self.plugin.options.contentIsLive isEqual:@YES])  {
                             [strongSelf fireBufferEnd];
                         }
                         strongSelf.shouldPause = true;
@@ -295,7 +295,7 @@ bool firstSeek;
                 if (isEmpty) {
                     [YBLog debug:@"AVPlayer playbackBufferEmpty"];
                     self.shouldPause = false;
-                    if (!self.flags.paused && [[self.plugin getIsLive] isEqual:@YES]) {
+                    if (!self.flags.paused && [self.plugin.options.contentIsLive isEqual:@YES]) {
                         [self fireBufferBegin];
                         [self.monitor skipNextTick];
                     }
