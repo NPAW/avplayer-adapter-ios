@@ -1,10 +1,15 @@
-## [6.6.3] - 2021-01-13
+## [6.6.4] - 2022-02-25
+### Changed
+- Avoided calling `fireStart` when `autoJoinTime` is disabled
+
+## [6.6.3] - 2022-01-13
 ### Fixed
 - Firing buffer in live
 
 ## [6.6.2] - 2021-12-14
 ### Added
 - Resolution in rendition parameter
+
 ### Fixed
 - Xcode 13 framework version
 
