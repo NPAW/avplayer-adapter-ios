@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.3"
+#define PLUGIN_VERSION_DEF "6.6.4"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -428,6 +428,12 @@ bool firstSeek;
 
 - (void) fireStop {
     [super fireStop];
+}
+
+- (void)fireStop:(NSDictionary<NSString *,NSString *> *)params {
+    if (self.autoJoinTime) {
+        [super fireStop:params];
+    }
 }
 
 #pragma mark - Overridden get methods

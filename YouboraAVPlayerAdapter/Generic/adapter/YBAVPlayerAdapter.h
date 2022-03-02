@@ -20,7 +20,7 @@
 @property (nonatomic, assign) BOOL supportPlaylists;
 
 /// If the content loads but the metadata have not come through, by default it's YES
-@property (nonatomic, assign) BOOL autoJoinTime DEPRECATED_MSG_ATTRIBUTE("This property will be removed in future releases");
+@property (nonatomic, assign) BOOL autoJoinTime;
 
 - (void) addFatalErrors:(NSMutableArray*) fatalErrors;
 
