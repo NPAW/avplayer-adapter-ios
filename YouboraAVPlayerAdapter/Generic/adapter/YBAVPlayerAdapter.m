@@ -554,6 +554,19 @@ bool firstSeek;
     return res != nil? res : [super getResource];
 }
 
+- (NSNumber *)getLatency {
+    NSNumber * latency = nil;
+    if (@available(macOS 10.15 , iOS 13.0, tvOS 13.0, *)) {
+        AVPlayer * avplayer = self.player;
+        AVAsset * asset = avplayer.currentItem.asset;
+        if (asset != nil && [self.plugin.options.contentIsLive isEqual:@YES]) {
+            CMTime time = [asset minimumTimeOffsetFromLive];
+            latency = @(CMTimeGetSeconds(time) * 1000);
+        }
+    }
+    return latency;
+}
+
 - (NSString *)getURLToParse {
     AVPlayer * avplayer = self.player;
     AVPlayerItemAccessLogEvent * logEvent = avplayer.currentItem.accessLog.events.lastObject;
