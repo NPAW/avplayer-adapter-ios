@@ -1,3 +1,7 @@
+## [6.6.5] - 2022-04-04
+### Added
+- `getLatency` function to report live latency in devices with iOS and tvOS 13.0 or greater
+
 ## [6.6.4] - 2022-02-25
 ### Changed
 - Avoided calling `fireStart` when `autoJoinTime` is disabled
