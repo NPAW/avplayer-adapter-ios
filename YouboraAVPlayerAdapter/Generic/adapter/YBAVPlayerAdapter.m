@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.4"
+#define PLUGIN_VERSION_DEF "6.6.5"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -552,6 +552,19 @@ bool firstSeek;
         }
     }
     return res != nil? res : [super getResource];
+}
+
+- (NSNumber *)getLatency {
+    NSNumber * latency = nil;
+    if (@available(macOS 10.15 , iOS 13.0, tvOS 13.0, *)) {
+        AVPlayer * avplayer = self.player;
+        AVAsset * asset = avplayer.currentItem.asset;
+        if (asset != nil && [self.plugin.options.contentIsLive isEqual:@YES]) {
+            CMTime time = [asset minimumTimeOffsetFromLive];
+            latency = @(CMTimeGetSeconds(time) * 1000);
+        }
+    }
+    return latency;
 }
 
 - (NSString *)getURLToParse {
