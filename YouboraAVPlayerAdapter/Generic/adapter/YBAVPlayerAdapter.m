@@ -436,6 +436,11 @@ bool firstSeek;
     }
 }
 
+- (void)fireFatalError:(NSDictionary<NSString *,NSString *> *)params {
+    self.autoJoinTime = YES;
+    [super fireFatalError:params];
+}
+
 #pragma mark - Overridden get methods
 - (NSNumber *)getPlayhead {
     double playhead = CMTimeGetSeconds(self.player.currentTime);
