@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.5"
+#define PLUGIN_VERSION_DEF "6.6.6"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -364,6 +364,7 @@ bool firstSeek;
                 }
                 if (self.player.rate != 0) {
                     [strongSelf fireJoin];
+                    self.autoJoinTime = YES;
                 }
                 
                 if (self.flags.joined && self.player.currentItem != nil) {

@@ -1,3 +1,7 @@
+## [6.6.6] - 2022-04-20
+### Fixed
+- Enable `autoJoinTime` when `fireJoin` to let the adapter do its work
+
 ## [6.6.5] - 2022-04-04
 ### Added
 - `getLatency` function to report live latency in devices with iOS and tvOS 13.0 or greater
