@@ -364,6 +364,7 @@ bool firstSeek;
                 }
                 if (self.player.rate != 0) {
                     [strongSelf fireJoin];
+                    self.autoJoinTime = YES;
                 }
                 
                 if (self.flags.joined && self.player.currentItem != nil) {
@@ -434,11 +435,6 @@ bool firstSeek;
     if (self.autoJoinTime) {
         [super fireStop:params];
     }
-}
-
-- (void)fireFatalError:(NSDictionary<NSString *,NSString *> *)params {
-    self.autoJoinTime = YES;
-    [super fireFatalError:params];
 }
 
 #pragma mark - Overridden get methods

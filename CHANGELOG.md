@@ -1,6 +1,6 @@
 ## [6.6.6] - 2022-04-20
 ### Fixed
-- Enable `autoJoinTime` when `fireFatalError` is called to stop the view when the error is fatal
+- Enable `autoJoinTime` when `fireJoin` to let the adapter do its work
 
 ## [6.6.5] - 2022-04-04
 ### Added
