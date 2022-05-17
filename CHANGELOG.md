@@ -1,3 +1,7 @@
+## [6.6.7] - 2022-05-17
+### Fixed
+- `getLatency` function handling `minimumTimeOffsetFromLive` as asynchronous variable
+
 ## [6.6.6] - 2022-04-20
 ### Fixed
 - Enable `autoJoinTime` when `fireJoin` to let the adapter do its work
