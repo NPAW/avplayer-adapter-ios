@@ -556,15 +556,22 @@ bool firstSeek;
 }
 
 - (NSNumber *)getLatency {
-    NSNumber * latency = nil;
+    // Get default value
+    NSNumber * latency = [super getLatency];
+    
     if (@available(macOS 10.15 , iOS 13.0, tvOS 13.0, *)) {
-        AVPlayer * avplayer = self.player;
-        AVAsset * asset = avplayer.currentItem.asset;
-        if (asset != nil && [self.plugin.options.contentIsLive isEqual:@YES]) {
-            CMTime time = [asset minimumTimeOffsetFromLive];
-            latency = @(CMTimeGetSeconds(time) * 1000);
+        AVPlayerItem * item = self.player.currentItem;
+        
+        if (item != nil) {
+            AVURLAsset * asset = (AVURLAsset *) item.asset;
+            if (asset != nil) {
+                if ([asset statusOfValueForKey:@"minimumTimeOffsetFromLive" error:nil] == AVKeyValueStatusLoaded) {
+                    latency = @(CMTimeGetSeconds(asset.minimumTimeOffsetFromLive) * 1000);
+                }
+            }
         }
     }
+    
     return latency;
 }
 
