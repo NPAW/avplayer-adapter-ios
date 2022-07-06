@@ -184,6 +184,7 @@ bool firstSeek;
                         // Healthy
                         if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
+                            [strongSelf.monitor skipNextTick];
                         } else if ([self.plugin.options.contentIsLive isEqual:@YES])  {
                             [strongSelf fireBufferEnd];
                         }
@@ -309,6 +310,7 @@ bool firstSeek;
                         if (firstSeek) {
                             if (!self.flags.buffering) {
                                 [self fireSeekEnd];
+                                [self.monitor skipNextTick];
                             }
                         }
                         self.shouldPause = true;
