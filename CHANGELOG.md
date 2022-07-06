@@ -1,3 +1,7 @@
+## [6.6.8] - 2022-07-06
+### Changed
+- Skipped monitor buffer when seeking
+
 ## [6.6.7] - 2022-05-17
 ### Fixed
 - `getLatency` function handling `minimumTimeOffsetFromLive` as asynchronous variable
