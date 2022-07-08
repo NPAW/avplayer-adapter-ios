@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.7"
+#define PLUGIN_VERSION_DEF "6.6.8"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -184,6 +184,7 @@ bool firstSeek;
                         // Healthy
                         if (!self.flags.buffering) {
                             [strongSelf fireSeekEnd];
+                            [strongSelf.monitor skipNextTick];
                         } else if ([self.plugin.options.contentIsLive isEqual:@YES])  {
                             [strongSelf fireBufferEnd];
                         }
@@ -309,6 +310,7 @@ bool firstSeek;
                         if (firstSeek) {
                             if (!self.flags.buffering) {
                                 [self fireSeekEnd];
+                                [self.monitor skipNextTick];
                             }
                         }
                         self.shouldPause = true;
