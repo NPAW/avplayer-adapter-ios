@@ -1,3 +1,7 @@
+## [6.6.9] - 2022-10-03
+### Fixed
+- Xcode 14 carthage issue with bitcode
+
 ## [6.6.8] - 2022-07-06
 ### Changed
 - Skipped monitor buffer when seeking
