@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.8"
+#define PLUGIN_VERSION_DEF "6.6.9"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
