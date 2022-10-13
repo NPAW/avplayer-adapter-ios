@@ -1,3 +1,7 @@
+## [6.6.10] - 2022-10-13
+### Fixed
+- Latency asynchronously getting by using the `loadValuesAsynchronously(forKeys:completionHandler:)` once content is started 
+
 ## [6.6.9] - 2022-10-03
 ### Fixed
 - Xcode 14 carthage issue with bitcode
