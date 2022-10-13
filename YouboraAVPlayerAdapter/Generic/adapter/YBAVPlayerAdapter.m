@@ -367,6 +367,18 @@ bool firstSeek;
                 if (self.player.rate != 0) {
                     [strongSelf fireJoin];
                     self.autoJoinTime = YES;
+                    
+                    // Preparing to listen asynchronously the latency metric from asset
+                    AVURLAsset * asset = (AVURLAsset *) self.player.currentItem.asset;
+                    if (@available(macOS 10.15 , iOS 13.0, tvOS 13.0, *)) {
+                        if (asset != nil) {
+                            [asset loadValuesAsynchronouslyForKeys:@[@"minimumTimeOffsetFromLive"] completionHandler:^{
+                               // It has been prepared to listen to `minimumTimeOffsetFromLive`from now on
+                                return;
+                            }];
+                        }
+                    }
+                    
                 }
                 
                 if (self.flags.joined && self.player.currentItem != nil) {
