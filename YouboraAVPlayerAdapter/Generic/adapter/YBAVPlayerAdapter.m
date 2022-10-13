@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.6.9"
+#define PLUGIN_VERSION_DEF "6.6.10"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -367,6 +367,18 @@ bool firstSeek;
                 if (self.player.rate != 0) {
                     [strongSelf fireJoin];
                     self.autoJoinTime = YES;
+                    
+                    // Preparing to listen asynchronously the latency metric from asset
+                    AVURLAsset * asset = (AVURLAsset *) self.player.currentItem.asset;
+                    if (@available(macOS 10.15 , iOS 13.0, tvOS 13.0, *)) {
+                        if (asset != nil) {
+                            [asset loadValuesAsynchronouslyForKeys:@[@"minimumTimeOffsetFromLive"] completionHandler:^{
+                               // It has been prepared to listen to `minimumTimeOffsetFromLive`from now on
+                                return;
+                            }];
+                        }
+                    }
+                    
                 }
                 
                 if (self.flags.joined && self.player.currentItem != nil) {
