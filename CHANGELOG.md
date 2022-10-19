@@ -1,3 +1,7 @@
+## [6.6.11] - 2022-10-19
+### Removed
+- Manual buffer calls in live
+
 ## [6.6.10] - 2022-10-13
 ### Fixed
 - Latency asynchronously getting by using the `loadValuesAsynchronously(forKeys:completionHandler:)` once content is started 
