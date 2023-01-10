@@ -179,7 +179,9 @@ bool firstSeek;
                         // Distance is very big -> seeking
                         [YBLog debug:@"Seek with distance: %f", distance];
                         strongSelf.shouldPause = false;
-                        [strongSelf fireSeekBegin:true];
+                        if (!self.flags.buffering) {
+                            [strongSelf fireSeekBegin:true];
+                        }
                     } else {
                         // Healthy
                         if (!self.flags.buffering) {
