@@ -1,3 +1,7 @@
+## [6.7.0] - 2023-01-10
+### Fixed
+- Fired event when the player recovers: `bufferUnderrun` is now fired instead of `seek`.
+
 ## [6.6.11] - 2022-10-19
 ### Removed
 - Manual buffer calls in live
