@@ -48,6 +48,9 @@
 /// Rendition
 @property (nonatomic, strong) NSString * rendition;
 
+/// Resource
+@property (nonatomic, strong) NSString * initialResource;
+
 /// Error codes for known fatal errors
 @property (nonatomic, strong) NSMutableArray * fatalErrors;
 
@@ -179,8 +182,9 @@ bool firstSeek;
                         // Distance is very big -> seeking
                         [YBLog debug:@"Seek with distance: %f", distance];
                         strongSelf.shouldPause = false;
-                        if (!self.flags.buffering) {
+                        if ([[self getAsset].URL.absoluteString isEqualToString:self.initialResource] || !self.flags.buffering) {
                             [strongSelf fireSeekBegin:true];
+                            self.initialResource = [self getAsset].URL.absoluteString;
                         }
                     } else {
                         // Healthy
@@ -363,6 +367,7 @@ bool firstSeek;
                 if (self.player.rate != 0) {
                     [strongSelf fireJoin];
                     self.autoJoinTime = YES;
+                    self.initialResource = [self getAsset].URL.absoluteString;
                     
                     // Preparing to listen asynchronously the latency metric from asset
                     AVURLAsset * asset = (AVURLAsset *) self.player.currentItem.asset;
@@ -445,6 +450,12 @@ bool firstSeek;
     if (self.autoJoinTime) {
         [super fireStop:params];
     }
+}
+
+- (AVURLAsset *)getAsset {
+    AVPlayer * player = self.player;
+    AVURLAsset * asset = (AVURLAsset *) player.currentItem.asset;
+    return asset;
 }
 
 #pragma mark - Overridden get methods
