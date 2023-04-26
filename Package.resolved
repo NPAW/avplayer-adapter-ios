@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "lib-plugin-ios",
+        "repositoryURL": "https://github.com/markst/lib-plugin-ios.git",
+        "state": {
+          "branch": "swift-package-xcframework",
+          "revision": "5d271091b18542703cbbabed80f36281660092b5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
