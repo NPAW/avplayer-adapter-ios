@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#if SWIFT_PACKAGE
 #import "YBAVPlayerAdapter.h"
+#else
+// How to define header search path for public header?
+#import "../adapter/YBAVPlayerAdapter.h"
+#endif
 
 @interface YBAVPlayerAdapterSwiftTranformer : NSObject
 
