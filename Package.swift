@@ -21,9 +21,15 @@ let package = Package(
             dependencies: [
                 .product(name: "YouboraLib", package: "lib-plugin-ios")
             ],
-            path: "YouboraAVPlayerAdapter/Generic",
+            path: "YouboraAVPlayerAdapter",
+            sources: [
+                "Generic",
+                "../YouboraAVPlayerAdapter iOS"
+            ],
+            publicHeadersPath: "YouboraAVPlayerAdapter iOS",
             cSettings: [
-                .headerSearchPath("adapter")
+                .headerSearchPath("Generic/adapter"),
+                .headerSearchPath("Generic/Transformer")
             ]
         ),
     ]
