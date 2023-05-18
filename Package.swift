@@ -24,10 +24,7 @@ let package = Package(
                     .product(name: "YouboraLib", package: "lib-plugin-spm-ios")
                 ],
                 exclude: [
-                    "../Info.plist",
-                    "include/YouboraAVPlayerAdapter/YBAVPlayerAdapter.h",
-                    "include/YouboraAVPlayerAdapter/YBAVPlayerAdapterTranformer.h",
-                    "include/YouboraAVPlayerAdapter/YBAVPlayerAdsAdapter.h"
+                    "Info.plist"
                 ]
         ),
     ]
