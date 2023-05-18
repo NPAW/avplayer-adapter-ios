@@ -22,6 +22,10 @@ let package = Package(
         .target(name: "YouboraAVPlayerAdapter",
                 dependencies: [
                     .product(name: "YouboraLib", package: "lib-plugin-spm-ios")
-                ]),
+                ],
+                exclude: [
+                    "Info.plist"
+                ]
+        ),
     ]
 )
