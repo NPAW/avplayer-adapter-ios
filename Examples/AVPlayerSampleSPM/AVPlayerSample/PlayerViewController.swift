@@ -43,7 +43,7 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
                 
         let options = YouboraConfigManager.getOptions()
-        options.accountCode = "powerdev"
+
         options.contentIsLive = NSNumber(value: resource == Resource.live || resource == Resource.liveAirShow)
         options.contentResource = resource
         

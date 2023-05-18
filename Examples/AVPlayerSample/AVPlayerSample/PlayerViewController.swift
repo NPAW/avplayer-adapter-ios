@@ -42,7 +42,7 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         
         let options = YouboraConfigManager.getOptions()
-        
+
         options.contentIsLive = NSNumber(value: resource == Resource.live || resource == Resource.liveAirShow)
         options.contentResource = self.resource
         

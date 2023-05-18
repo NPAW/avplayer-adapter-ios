@@ -85,7 +85,6 @@
 		06EA7B5A2513B7FD0005D4E5 /* AVPlayerSample_tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerSample_tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EA7B5C2513B7FD0005D4E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06EA7B682513B7FF0005D4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A8E79722A16288D0072E5F7 /* avplayer-adapter-spm-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "avplayer-adapter-spm-ios"; path = ../..; sourceTree = "<group>"; };
 		7A972EAF29DAE2BB00C461EF /* YouboraConfigUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = YouboraConfigUtils.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +127,6 @@
 		0678F46924FE87B2008ACB76 = {
 			isa = PBXGroup;
 			children = (
-				7A7016E629F68261006B1075 /* Packages */,
 				063B9EE625110A340086D241 /* Generic */,
 				0678F47424FE87B2008ACB76 /* AVPlayerSample */,
 				06EA7B5B2513B7FD0005D4E5 /* AVPlayerSample_tvOS */,
@@ -203,14 +201,6 @@
 			path = AVPlayerSample_tvOS;
 			sourceTree = "<group>";
 		};
-		7A7016E629F68261006B1075 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				7A8E79722A16288D0072E5F7 /* avplayer-adapter-spm-ios */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		7A972E9D29DADF7400C461EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +266,8 @@
 			dependencies = (
 			);
 			name = AVPlayerSample_tvOS;
+			packageProductDependencies = (
+			);
 			productName = AVPlayerSample_tvOS1;
 			productReference = 06EA7B5A2513B7FD0005D4E5 /* AVPlayerSample_tvOS.app */;
 			productType = "com.apple.product-type.application";
