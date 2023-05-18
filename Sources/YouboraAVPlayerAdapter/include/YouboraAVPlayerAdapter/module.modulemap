@@ -1,0 +1,4 @@
+module YouboraAVPlayerAdapter {
+    header "YouboraAVPlayerAdapter.h"
+    export *
+}

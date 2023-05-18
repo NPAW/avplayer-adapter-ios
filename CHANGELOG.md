@@ -1,3 +1,7 @@
+## [6.7.1] - 2023-04-03
+### Changed
+- Project structure to enable Swift Package Manager integrations.
+
 ## [6.7.0] - 2023-01-10
 ### Fixed
 - Fired event when the player recovers: `bufferUnderrun` is now fired instead of `seek`.

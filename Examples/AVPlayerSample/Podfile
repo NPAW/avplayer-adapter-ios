@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+workspace 'AVPlayerSample.xcworkspace'
+
+def generic_pods
+  pod 'YouboraConfigUtils', '1.1.8'
+  pod 'YouboraAVPlayerAdapter', :path => '../../'
+  pod 'YouboraLib'
+end
+
+target 'AVPlayerSample' do
+  platform :ios, '10.0'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AVPlayerSample
+  generic_pods
+end
+
+target 'AVPlayerSample_tvOS' do
+  platform :tvos, '10.0'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AVPlayerSample_tvOS
+  generic_pods
+end
+
+target 'AVPlayerSample_macOS' do
+  platform :macos, '10.11'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for AVPlayerSample_tvOS
+  generic_pods
+end

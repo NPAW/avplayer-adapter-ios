@@ -1,0 +1,30 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 effective-4.1.50 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-macos10.11 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -Onone -module-name YouboraConfigUtils
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Cocoa
+import CoreFoundation
+import Foundation
+import Swift
+@_exported import YouboraConfigUtils
+import YouboraLib
+import _Concurrency
+import _StringProcessing
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class YouboraConfigViewController : AppKit.NSViewController, AppKit.NSCollectionViewDelegate, AppKit.NSCollectionViewDataSource, AppKit.NSCollectionViewDelegateFlowLayout {
+  @objc @_Concurrency.MainActor(unsafe) public static func initFromXIB() -> YouboraConfigUtils.YouboraConfigViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: AppKit.NSCollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: AppKit.NSCollectionView, itemForRepresentedObjectAt indexPath: Foundation.IndexPath) -> AppKit.NSCollectionViewItem
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: AppKit.NSCollectionView, layout collectionViewLayout: AppKit.NSCollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> Foundation.NSSize
+  @objc @_Concurrency.MainActor(unsafe) open func insertIntoContainer(containerView: AppKit.NSView)
+  @objc @_Concurrency.MainActor(unsafe) open func removeFromContainer()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: AppKit.NSNib.Name?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class YouboraConfigManager : ObjectiveC.NSObject {
+  @objc @discardableResult
+  public static func getOptions() -> YouboraLib.YBOptions
+  @objc override dynamic public init()
+  @objc deinit
+}
