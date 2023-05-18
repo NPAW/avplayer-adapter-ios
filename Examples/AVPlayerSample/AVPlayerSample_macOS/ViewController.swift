@@ -19,9 +19,10 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        YBLog.setDebugLevel(.debug)
+        
         let options = YBOptions()
         
-        options.accountCode = "powerDev"
         options.offline = false
         
         self.plugin = YBPlugin(options: options)
