@@ -1,0 +1,1 @@
+../../YBAVPlayerAdsAdapter.h

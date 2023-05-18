@@ -1,0 +1,11 @@
+framework module YouboraConfigUtils {
+  umbrella header "YouboraConfigUtils.h"
+
+  export *
+  module * { export * }
+}
+
+module YouboraConfigUtils.Swift {
+  header "YouboraConfigUtils-Swift.h"
+  requires objc
+}
