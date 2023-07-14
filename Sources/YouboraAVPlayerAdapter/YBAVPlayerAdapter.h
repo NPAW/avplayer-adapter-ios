@@ -22,6 +22,9 @@
 /// If the content loads but the metadata have not come through, by default it's YES
 @property (nonatomic, assign) BOOL autoJoinTime;
 
+/// Assign to true if
+@property (nonatomic, assign) BOOL avoidFireStopOnEndQueueItem;
+
 - (void) addFatalErrors:(NSMutableArray*) fatalErrors;
 
 @end

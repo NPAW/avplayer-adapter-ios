@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.7.1"
+#define PLUGIN_VERSION_DEF "6.7.2"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -72,6 +72,7 @@ bool firstSeek;
     
     if (self) {
         self.supportPlaylists = YES;
+        self.avoidFireStopOnEndQueueItem = NO;
     }
     
     return self;
@@ -396,7 +397,7 @@ bool firstSeek;
 
 - (void) itemDidFinishPlaying:(NSNotification *) notification {
     @try {
-        if (notification.object == self.player.currentItem) {
+        if (notification.object == self.player.currentItem && !self.avoidFireStopOnEndQueueItem) {
             [YBLog notice:@"itemDidFinishPlaying, stopping"];
             [self fireStop];
             [self resetValues];

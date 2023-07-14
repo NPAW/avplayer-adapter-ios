@@ -146,7 +146,9 @@ extension PlayerViewController {
         let player = AVPlayer(url: url)
         self.playerViewController?.player = player
         
-        self.plugin?.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdapter(player: player))
+        let adapter = YBAVPlayerAdapter(player: player)
+        adapter.avoidFireStopOnEndQueueItem = true
+        self.plugin?.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: adapter)
         
        
         // Start playback
