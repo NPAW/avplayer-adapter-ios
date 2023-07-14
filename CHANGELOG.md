@@ -1,10 +1,10 @@
 ## [6.7.2] - 2023-04-03
 ### Changed
-- Add flag to avoid firing '/stop` on the end of the AVQueueListItem.s∫
+- Add flag to avoid firing `/stop` on the end of the AVQueueListItem.s∫
 
 ## [6.7.1] - 2023-04-03
 ### Changed
-- Project structure to enable Swift Packages Manager integrations.
+- Project structure to enable Swift Package Manager integrations.
 
 ## [6.7.0] - 2023-01-10
 ### Fixed
