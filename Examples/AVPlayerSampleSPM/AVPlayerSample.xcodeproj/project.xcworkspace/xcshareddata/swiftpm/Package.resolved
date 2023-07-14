@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "YouboraLib",
+        "repositoryURL": "https://bitbucket.org/npaw/lib-plugin-spm-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "d43eda8593d62650b4f90958aadfa9179b6f6713",
+          "version": "6.7.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
