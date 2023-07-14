@@ -147,7 +147,6 @@ extension PlayerViewController {
         self.playerViewController?.player = player
         
         let adapter = YBAVPlayerAdapter(player: player)
-        adapter.avoidFireStopOnEndQueueItem = true
         self.plugin?.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: adapter)
         
        
