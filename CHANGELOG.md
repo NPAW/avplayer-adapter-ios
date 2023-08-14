@@ -1,3 +1,7 @@
+## [6.7.3] - 2023-08-14
+### Changed
+- Add security checks on `player.currentItem.accessLog.events.lastObject` to avoid app crashing.
+
 ## [6.7.2] - 2023-04-03
 ### Changed
 - Add flag to avoid firing `/stop` on the end of the AVQueueListItem.
