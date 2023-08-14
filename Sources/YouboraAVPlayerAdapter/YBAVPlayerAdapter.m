@@ -11,7 +11,7 @@
 #import <YouboraLib/YouboraLib-Swift.h>
 
 // Constants
-#define PLUGIN_VERSION_DEF "6.7.2"
+#define PLUGIN_VERSION_DEF "6.7.3"
 #define PLUGIN_NAME_DEF "AVPlayer"
 
 #if TARGET_OS_TV==1
@@ -506,7 +506,7 @@ bool firstSeek;
 
 - (NSNumber *)getBitrate {
     
-    AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
+    AVPlayerItemAccessLogEvent * logEvent = self.lastAccessLogEvent;
     if (logEvent) {
         
         double br;
@@ -525,7 +525,7 @@ bool firstSeek;
 
 - (NSNumber *)getThroughput {
     
-    AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
+    AVPlayerItemAccessLogEvent * logEvent = self.lastAccessLogEvent;
     
     if (logEvent && logEvent.observedBitrate > 0) {
         return @(round(logEvent.observedBitrate));
@@ -539,7 +539,7 @@ bool firstSeek;
     // We build rendition only if we have bitrate, but it is different from the indicated bitrate
     // For non-manifest streams these two values are equal and we want to avoid sending rendition
     // in those cases
-    AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
+    AVPlayerItemAccessLogEvent * logEvent = self.lastAccessLogEvent;
 
     NSString * rendition = [super getRendition];
     
@@ -559,6 +559,14 @@ bool firstSeek;
     }
     
     return rendition;
+}
+
+- (AVPlayerItemAccessLogEvent *)lastAccessLogEvent {
+    AVPlayer * avplayer = self.player;
+    if (avplayer.currentItem && avplayer.currentItem.accessLog.events.lastObject) {
+        return self.player.currentItem.accessLog.events.lastObject;
+    }
+    return nil;
 }
 
 - (NSString *)getResource {
@@ -597,8 +605,7 @@ bool firstSeek;
 }
 
 - (NSString *)getURLToParse {
-    AVPlayer * avplayer = self.player;
-    AVPlayerItemAccessLogEvent * logEvent = avplayer.currentItem.accessLog.events.lastObject;
+    AVPlayerItemAccessLogEvent * logEvent = self.lastAccessLogEvent;
     return logEvent.URI;
 }
 
@@ -615,7 +622,7 @@ bool firstSeek;
 }
 
 - (NSNumber *)getTotalBytes {
-    AVPlayerItemAccessLogEvent * logEvent = self.player.currentItem.accessLog.events.lastObject;
+    AVPlayerItemAccessLogEvent * logEvent = self.lastAccessLogEvent;
     if (!logEvent) { return nil; }
     [YBLog debug:@"Total bytes %lld", logEvent.numberOfBytesTransferred];
     return [NSNumber numberWithUnsignedLongLong:logEvent.numberOfBytesTransferred];
