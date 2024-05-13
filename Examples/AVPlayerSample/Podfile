@@ -2,13 +2,13 @@
 workspace 'AVPlayerSample.xcworkspace'
 
 def generic_pods
-  pod 'YouboraConfigUtils', '1.1.8'
+  pod 'YouboraConfigUtils', '1.1.9'
   pod 'YouboraAVPlayerAdapter', :path => '../../'
   pod 'YouboraLib'
 end
 
 target 'AVPlayerSample' do
-  platform :ios, '10.0'
+  platform :ios, '12.0'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -17,7 +17,7 @@ target 'AVPlayerSample' do
 end
 
 target 'AVPlayerSample_tvOS' do
-  platform :tvos, '10.0'
+  platform :tvos, '12.0'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -26,7 +26,7 @@ target 'AVPlayerSample_tvOS' do
 end
 
 target 'AVPlayerSample_macOS' do
-  platform :macos, '10.11'
+  platform :macos, '10.14'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

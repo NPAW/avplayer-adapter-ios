@@ -1,3 +1,8 @@
+## [6.7.4] - 2024-05-13
+### Changed
+- Upgrade minimum versions to iOS 12.0, tvOS 12.0 and osX 10.14.
+- Upgrade YouboraConfigUtils to 1.1.9.
+
 ## [6.7.3] - 2023-08-14
 ### Changed
 - Add security checks on `player.currentItem.accessLog.events.lastObject` to avoid app crashing.
