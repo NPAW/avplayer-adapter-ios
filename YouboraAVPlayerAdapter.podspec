@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'YouboraAVPlayerAdapter'
-  s.version = '6.7.3'
+  s.version = '6.7.4'
 
   # Metadata
   s.summary      = "Adapter to use YouboraLib on AVPlayer"
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
   s.author             = { "NPAW" => "support@nicepeopleatwork.com" }
 
   # Platforms
-  s.ios.deployment_target = "10.0"
-  s.tvos.deployment_target = "10.0"
-  s.osx.deployment_target = "10.10"
+  s.ios.deployment_target = "12.0"
+  s.tvos.deployment_target = "12.0"
+  s.osx.deployment_target = "10.14"
 
   # Platforms
   s.swift_version = "5.3"

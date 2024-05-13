@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,12 @@
 		06EA7B6D2513B8230005D4E5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EA7B182513745A0005D4E5 /* MenuViewController.swift */; };
 		06EA7B6E2513B8260005D4E5 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06EA7B222513758A0005D4E5 /* MenuViewController.xib */; };
 		06EA7B6F2513B8C60005D4E5 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EA7B142513681A0005D4E5 /* Resources.swift */; };
+		0ED9368F2BED1B0E006BED41 /* YouboraLib in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED9368E2BED1B0E006BED41 /* YouboraLib */; };
+		0ED936912BED1B2A006BED41 /* YouboraLib in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED936902BED1B2A006BED41 /* YouboraLib */; };
+		0ED936932BED1B37006BED41 /* YouboraLib in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED936922BED1B37006BED41 /* YouboraLib */; };
+		0ED936952BED1B7C006BED41 /* YouboraAVPlayerAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED936942BED1B7C006BED41 /* YouboraAVPlayerAdapter */; };
+		0ED936972BED1B84006BED41 /* YouboraAVPlayerAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED936962BED1B84006BED41 /* YouboraAVPlayerAdapter */; };
+		0ED936992BED1B8A006BED41 /* YouboraAVPlayerAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED936982BED1B8A006BED41 /* YouboraAVPlayerAdapter */; };
 		7A972EB029DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A972EAF29DAE2BB00C461EF /* YouboraConfigUtils.xcframework */; };
 		7A972EB129DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A972EAF29DAE2BB00C461EF /* YouboraConfigUtils.xcframework */; };
 		7A972EB229DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A972EAF29DAE2BB00C461EF /* YouboraConfigUtils.xcframework */; };
@@ -94,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED9368F2BED1B0E006BED41 /* YouboraLib in Frameworks */,
+				0ED936952BED1B7C006BED41 /* YouboraAVPlayerAdapter in Frameworks */,
 				7A972EB029DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED936932BED1B37006BED41 /* YouboraLib in Frameworks */,
+				0ED936992BED1B8A006BED41 /* YouboraAVPlayerAdapter in Frameworks */,
 				7A972EB229DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED936912BED1B2A006BED41 /* YouboraLib in Frameworks */,
+				0ED936972BED1B84006BED41 /* YouboraAVPlayerAdapter in Frameworks */,
 				7A972EB129DAE2BC00C461EF /* YouboraConfigUtils.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +249,8 @@
 			);
 			name = AVPlayerSample;
 			packageProductDependencies = (
+				0ED9368E2BED1B0E006BED41 /* YouboraLib */,
+				0ED936942BED1B7C006BED41 /* YouboraAVPlayerAdapter */,
 			);
 			productName = AVPlayerSample;
 			productReference = 0678F47224FE87B2008ACB76 /* AVPlayerSample.app */;
@@ -257,6 +271,8 @@
 			);
 			name = AVPlayerSample_macOS;
 			packageProductDependencies = (
+				0ED936922BED1B37006BED41 /* YouboraLib */,
+				0ED936982BED1B8A006BED41 /* YouboraAVPlayerAdapter */,
 			);
 			productName = AVPlayerSample_macOS;
 			productReference = 06EA7B412513B4E20005D4E5 /* AVPlayerSample_macOS.app */;
@@ -277,6 +293,8 @@
 			);
 			name = AVPlayerSample_tvOS;
 			packageProductDependencies = (
+				0ED936902BED1B2A006BED41 /* YouboraLib */,
+				0ED936962BED1B84006BED41 /* YouboraAVPlayerAdapter */,
 			);
 			productName = AVPlayerSample_tvOS1;
 			productReference = 06EA7B5A2513B7FD0005D4E5 /* AVPlayerSample_tvOS.app */;
@@ -313,6 +331,7 @@
 			);
 			mainGroup = 0678F46924FE87B2008ACB76;
 			packageReferences = (
+				0ED9368D2BED1B0E006BED41 /* XCRemoteSwiftPackageReference "lib-plugin-spm-ios" */,
 			);
 			productRefGroup = 0678F47324FE87B2008ACB76 /* Products */;
 			projectDirPath = "";
@@ -688,6 +707,47 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ED9368D2BED1B0E006BED41 /* XCRemoteSwiftPackageReference "lib-plugin-spm-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://bitbucket.org/npaw/lib-plugin-spm-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ED9368E2BED1B0E006BED41 /* YouboraLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED9368D2BED1B0E006BED41 /* XCRemoteSwiftPackageReference "lib-plugin-spm-ios" */;
+			productName = YouboraLib;
+		};
+		0ED936902BED1B2A006BED41 /* YouboraLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED9368D2BED1B0E006BED41 /* XCRemoteSwiftPackageReference "lib-plugin-spm-ios" */;
+			productName = YouboraLib;
+		};
+		0ED936922BED1B37006BED41 /* YouboraLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED9368D2BED1B0E006BED41 /* XCRemoteSwiftPackageReference "lib-plugin-spm-ios" */;
+			productName = YouboraLib;
+		};
+		0ED936942BED1B7C006BED41 /* YouboraAVPlayerAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YouboraAVPlayerAdapter;
+		};
+		0ED936962BED1B84006BED41 /* YouboraAVPlayerAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YouboraAVPlayerAdapter;
+		};
+		0ED936982BED1B8A006BED41 /* YouboraAVPlayerAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = YouboraAVPlayerAdapter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0678F46A24FE87B2008ACB76 /* Project object */;
 }
