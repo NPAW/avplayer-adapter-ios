@@ -1,3 +1,7 @@
+## [6.7.5] - 2026-01-02
+### Fixed
+- Prevent crash when adding boundary time observers with nil player/currentItem/asset or invalid/empty boundary times.
+
 ## [6.7.4] - 2024-05-13
 ### Changed
 - Upgrade minimum versions to iOS 12.0, tvOS 12.0 and osX 10.14.
