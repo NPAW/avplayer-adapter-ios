@@ -8,6 +8,7 @@
 
 #import "YBAVPlayerAdsAdapter.h"
 #import <YouboraLib/YouboraLib-Swift.h>
+#import <math.h>
 
 @interface YBAVPlayerAdsAdapter()
 
@@ -60,9 +61,29 @@
     
     // Divide the asset's duration into quarters.
     AVPlayer * avplayer = self.player;
+    if (avplayer == nil || avplayer.currentItem == nil) {
+        return;
+    }
+    
     AVAsset * currentPlayerAsset = avplayer.currentItem.asset;
+    if (currentPlayerAsset == nil) {
+        return;
+    }
+    
     float currentAssetDuration = CMTimeGetSeconds(currentPlayerAsset.duration);
+    
+    // Validate duration: must be finite and greater than zero
+    if (!isfinite(currentAssetDuration) || currentAssetDuration <= 0) {
+        return;
+    }
+    
     float interval = CMTimeGetSeconds(CMTimeMultiplyByFloat64(currentPlayerAsset.duration, .25));
+    
+    // Protect against invalid or zero interval to avoid infinite loops
+    if (!isfinite(interval) || interval <= 0) {
+        return;
+    }
+    
     float currentTime = CMTimeGetSeconds(kCMTimeZero);
     NSMutableArray<NSValue *> * times = [[NSMutableArray alloc] init];
     
@@ -72,8 +93,13 @@
         [times addObject:[NSValue valueWithCMTime:CMTimeMakeWithSeconds(currentTime, 1)]];
     }
     
+    // addBoundaryTimeObserverForTimes crashes with an empty array
+    if (times.count == 0) {
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
-    self.quartilePeriodicTimeObserver = [self.player addBoundaryTimeObserverForTimes:times queue:0 usingBlock:^ {
+    self.quartilePeriodicTimeObserver = [avplayer addBoundaryTimeObserverForTimes:times queue:0 usingBlock:^ {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf) {
             [strongSelf fireQuartile: ++strongSelf.lastQuartileSent];
